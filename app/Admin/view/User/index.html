@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="__Css__/link.css">
+<div class="card-header-title">
+    权限管理 > 管理员列表
+</div>
+<div class="card-content-body link-body">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="small-box">
+            <a href="javascript:;" data-url="/Admin/link/add" class="action-add">新增用户</a>
+            <div class="tab">
+                <form id="myForm">
+                    <table class="os">
+                        <tr class="odd">
+                            <td><b>ID</b></td>
+                            <td><b>用户名</b></td>
+                            <td><b>头像</b></td>
+                            <td><b>用户角色</b></td>
+                            <td><b>注册时间</b></td>
+                            <td><b>状态</b></td>
+                            <td><b>操作</b></td>
+                        </tr>
+                        {volist name="list" id="vo" key="k"}
+                        <tr>
+
+                            <td class="id">{$vo.id}</td>
+                            <td class="user">{$vo.user}</td>
+                            <td class="user_pic"><img src="{$vo.user_pic}" alt="{$vo.user}" class="user_pic"></td>
+                           <td>{$vo['auth_group'][0]['title']}</td>
+                            <td>{$vo.reg_time|date='Y-m-d H:i:s',###}</td>
+                            <td class="status">
+                                {eq name="$vo['auth_group'][0]['status']" value="0"}
+                                <i class="fa fa-check-circle"></i>
+                                {else\}
+                                <i class="fa fa-times-circle"></i>
+                                {/eq}
+                                <!--<div class="switch">
+                                    <input type="checkbox" id="user_status" class="status" {if condition="$vo['auth_group'][0]['status'] eq 1"}checked="checked"{/if} >
+                                    <label for="user_status" class="slider"></label>
+                                    <p>{eq name="$vo['auth_group'][0]['status']" value="1"}关闭{else\}开启{/eq}</p>
+                                </div>-->
+
+                            </td>
+                            <td class="smart-actions">
+                                <a class="action-edit">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a class="action-delete" data-id="{$vo.id}">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+                        {/volist}
+
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

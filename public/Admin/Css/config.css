@@ -1,0 +1,132 @@
+.config-body{
+    margin: 1.25rem auto;
+    padding: 1.8rem;
+    width: 70%;
+    -webkit-box-flex: 1;
+    flex: 1;
+    -ms-flex: 1 1 auto;
+    overflow: auto;
+}
+.config-body dl.row {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+.config-body form.form-horizontal>dl.row>dd.odd {
+    display: inline-block;
+    font: 700 .8rem/1rem arial;;
+    vertical-align: top;
+    letter-spacing: normal;
+    color: #2a2a2a;
+    margin-bottom: .5rem;
+}
+.config-body form.form-horizontal>dl.row>dd.opt{
+    text-align: left;
+    font-size: 12px;
+    line-height:1.4rem;
+    vertical-align: top;
+    letter-spacing: normal;
+}
+.config-body p.notic {
+    margin: 0;
+    margin-top: .8rem;
+    font-size: 12px;
+    line-height: 18px;
+    color: #AAA;
+    clear: both;
+}
+span.imgpicker {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+}
+.uploader-text {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #dadfe6;
+    padding:.51rem .5rem .52rem .85rem;;
+    color: #2a2a2a;
+    text-align: center;
+    border-radius: .375rem;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+span.imgpicker:hover span.uploader-text ,button.uploader-text:hover{
+    color: #fff;
+    background: #776ddb;
+}
+input.file-invisible {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 75px;
+    height: 39px;
+    overflow: hidden;
+    bottom: auto;
+    right: auto;
+    opacity: 0;
+    cursor: pointer;
+}
+i.fa.fa-picture-o.imgFile-ico {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    padding: 13px;
+    font-size: 20px;
+    color: #AAA;
+}
+input[name=SiteaLogo] {
+    text-indent: 1.5rem;
+}
+
+label.col-sm-2.control-label {
+    display: inline-block;
+    font: 700 .8rem/1rem arial;
+    color: #2a2a2a;
+    padding-top: .75rem;
+}
+button.uploader-text {
+    outline: 0;
+    border: 0;
+    padding: .78rem 1.8rem;
+}
+
+.box-content input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -999px;
+}
+.box-content .cb-enable, .cb-disable {
+    color: #777;
+    font-size: 12px;
+    line-height: 25px;
+    background-color: #ebeff5;
+    height: 25px;
+    padding: 1px 11px;
+    border-style: solid;
+    border-color: #BEC3C7;
+}
+.box-content .cb-enable.selected {
+    color: #FFF;
+    background-color: #40dc7e;
+    border-color: #48a76c;
+}
+.box-content .cb-disable.selected {
+    color: #FFF;
+    background-color: #96A6A6;
+    border-color: #808B8D;
+}
+.box-content .cb-disable {
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 4px 4px 0;
+}
+.box-content .cb-enable {
+    border-width: 1px 0 1px 1px;
+    border-radius: 4px 0 0 4px;
+}
+.card-header-title a {
+    color: #2a2a2a;
+}

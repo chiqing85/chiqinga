@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="__Css__/link.css">
+<div class="card-header-title">
+    权限管理 > 角色管理
+</div>
+<div class="card-content-body link-body">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="small-box">
+            <a href="javascript:;" data-url="/Admin/goup/add" class="action-add">新增角色</a>
+            <div class="tab">
+                <form id="myForm">
+                    <table class="os">
+                        <tr class="odd">
+                            <td><b>ID</b></td>
+                            <td><b>角色名称</b></td>
+                            <td><b>角色描述</b></td>
+                            <td><b>状态</b></td>
+                            <td><b>操作</b></td>
+                        </tr>
+                        {volist name="list" id="vo" key="k"}
+                        <tr>
+                            <td class="id">{$vo.id}</td>
+                            <td class="name">{$vo.title}</td>
+                            <td class="url">{$vo.describe}</td>
+                            <td>
+                                {eq name="$vo.status" value="0"}
+                                <i class="fa fa-check-circle"></i>
+                                {else\}
+                                <i class="fa fa-times-circle"></i>
+                                {/eq}
+                            </td>
+                            <td class="smart-actions">
+                                <a class="action-edit">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a class="action-delete" data-id="{$vo.id}">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {/volist}
+
+                    </table>
+                </form>
+                {$list->render()}
+            </div>
+        </div>
+    </div>
+</div>
