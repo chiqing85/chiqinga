@@ -6,6 +6,18 @@
  *
  * * * * * */
 
+// 展示切换
+
+$('.navigation').live('click', function() {
+    if($('body').is(".nav-sm")) {
+        $('body').removeClass('nav-sm');
+    }else{
+        $('.child_menu').hide();
+        $('body').addClass('nav-sm');
+    };
+});
+
+
 //左侧菜单栏
 $.post('/admin/index/menu',function(data){
 

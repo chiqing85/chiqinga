@@ -30,8 +30,8 @@ return array(
         ['name' => '权限节点', 'data-url' => ''],
     ]],
     'Article' => ['name' => '文章管理', 'ico' => 'fa-file-text', 'data-url' => 'javascript:;', 'child' => [
-        ['name' => '文章列表', 'data-url' => ''],
-        ['name' => '文章栏目', 'data-url' => ''],
+        ['name' => '文章列表', 'data-url' => '/Admin/arctype'],
+        ['name' => '文章栏目', 'data-url' => '/Admin/category'],
     ]],
    /*
    * 因为时间太紧，图片管理功能下次再行处理

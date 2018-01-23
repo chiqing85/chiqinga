@@ -26,7 +26,7 @@ class Notice
 
         $old_md5 = '';
 
-        while(true){
+        while(true) {
 
             $mse = Db('notice')->where('isstatus = 0 and uid = 1')->count();
             $md5 = md5($mse);

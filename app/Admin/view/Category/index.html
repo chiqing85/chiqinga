@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="__Css__/link.css">
+<div class="card-header-title">
+    文章管理 >　文章栏目
+</div>
+<div class="card-content-body link-body">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="small-box">
+            <a href="javascript:;" data-url="/Admin/Category/add" class="action-add">新增栏目</a>
+            <div class="tab">
+                <form id="myForm">
+                    <table class="os">
+                        <tr class="odd">
+                            <td width="25"><i class="fa fa-star-half-full"></i></td>
+                            <td><b>ID</b></td>
+                            <td><b>分类名称</b></td>
+                            <td><b>状态</b></td>
+                            <td><b>排序</b></td>
+                            <td><b>操作</b></td>
+                        </tr>
+                        {volist name="list" id="vo"}
+                        <tr>
+                            <td>
+                                [<i class="fa  {if condition='count($vo.level) eq 0'}fa-plus{else \}fa-minus{/if}"></i>]
+                            </td>
+                            <td><b>{$vo.id}</b></td>
+                            <td><b>{$vo.name}</b></td>
+                            <td>
+                                {eq name="$vo.isshow" value="0"}
+                                <i class="fa fa-check-circle"></i>
+                                {else\}
+                                <i class="fa fa-times-circle"></i>
+                                {/eq}
+                            </td>
+                            <td><b>{$vo.sort}</b></td>
+                            <td style="display: flex;">
+                                <a href="#/categorcreatey/1" title=" 添加子类" class="save">
+                                    <i class="fa fa-pencil-square-o"></i>
+
+                                </a>
+                                &nbsp;&nbsp;
+                                <a href="#/Scategory/1" title="编辑" class="action-edit">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                &nbsp;&nbsp;
+                                <a href="javascript:;" class='action-delete' title="删除">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {/volist}
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

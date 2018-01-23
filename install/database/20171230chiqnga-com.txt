@@ -23,11 +23,10 @@ login_time int(10) not null comment '最后登录时间',
 login_ip varchar(16) not null comment '最后登录IP',
 token int(6) not null comment '加盐'
 )charset=utf8;
-
 --------------------------------
 --------插入后台管理员数据-------
 -------------------------------
-insert into user(`user`, `user_password`, `reg_time`, `token`) value ('admin', md5('admin'+5687), UNIX_TIMESTAMP(), '5687');
+insert into user(`user`, `user_password`, `reg_time`, `token`) value ('admin', md5('admin'+5687), UNIX_TIMESTAMP(), '3658');
 
 --------------------------------
 ----------登录表----------------
@@ -134,9 +133,8 @@ isshow tinyint(1) not null comment '0显示,1不显示'
 )charset=utf8;
 
 ---------------------------------------------------------------
--------------------------反馈管理----------------
+-------------------------反馈管理-----------------------------
 --------------------------------------------------------------
-
 create table feedback(
 id int(10) auto_increment primary key,
 uid int(10) not null comment '用户ID',
@@ -152,3 +150,16 @@ time varchar(10) not null comment '提交时间',
 ip varchar(16) not null comment '提交者IP',
 status tinyint(1) not null default 0 comment '1已读/0未读状态'
 )charset=utf8;
+
+-------------------------------------------------------------------------------
+---------------------------------------文章栏目--------------------------------
+--------------------------------------------------------------------------------
+create table category(
+id int(10) auto_increment primary key,
+name varchar(30) not null comment '栏目名称',
+isshow tinyint(1) not null comment '0显示,1不显示',
+pid int(10),
+sort smallint(16) not null default 100 comment '排序'
+)charset=utf8;
+
+

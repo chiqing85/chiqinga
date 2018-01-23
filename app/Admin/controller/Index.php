@@ -28,6 +28,8 @@ class Index extends Common
 
         $this->home();
 
+
+
         if(request()->isPost()){
 
             return view('indexs');

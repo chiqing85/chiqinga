@@ -70,7 +70,8 @@ class User extends Model
         //一对一关联
         // return $this->hasOne('AuthGroupAccess', 'uid', 'id')->field('uid');
         //多对多关联
-        return $this->belongsToMany('AuthGroup','\\app\\Admin\\model\\AuthGroupAccess', 'uid', 'uid');
+
+        return $this->belongsToMany('AuthGroup','app\Admin\model\AuthGroupAccess','uid', 'uid');
     }
 
     public function getAuthGroupAccess($id)

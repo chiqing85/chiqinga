@@ -40,4 +40,29 @@ class User extends Common
 
         return view();
     }
+
+    /*****
+     *
+     * 新增管理员
+     *
+     * ******/
+    public function add()
+    {
+
+        if(request()->isPost())
+        {
+            return 111111;
+
+        }else{
+
+        //查询角色列表
+
+        $list = model('AuthGroup')->field('id,title')->select();
+
+        $this->assign('list', $list);
+
+        return view();
+
+        }
+    }
 }

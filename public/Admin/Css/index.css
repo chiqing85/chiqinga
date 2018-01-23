@@ -98,7 +98,6 @@ table.os tr td {
     padding: 9px 12px;
     border: 1px solid #ebeef2;
     vertical-align: middle;
-    line-height: 2rem;
 }
 .card-header-title{
     padding: 1rem 1.8rem;
@@ -158,20 +157,17 @@ li.content-title.active>a:before {
 .slider-container {
     width: 80%;
     max-width: 300px;
-    margin: 1.5rem auto 0.5rem;
+    margin: 0 auto .5rem;
     z-index: 2;
 }
 circle.circle {
     fill: #fff;
     stroke: #40dc7e;
 }
-text.svgmin,text.svgaxm {
-    font-size: 1.3rem;
-}
 .temperature-bg{
     width: 260px;
-    margin-top: 3.5rem;
-    margin-left: 5rem;
+    margin-top: 3rem;
+    margin-left: 3.5rem;
     height: 260px;
     position: absolute;
     border-radius: 50%;
@@ -190,13 +186,13 @@ text.svgmin,text.svgaxm {
     position: relative;
     color: #2a2a2a;
     font-family: Exo;
-    font-size: 4rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: bold;
     height: 70px;
 }
 .btn-group {
     display: flex;
-    padding: 1.25rem;
+    padding: 1rem;
     width: 93%;
     margin: 0 auto;
     justify-content: center;
@@ -238,6 +234,10 @@ label.btn.btn-icon.active {
 label.btn.btn-icon.active>i.fa {
     border-color: #42dc7d;
 }
+label.btn-icon:hover>i.fa {
+    color: #42dc7d;
+    border-color: #42dc7d;
+}
 .data-title{
     position: absolute;
     white-space: nowrap;
@@ -262,14 +262,14 @@ label.btn.btn-icon.active>i.fa {
     display: block;
     width: 0;
     height: 0;
-    border: 5px dashed transparent;
-    border-bottom: 5px solid #42db7d;
+    border: 10px dashed transparent;
+    border-bottom: 10px solid #42db7d;
 }
 .data-title>span{
-    top: -10px;
+    top: -20px;
 }
 .data-title em{
-    top: -9px;
+    top: -19px;
     border-bottom-color: #fff !important;
 }
 i.fa.fa-fire {
