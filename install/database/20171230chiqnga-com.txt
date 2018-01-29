@@ -79,6 +79,7 @@ CREATE TABLE `auth_group_access` (
     KEY `uid` (`uid`),
     KEY `group_id` (`group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
 ---------------------------------------
 ------------网站信息
 ----------------------------------------
@@ -157,9 +158,33 @@ status tinyint(1) not null default 0 comment '1已读/0未读状态'
 create table category(
 id int(10) auto_increment primary key,
 name varchar(30) not null comment '栏目名称',
+dirs varchar(30) comment'导航',
 isshow tinyint(1) not null comment '0显示,1不显示',
 pid int(10),
-sort smallint(16) not null default 100 comment '排序'
+sort smallint(16) not null default 100 comment '排序',
+time varchar(10) not null comment '创建时间'
 )charset=utf8;
+
+-----------------------------------------------------------------------------
+---------------------------------------文章----------------------------------
+-----------------------------------------------------------------------------
+create table article(
+id int(10) auto_increment primary key comment '文章ID',
+cid smallint(5) not null comment '栏目id',
+title varchar(100) not null comment '标题',
+duction varchar(255) not null comment '简介',
+thumb varchar(255) default '' comment '缩略图',
+content text comment '内容',
+keywords varchar(255) comment '关键词',
+author varchar(20) not null comment '作者',
+tag varchar(50) default '' comment '来源',
+istop tinyint(1) default 0 comment '是否置顶 0 NO 1 yes',
+isshow tinyint(1) not null comment '是否显示 0 显示 1 不显示',
+time varchar(10) not null comment '创建时间',
+number int(15) not null comment '点击量',
+feedback int(11) default 0 comment '评论量',
+ip varchar(50) not null comment '发布者ip'
+)charset=utf8;
+
 
 
