@@ -33,23 +33,3 @@
         </div>
     </div>
 </div>
-
-<script>
-
-    $('.pagination>li').on('click',function () {
-
-       var $url = $(this).find('a').attr('href');
-
-       if($url == undefined){
-           return false;
-       }
-
-        $.post($url,function(data){
-
-            $('.article').html(data);
-
-        });
-
-        return false;
-    });
-</script>

@@ -111,8 +111,6 @@ $('ul.navbar-nav>li').on('click',function() {
 
     if(!$(this).is('.open')) {
 
-
-
         if($(this).find('a').attr('data-url') !== undefined && $('.sse').text() !== '') {
 
             $.post($(this).find('a').attr('data-url'),function (data) {
@@ -173,14 +171,14 @@ $("sider").mCustomScrollbar({
 /*************
  *
  *
- * Config
+ * config
  *
  *
  * * * * * */
 
 $(document).on('click', '.config-submits', function(){
 
-    $.post('/Admin/Config/save',$('#myForm').serialize(),function(data){
+    $.post('/admin/config/save',$('#myForm').serialize(),function(data){
 
         if(data.status == 200){
 
@@ -198,14 +196,15 @@ $(document).on('click', '.config-submits', function(){
     });
 });
 
-$(document).on('change','input.file-invisible',function () {
+//上传图片logo
+$(document).on('change','input.file-config',function () {
 
     var formData = new FormData();
 
     formData.append('images', $(this)[0].files[0]);
 
     $.ajax({
-        url: '/Admin/Upload',
+        url: '/admin/Upload',
         type: 'POST',
         data: formData,
         // 告诉jQuery不要去处理发送的数据
@@ -218,8 +217,6 @@ $(document).on('change','input.file-invisible',function () {
 
         }
     });
-
-
 
 });
 
@@ -238,13 +235,13 @@ $(document).on('click', '.save', function(){
 
     var formdata = $('#myForm').serialize();
 
-    $.post('/Admin/link/save',formdata, function(data){
+    $.post('/admin/link/save',formdata, function(data){
 
         if(data.status == 200) {
 
             layer.msg(data.msg, {icon: 6, time: 2000},function () {
 
-                $.post('/Admin/link/',function (data) {
+                $.post('/admin/link/',function (data) {
 
                     $('.article').html(data);
                 })
@@ -262,7 +259,7 @@ $(document).on('click', '.save', function(){
 
 // 编辑
 
-$(document).on('click', '.action-edit',function () {
+$(document).on('click', '.action-edit.action-link',function () {
 
     var tr = $(this).closest('tr');
 
@@ -360,14 +357,77 @@ $(document).on('click', '.ins',function () {
  *
  * * * * * */
 
-$(document).on('click', '.action-add', function(){
+$(document).on('click', '.action-add, .action-add-c', function(){
 
     $.get($(this).attr('data-url'),function (data) {
 
         $('.article').html(data);
+
     });
+
 });
 
+
+
+
+
+/***********
+* 添加文章
+* * * * * * */
+
+//文章缩略图
+$(document).on('change', '.file-article', function() {
+
+    var formData = new FormData();
+
+    formData.append('images', $(this)[0].files[0]);
+
+    $.ajax({
+        url: '/admin/article/upload',
+        type: 'POST',
+        data: formData,
+        // 告诉jQuery不要去处理发送的数据
+        processData : false,
+        // 告诉jQuery不要去设置Content-Type请求头
+        contentType : false,
+        success: function (data) {
+
+            $('input[name=thumb]').val(data);
+
+        }
+    });
+
+});
+
+ /**
+ * 预览
+ * */
+
+ $(document).on('click', '.action-other', function () {
+
+    $.post($(this).attr('data-url'), function (data) {
+        layer.full(
+            layer.open({
+                type: 1,
+                title: '<i class="fa fa-eye-slash"></i> 预览',
+                skin: 'layui-layer-rim', //加上边框
+                // area: ['420px', '240px'], //宽高
+                content: data,
+            })
+        )
+    })
+ });
+
+ /**
+ * 编辑
+ * */
+
+ $(document).on('click', '.action-edit-save', function() {
+     $.get($(this).attr('data-url'), function(data) {
+
+         $('.article').html(data);
+     })
+});
 /*************
  *
  * database
@@ -384,6 +444,8 @@ $(document).on('click', '#database', function() {
     });
 
 });
+
+
 
 
 
@@ -439,4 +501,31 @@ $(document).on('click', '.submits', function(){
             layer.msg(data,{icon:5, time:1500});
         };
     });
+});
+
+//缩略图
+
+function mouseover(e) {
+var img = "<img src='" + $('input[name=thumb]').val() + "'>";
+    layer.tips(img,e,{tips: [1, '#fff']});
+}
+
+/*
+* 分页
+* */
+$(document).on('click', '.pagination>li', function () {
+
+    var $url = $(this).find('a').attr('href');
+
+    if($url == undefined){
+        return false;
+    }
+
+    $.post($url,function(data){
+
+        $('.article').html(data);
+
+    });
+
+    return false;
 });

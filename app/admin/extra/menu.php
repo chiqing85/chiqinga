@@ -15,23 +15,23 @@
 //| 后台菜单
 //+-------------------------------------------------------------------------
 return array(
-    'Admin' =>['name'=>'后台首页','ico'=>'fa-home','data-url'=>'/Admin/index','child'=>[]],
+    'admin' =>['name'=>'后台首页','ico'=>'fa-home','data-url'=>'/admin/index','child'=>[]],
     'Cog' => [ 'name' => '系统', 'ico' => 'fa-cog', 'data-url' => 'javascript:;', 'child' => [
-        ['name' =>'网站信息','data-url' => '/Admin/config'],
-        ['name' =>'邮件设置','data-url' => '/Admin/mail'],
-        ['name' => '友情链接', 'data-url' => '/Admin/link'],
+        ['name' =>'网站信息','data-url' => '/admin/config'],
+        ['name' =>'邮件设置','data-url' => '/admin/mail'],
+        ['name' => '友情链接', 'data-url' => '/admin/link'],
         // ['name' =>'广告设置','data-url' => ''],      *　广告设置功能，因为目前只是后台，前台时间原因来不及处理，待下次升级再添加
-        ['name' =>'登录日志','data-url' => '/Admin/userlog'],
-        ['name' => '清除缓存', 'data-url' => '/Admin/Index/cache_clear'],
+        ['name' =>'登录日志','data-url' => '/admin/userlog'],
+        ['name' => '清除缓存', 'data-url' => '/admin/index/cache_clear'],
     ]],
     'Auth' => ['name' => '权限管理', 'ico' => 'fa-table', 'data-url' => 'javascript:;', 'child' =>[
-        ['name' => '管理员列表', 'data-url' => '/Admin/user'],
-        ['name' => '角色管理', 'data-url' => '/Admin/Goup'],
-        ['name' => '权限节点', 'data-url' => ''],
+        ['name' => '管理员列表', 'data-url' => '/admin/user'],
+        ['name' => '角色管理', 'data-url' => '/admin/goup'],
+        ['name' => '权限节点', 'data-url' => '/admin/rule'],
     ]],
     'Article' => ['name' => '文章管理', 'ico' => 'fa-file-text', 'data-url' => 'javascript:;', 'child' => [
-        ['name' => '文章列表', 'data-url' => '/Admin/arctype'],
-        ['name' => '文章栏目', 'data-url' => '/Admin/category'],
+        ['name' => '文章列表', 'data-url' => '/admin/article'],
+        ['name' => '文章栏目', 'data-url' => '/admin/category'],
     ]],
    /*
    * 因为时间太紧，图片管理功能下次再行处理
@@ -41,12 +41,12 @@ return array(
         ['name' => '图片回收站', 'data-url' => ''],
     ]],*/
     'Envelope' => ['name' => '评论管理', 'ico' => 'fa-sitemap', 'data-url' => 'javascript:;', 'child' => [
-        ['name' => '评论列表', 'data-url' => '/Admin/feedback/1'],
-        ['name' => '意见反馈', 'data-url' => '/Admin/feedback/0'],
+        ['name' => '评论列表', 'data-url' => '/admin/feedback/1'],
+        ['name' => '意见反馈', 'data-url' => '/admin/feedback/0'],
     ]],
-    'Database' => ['name' => '数据库', 'ico' => 'fa-database', 'data-url' => 'javascript:;', 'child' => [
-        ['name' => '数据库列表', 'data-url' => '/Admin/database'],
+    'database' => ['name' => '数据库', 'ico' => 'fa-database', 'data-url' => 'javascript:;', 'child' => [
+        ['name' => '数据库列表', 'data-url' => '/admin/database'],
         ['name' => '数据还原', 'data-url' => ''],
-        ['name' => 'SQL执行', 'data-url' => '/Admin/database/query'],
+        ['name' => 'SQL执行', 'data-url' => '/admin/database/query'],
     ]],
 );

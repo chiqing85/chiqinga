@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="__Css__/config.css">
 <div class="card-header-title">
     系统 > 邮件设置
+    <a data-url="/admin/mail" style="display: none;"></a>
 </div>
 <div class="card-content-body config-body">
-    <form class="form-horizontal" id="myForm" onsubmit="return false">
+    <form class="form-horizontal" id="myForm" onsubmit="return false" data-url="/admin/mail/save">
         <div class="box-content">
             <div class="form-group">
                 <label class="col-sm-2 control-label">邮件发送(SMTP)</label>
@@ -67,22 +68,6 @@
 </div>
 
 <script>
-    //保存邮箱信息
-    $('.submits').on('click', function () {
-
-            $.post("Mail/save", $('#myForm').serialize(), function (data) {
-                if(data.status == 200) {
-                    layer.msg(data.msg, {icon: 6, time:2000, btnAlign: 'c'}, function(index){
-
-                        layer.close(index);
-                        location.href = data['url'];
-                    });
-                }else{
-                    layer.msg(data.msg,{icon:5, time:1500});
-                }
-            });
-    });
-
 //        测试发送邮件
 
     $('button.uploader-text').on('click', function () {
@@ -104,16 +89,4 @@
 
         });
     })
-//    checked选择器
-    $('.cb-enable,.cb-disable').on('click', function() {
-        var show = $(this).parents('.show');
-        if($('.cb-enable',show).is('.selected')){
-            $('.cb-enable', show).removeClass('selected');
-            $(this).addClass('selected');
-        }else{
-            $('.cb-disable', show).removeClass('selected');
-            $(this).addClass('selected');
-
-        }
-    });
 </script>

@@ -12,7 +12,7 @@
  * Time:16:02
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 
 use think\Db;

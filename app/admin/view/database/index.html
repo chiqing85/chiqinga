@@ -22,8 +22,12 @@
                             <td><b>创建时间</b></td>
                             <td><b>操作</b></td>
                         </tr>
-                        {volist name="datalist" id="vo" key="k"}
+                        {volist name="datalist" id="vo" key="k" mod='2'}
+                        {eq name="mod" value="1"}
+                        <tr class="odd">
+                            {else/}
                         <tr>
+                        {/eq}
                             <td>
                                 <input type="checkbox" id="{$vo.Name}"  name="base[]" value="{$vo.Name}" class="typecheck">
                                 <label for="{$vo.Name}" class="colourattrbox"></label>

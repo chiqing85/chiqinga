@@ -12,7 +12,7 @@
  * Time:17:18
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 
 use think\Loader;
@@ -39,7 +39,7 @@ class Goup extends Common
         {
             $goup = input('post.');
 
-            $validate = Loader::validate('Goup');
+            $validate = Loader::validate('goup');
 
             if(!$validate->check($goup)) {
 

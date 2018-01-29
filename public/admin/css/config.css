@@ -82,7 +82,7 @@ input[name=SiteaLogo] {
     text-indent: 1.5rem;
 }
 
-label.col-sm-2.control-label {
+label.col-sm-2.control-label,label.col-sm-1.control-label {
     display: inline-block;
     font: 700 .8rem/1rem arial;
     color: #2a2a2a;
@@ -129,4 +129,82 @@ button.uploader-text {
 }
 .card-header-title a {
     color: #2a2a2a;
+}
+
+.article-add input[type=checkbox] ,.article-add input[type="radio"]{
+    display: none;
+}
+label.colourattrbox {
+    position: relative;
+    margin: 3px 0;
+    border-radius: .25rem;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dadfe6;
+    vertical-align: middle;
+}
+label.colourattrbox:hover ,label.colourattrradio:hover{
+    border-color: #40dc7e;
+    cursor: pointer;
+}
+input.typecheck:checked + label {
+    border-color: #40dc7e;
+}
+input.typecheck:checked + label::after {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    content: "";
+    width: 0.4rem;
+    height: .81rem;
+    border: solid #2a2a2a;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+div#edui1_toolbarbox {
+    background: #fff;
+}
+div#edui1_toolbarbox {
+    box-shadow: none !important;
+}
+.edui-default .edui-editor-toolbarboxouter {
+    background: transparent !important;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+    box-shadow: none;
+}
+.article-add .form-radio {
+    display: inline-block;
+    vertical-align: sub;
+    line-height: 28px;
+    margin: 6px 10px 0 0;
+}
+.form-radio>span {
+    padding-left: 8px;
+}
+label.colourattrradio {
+    position: relative;
+    margin: 3px 0;
+    background-color: transparent;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #dadfe6;
+    border-radius: 50%;
+    float: left;
+}
+input.typeradio:checked + label{
+    border-color: #40dc7e;
+}
+input.typeradio:checked + label::after{
+    content: "";
+    width: .57rem;
+    height: .57rem;
+    background-color: #40dc7e;
+    border-radius: 50%;
+    position: absolute;
+    top: .239rem;
+    left: .19rem;
 }

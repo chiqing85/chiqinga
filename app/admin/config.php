@@ -5,10 +5,10 @@ return [
     //| 后台模板全局替换
     //+-------------------------------------------------------------------------
     'view_replace_str'             => [
-        '__Public__'=> '/public',
-        '__Css__' => '/public/Admin/Css',
-        '__Img__' => '/Public/Admin/Images',
-        '__Js__' => '/public/Admin/Js'
+        '__Public__'=> '',
+        '__Css__' => '/admin/css',
+        '__Img__' => '/admin/images',
+        '__Js__' => '/admin/js'
     ],
 
     'session' => [

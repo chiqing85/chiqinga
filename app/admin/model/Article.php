@@ -14,7 +14,14 @@
 namespace app\Admin\model;
 
 
-class Article
+use think\Model;
+
+class Article extends Model
 {
+    public function Category()
+    {
+        return $this->hasOne('Category', 'id', 'cid');
+    }
+
 
 }

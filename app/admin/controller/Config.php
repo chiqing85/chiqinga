@@ -12,7 +12,7 @@
  * Time:22:43
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 use think\Validate;
 

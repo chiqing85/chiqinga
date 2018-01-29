@@ -13,8 +13,14 @@
 
 namespace App\Admin\validate;
 
+use think\Validate;
 
-class Rule
+
+class Rule extends Validate
 {
-
+    protected $rule = [
+        ['title', 'require','权限名称不能为空'],
+        ['name', 'require', '权限节点不能为空'],
+        ['__token__', 'require|max:50|token'],
+    ];
 }

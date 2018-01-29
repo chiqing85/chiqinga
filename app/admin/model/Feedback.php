@@ -36,7 +36,7 @@ class Feedback extends Model
 
         $feedback->name = session('user.name');
 
-        $feedback->item = session('user.user_pic')?session('user.user_pic'): '/public/Admin/Images/item/'. mt_rand(0,139). 'jpg';
+        $feedback->item = session('user.user_pic')?session('user.user_pic'): '/public/admin/images/item/'. mt_rand(0,139). 'jpg';
 
         if($feedback->save())
         {

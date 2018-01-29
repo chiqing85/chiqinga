@@ -12,7 +12,7 @@
  * Time:23:52
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 use think\Controller;
 use think\File;
 use think\Image;
@@ -25,11 +25,11 @@ class Upload extends Controller
         //设置常量 Docu
         defined('__Docu__') or define("__Docu__", realpath($_SERVER['DOCUMENT_ROOT']) . DS);
 
-        $file = request()->file('images');
+        $file = request()->file('image');
 
         if($file)
         {
-            $info = $file->validate(['size' => 2097152, 'ext' => 'jpeg,jpg,png,gif'])->move(__Docu__ . 'public/Uploads/');
+            $info = $file->validate(['size' => 2097152, 'ext' => 'jpeg,jpg,png,gif'])->move(__Docu__ . 'uploads/');
 
         }else{
 

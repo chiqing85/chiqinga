@@ -6,7 +6,7 @@
     </span>
 </div>
 <div class="card-content-body config-body">
-    <form class="form-horizontal" id="myForm" onsubmit="return false">
+    <form class="form-horizontal" id="myForm" onsubmit="return false" data-url="/admin/link/add">
         <div class="box-content">
             <div class="form-group">
                 <label class="col-sm-2 control-label">网站名称</label>
@@ -53,26 +53,6 @@
 </div>
 
 <script>
-    //提交友链
-    $('.submits').on('click', function () {
-
-        $.post("/Admin/link/add", $('#myForm').serialize(), function (data) {
-            if(data.status == 200) {
-
-                layer.msg(data.msg, {icon: 6, time:2000},function(index){
-
-                    layer.close(index);
-
-                    $('.card-header-title a').trigger('click');
-                });
-
-            }else{
-
-                layer.msg(data,{icon:5, time:1500});
-            };
-        });
-    });
-
     //返回
 
     $('.card-header-title a').on('click',function () {
@@ -80,16 +60,4 @@
             $('.article').html(data);
         });
     })
-    //    checked选择器
-    $('.cb-enable,.cb-disable').on('click', function() {
-        var show = $(this).parents('.show');
-        if($('.cb-enable',show).is('.selected')){
-            $('.cb-enable', show).removeClass('selected');
-            $(this).addClass('selected');
-        }else{
-            $('.cb-disable', show).removeClass('selected');
-            $(this).addClass('selected');
-
-        }
-    });
 </script>

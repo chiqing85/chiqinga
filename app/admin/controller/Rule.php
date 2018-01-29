@@ -14,14 +14,20 @@
 namespace app\admin\controller;
 
 
-class AuthRule extends Common
+use app\Admin\model\AuthRule;
+use think\Loader;
+
+class Rule extends Common
 {
+
     /**
     *　权限节点
      */
     public function index()
     {
+        $this->assign('list', le(db('AuthRule')->select()));
 
+        return view();
     }
 
      /**
@@ -29,6 +35,37 @@ class AuthRule extends Common
      */
      public function add()
      {
-         return 111;
+         if(request()->isPost())
+         {
+             $data = input('post.');
+
+             $validate = Loader::validate('Rule');
+
+             if(!$validate->check($data))
+             {
+                 return $validate->getError();
+             }
+
+             unset($data['__token__']);
+
+             $data['time'] = time();
+
+             if(db('AuthRule')->insert($data))
+             {
+                 return jsdata('200','添加节点成功!');
+
+             } else {
+
+                 return '节点添加失败—';
+             }
+         } else {
+
+             $data = le(db('AuthRule')->select());
+
+             $this->assign('list',$data );
+
+             return view();
+         }
+
      }
 }

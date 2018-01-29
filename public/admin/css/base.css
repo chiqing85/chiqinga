@@ -39,7 +39,7 @@ a, a:hover, a:focus {
     padding: 1.25rem;
     color: #2a2a2a;
     background: #fff;
-    z-index: 1;
+    z-index: 1000;
 }
 .navbar-header {
     float: left;
@@ -477,9 +477,12 @@ select.form-control.select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border: none;
 }
 .selectbox {
     position: relative;
+    border: 2px solid #40dc7e;
+    border-radius:4px;
 }
 .selectbox:before {
     position: absolute;

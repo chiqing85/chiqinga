@@ -64,3 +64,16 @@ function unlinlist($data, $pid = 0){
     };
     return $arr;
 }
+
+function le($data, $pid = 0, $level = 0, $html = ""){
+    $arr = array();
+    foreach ($data as $v) {
+        if($v['pid'] == $pid) {
+            $v['level'] = $level;
+            $v['html'] = str_repeat($html, $level);
+            $arr[] =$v;
+            $arr = array_merge($arr, le($data, $v['id'], $level + 1, $html  = '|—　'));
+        }
+    }
+    return $arr;
+};

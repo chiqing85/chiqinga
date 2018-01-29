@@ -12,16 +12,19 @@
  * Time:23:02
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 
 use think\Loader;
 
 class Category extends Common
 {
+    /**
+     * 文章分类
+     * */
     public function index()
     {
-        $data = Db('Category')->select();
+        $data = Db('category')->order('sort asc, id desc')->select();
 
         $volis = unlinlist($data);
 
@@ -30,7 +33,7 @@ class Category extends Common
         return view();
     }
 
-    /*
+    /**
      * 添加文章分类
      */
     public function add()
@@ -39,7 +42,7 @@ class Category extends Common
 
             $data = input('post.');
 
-            $validate = Loader::validate('Category');
+            $validate = Loader::validate('category');
 
             if(!$validate->check($data)) {
 
@@ -48,23 +51,45 @@ class Category extends Common
 
             unset($data['__token__']);
 
-            if(Db('Category')->insert($data)) {
+            $data['time'] = time();
+
+            if(Db('category')->insert($data)) {
 
                 return jsdata(200, '栏目添加成功……','');
 
             }else{
 
-                return '栏目添加失败！';
+                return '对不起，栏目添加失败！';
             }
 
 
         }else {
 
-            input('get.pid') == false?$pid = 0:$pid = input('get.pid');
+            input('id') == false ? $pid = 0 : $pid = input('id');
+
+            $this->assign('pid', $pid );
 
             return view();
         }
-
     }
+
+     /**
+     * 删除栏目
+     * */
+     public function del()
+     {
+         if( Db('category')->delete(input('id')))
+         {
+             return jsdata(200, '删除成功！');
+
+         }else{
+             return '删除失败！';
+         }
+     }
+
+     public function save()
+     {
+         return 1111;
+     }
 
 }

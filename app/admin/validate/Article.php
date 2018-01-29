@@ -14,7 +14,15 @@
 namespace App\Admin\validate;
 
 
-class Article
-{
+use think\Validate;
 
+class Article extends Validate
+{
+    protected $rule = [
+        ['title', 'require','标题不能为空'],
+        ['duction', 'require', '简介不能为空'],
+        ['content', 'require', '内容不能为空'],
+        ['author','require', '作者不能为空'],
+        ['__token__', 'require|max:50|token'],
+    ];
 }

@@ -12,7 +12,7 @@
  * Time:14:56
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 use think\Request;
 
@@ -59,7 +59,7 @@ class Login extends Common
                 return $validate->getError();
             };
 
-            return model('User')->login($data);
+            return model('user')->login($data);
 
         }else{
             return view();

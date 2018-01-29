@@ -1,10 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<link rel="stylesheet" href="__Css__/config.css">
+<div class="card-header-title">
+    文章管理 > <a data-url="/Admin/article">文章列表</a> >　编辑文章
+    <span class="pull-right">
+        <a data-url="/Admin/article"><i class="fa fa-list"></i> 返回</a>
+    </span>
+</div>
+<div class="card-content-body config-body article-add">
+    <form class="form-horizontal" id="myForm" onsubmit="return false" data-url="/Admin/article/save/">
+        <div class="box-content">
+            <div class="form-group">
+                <label class="col-sm-1 control-label">标题</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="title" placeholder="标题" value="{$data['title']}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">栏目</label>
+                <div class="col-sm-10">
+                    <div class="selectbox">
+                        <select name="cid" class="form-control select">
+                            {volist name="list" id="vo"}
+                            <option value="{$vo.id}" {eq name="$vo.pid" value="0"}disabled{/eq} {eq name="$vo.id" value="$data['cid']"}selected{/eq}>{$vo.html}{$vo.name}</option>
+                            {/volist}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-1 control-label">简介</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" style=" resize: none;" name="duction" placeholder="简介……" >{$data['duction']}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">缩略图</label>
+                <div class="col-sm-10" style="line-height: 1.4rem">
+                    <input class="form-control" name="thumb" style="text-indent: 1.35rem;" placeholder="缩略图" value="{$data['thumb']}">
+                    <i class="fa fa-picture-o imgFile-ico" style="padding-left: 1.2rem" onmouseover="mouseover(this)" onmouseout="layer.closeAll();">
+                        <div class="thumb">
+                            <i></i>
+                            <em></em>
+                        </div>
+                    </i>
+                    <span class="imgpicker">
+                        <span class="uploader-text" style="right: .9rem;">选择上传…</span>
+                        <input type="file" class="file-invisible file-article" name="image" accept="image/jpg,image/jpeg,image/png">
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">内容</label>
+                <div class="col-sm-10">
+                    <textarea id="editor" name="content" placeholder="内容">{$data.content}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">关键词</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="keywords" placeholder="多个关键词以 , 号隔开" value="{$data.keywords}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-1 control-label">作者</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="author" placeholder="作者" value="{$data.author}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-1 control-label">访问量</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="number" placeholder="访问量" value="{$data.number}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">来源</label>
+                <div class="col-sm-10">
+                    <div class="form-radio">
+                        <input type="radio" class="typeradio" id="tag00" name="tag"  value="0" {eq name="$data.tag" value="0"}checked{/eq}>
+                        <label for="tag00" class="colourattrradio"></label>
+                        <span>原创</span>
+                    </div>
+                    <div class="form-radio">
+                        <input type="radio" class="typeradio" id="tag01" name="tag" value="1" {eq name="$data.tag" value="1"}checked{/eq}>
+                        <label for="tag01" class="colourattrradio"></label>
+                        <span>转载</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-1 control-label">属性</label>
+                <div class="col-sm-10">
+                    <input type="checkbox" id="istop"  name="istop" value="1" class="typecheck" {eq name="$data.istop" value="1"}checked{/eq}>
+                    <label for="istop" class="colourattrbox"></label>
+                    &nbsp; <span style="display: inline-block; padding-top: .35rem;">置顶</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-1 control-label">是否显示</label>
+                <div class="col-sm-7 show" style="font-size: 0;">
+                    <label for="goods_category1" class="cb-enable {eq name="$data.isshow" value="0"}selected{/eq}">开</label>
+                    <label for="goods_category0" class="cb-disable {eq name="$data.isshow" value="1"}selected{/eq}">关</label>
+                    <input id="goods_category1" type="radio" name="isshow" {eq name="$data.isshow" value="0"}checked{/eq} value="0" >
+                    <input id="goods_category0" type="radio" name="isshow" {eq name="$data.isshow" value="1"}checked{/eq} value="1" >
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-1 control-label"></label>
+            <div class="col-sm-10">
+                {:token()}
+                <input type="hidden" name="id" value="{$data.id}">
+                <button class="btn btn-info pull-left submits">提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+
+    var opt = {
+        'toolbars' : [
+            [
+                'source', '|', 'bold', 'italic', 'underline', 'strikethrough', '|', 'paragraph', 'fontfamily', 'fontsize', 'insertcode', 'forecolor', '|', 'indent','justifyleft', 'justifyright',
+                'justifycenter', 'justifyjustify','insertorderedlist', 'insertunorderedlist', '|', 'horizontal', 'inserttable', 'link', 'fullscreen', 'insertimage', 'removeformat', 'preview'
+            ]
+        ],
+        initialFrameWidth: 880,
+        initialFrameHeight : 500,
+        focus : false,
+        wordCount:false,
+        elementPathEnabled :false
+    };
+    var editor = new UE.ui.Editor(opt);
+    editor.render('editor');
+
+
+</script>

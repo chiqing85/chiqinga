@@ -14,7 +14,9 @@
 namespace app\Admin\model;
 
 
-class AuthRule
+use think\Model;
+
+class AuthRule extends Model
 {
 
 }

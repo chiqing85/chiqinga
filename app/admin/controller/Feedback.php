@@ -12,7 +12,7 @@
  * Time:23:10
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 
 use think\Validate;
@@ -55,6 +55,6 @@ class Feedback extends Common
 
         unset($data['__token__']);
 
-        return model('Feedback')->add($data);
+        return model('feedback')->add($data);
     }
 }

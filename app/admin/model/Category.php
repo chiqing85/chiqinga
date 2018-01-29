@@ -14,7 +14,9 @@
 namespace app\Admin\model;
 
 
-class Category
+use think\Model;
+
+class Category extends Model
 {
 
 }

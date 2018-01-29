@@ -12,7 +12,7 @@
  * Time:14:56
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 use think\Cache;
 use think\Db;
@@ -26,8 +26,22 @@ class Index extends Common
 
         $this->assign('affiche', $data);
 
+
         $this->home();
 
+        $today_start=mktime(0,0,0,date('m'),date('d'),date('Y'));
+
+        //今日新增文章
+        $this->assign('articled', db('article')->where('time', 'gt', $today_start)->count());
+
+        //总文章
+        $this->assign('article', db('article')->count());
+
+        //今日新增评论
+        $this->assign('feedback_d', db('feedback')->where('time', 'gt', $today_start)->count());
+
+        //评论总数
+        $this->assign('feedback', db('feedback')->count());
 
 
         if(request()->isPost()){

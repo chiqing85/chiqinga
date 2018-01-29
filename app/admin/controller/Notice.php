@@ -12,7 +12,7 @@
  * Time:10:45
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 
 class Notice

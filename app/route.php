@@ -25,11 +25,21 @@ return [
     ],
 
 
-    'login' => 'Admin/login/index',
-    'out' => 'Admin/login/out',
+    'login' => 'admin/login/index',
+    'out' => 'admin/login/out',
 
-    'Admin/link/del/:id' => 'Admin/link/del',
+    'admin/link/del/:id' => 'admin/link/del',
 
-    'Admin/feedback/:md_id' => 'Admin/feedback/index',
+    'admin/category/del/:id' =>'admin/category/del',
 
+    'admin/article/del/:id' => 'admin/article/del',
+
+    'admin/category/add/:id' => 'admin/category/add',
+
+    'admin/category/add/' => 'admin/category/add',
+
+    'admin/feedback/:md_id' => 'admin/feedback/index',
+    'admin/article/preview/:id' => 'admin/article/preview',
+    'admin/article/save/:id' => 'admin/article/save',
+    'admin/article/save/' => 'admin/article/save',
 ];

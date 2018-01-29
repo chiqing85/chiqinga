@@ -46,7 +46,7 @@ class Build extends Command
             $build = include APP_PATH . 'build.php';
         }
         if (empty($build)) {
-            $output->writeln("Build Config Is Empty");
+            $output->writeln("Build config Is Empty");
             return;
         }
         \think\Build::run($build);

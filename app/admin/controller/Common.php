@@ -11,7 +11,7 @@
  * Author: chiqing_85
  * Time:14:56
  */
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 use think\Controller;
 

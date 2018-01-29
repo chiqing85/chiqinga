@@ -37,10 +37,11 @@ class Notice
 
                 $old_md5 = $md5;
             }
-            ob_flush();//刷新
-            flush();//刷新
+
+            flush();    //刷新
+            ob_flush(); //刷新
             sleep(3);
 
-        }
+        };
     }
 }

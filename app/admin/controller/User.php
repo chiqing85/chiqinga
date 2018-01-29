@@ -12,7 +12,7 @@
  * Time:16:31
  */
 
-namespace app\Admin\controller;
+namespace app\admin\controller;
 
 
 
@@ -30,7 +30,7 @@ class User extends Common
         $us = [];
         foreach ($user as $key => $v) {
 
-            if($v['user_pic'] == false) $v['user_pic'] = '/Public/Admin/images/user.png';
+            if($v['user_pic'] == false) $v['user_pic'] = '/Public/admin/images/user.png';
 
             $us[] = $v->getAuthGroupAccess($v['id']);
 
