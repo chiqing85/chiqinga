@@ -17,18 +17,23 @@ namespace app\admin\controller;
 use app\admin\model\User as userser;
 use think\File;
 use think\Image;
-
-
+use think\Loader;
 
 
 class User extends Common
 {
+    private $cModel;   //当前控制器关联模型
+
+    public function _initialize()
+    {
+        parent::_initialize();
+        $this->cModel = new userser;   //别名：避免与控制名冲突
+    }
 
     public function index()
     {
-        $userser = new userser;
 
-        $user = $userser->field('user_password', true)->paginate(12);
+        $user = $this->cModel->field('user_password', true)->paginate(12);
 
 
         $this->assign('list', $user);
@@ -46,9 +51,47 @@ class User extends Common
 
         if(request()->isPost())
         {
-            return 111111;
+           $data = input('post.');
 
-        }else{
+           $validata = Loader::validate('User');
+
+           if(!$validata->check($data))
+           {
+               return $validata->getError();
+           }
+
+           $data['reg_time'] = time();
+
+           $data['login_ip'] = request()->ip();
+
+            //生成随机数
+            $rand = mt_rand(100000,999999);
+
+            $data['user_password'] = md5(input('user_password')) . $rand;
+
+            unset($data['__token__']);
+
+            $data['token'] = $rand;
+
+            $user = $this->cModel;
+
+            $user->data($data, true);
+
+            if($user->allowField(true)->save())
+            {
+                $user->AuthGroup()->save($data['group_id']);
+
+                return jsdata(200,'添加用户成功……','');
+
+            } else {
+
+                return '用户添加失败！';
+            }
+
+
+
+        } else{
+
 
         //查询角色列表
 
