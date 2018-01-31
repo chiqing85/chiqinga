@@ -48,6 +48,9 @@ class Common extends Controller
 
             //备案号
             if($v['key'] == 'RecordNo') $RecordNo = $v['v'];
+
+            //网站logo
+            if($v['key'] == 'SiteaLogo') $SiteaLogo = $v['v'];
         }
         $this->assign('SiteaName', $SiteaName);
 
@@ -56,6 +59,8 @@ class Common extends Controller
         $this->assign('MetaCopyright', $MetaCopyright);
 
         $this->assign('RecordNo', $RecordNo);
+
+        $this->assign('SiteaLogo', $SiteaLogo);
     }
 
 

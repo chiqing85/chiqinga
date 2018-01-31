@@ -14,29 +14,24 @@
 
 namespace app\admin\controller;
 
+use app\admin\model\User as userser;
+use think\File;
+use think\Image;
+
 
 
 
 class User extends Common
 {
+
     public function index()
     {
-        // 管理员列表
+        $userser = new userser;
 
-        $user = new \app\Admin\model\User();
+        $user = $userser->field('user_password', true)->paginate(12);
 
-        $user = $user->field('id,user,user_pic')->paginate(12);
 
-        $us = [];
-        foreach ($user as $key => $v) {
-
-            if($v['user_pic'] == false) $v['user_pic'] = '/Public/admin/images/user.png';
-
-            $us[] = $v->getAuthGroupAccess($v['id']);
-
-        };
-
-        $this->assign('list', $us);
+        $this->assign('list', $user);
 
         return view();
     }
@@ -63,6 +58,27 @@ class User extends Common
 
         return view();
 
+        }
+    }
+
+    //用户头像
+    public function upload()
+    {
+        $file = request()->file('images');
+
+        if($file)
+        {
+            $image = \think\Image::open($file);
+
+            $thume = '/uploads/item'. DS .md5(microtime(true)) .'.jpg';
+
+            $image->thumb(150, 150)->save( realpath($_SERVER['DOCUMENT_ROOT']) . $thume);
+
+            return $thume;
+
+        }else{
+
+            return '文件上传失败！';
         }
     }
 }
