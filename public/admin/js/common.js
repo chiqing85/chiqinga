@@ -17,7 +17,19 @@ $('.navigation').live('click', function() {
     };
 });
 
+/*用户头像*/
 
+$(document).on('click','.file-user', function () {
+    layer.open({
+        type: 2,
+        title: '<i class="fa fa-crop"></i> 用户头像',
+        area: ['880px', '650px'],
+        fixed: false, //不固定
+        maxmin: true,
+        content: '/static/cropper/index.html'
+    });
+    return false;
+})
 //左侧菜单栏
 $.post('/admin/index/menu',function(data){
 
@@ -204,7 +216,7 @@ $(document).on('change','input.file-config',function () {
     formData.append('images', $(this)[0].files[0]);
 
     $.ajax({
-        url: '/admin/Upload',
+        url: '/admin/upload',
         type: 'POST',
         data: formData,
         // 告诉jQuery不要去处理发送的数据
@@ -213,15 +225,12 @@ $(document).on('change','input.file-config',function () {
         contentType : false,
         success: function (data) {
 
-            console.log(data);
+            $('input.file-img').val(data);
 
         }
     });
 
 });
-
-
-
 
 /**************
 *
@@ -409,7 +418,7 @@ $(document).on('change', '.file-article', function() {
         layer.full(
             layer.open({
                 type: 1,
-                title: '<i class="fa fa-eye-slash"></i> 预览',
+                title: '<i class="fa fa-eye"></i> 预览',
                 skin: 'layui-layer-rim', //加上边框
                 // area: ['420px', '240px'], //宽高
                 content: data,
@@ -506,7 +515,7 @@ $(document).on('click', '.submits', function(){
 //缩略图
 
 function mouseover(e) {
-var img = "<img src='" + $('input[name=thumb]').val() + "'>";
+var img = "<img src='" + $('input.file-img').val() + "'>";
     layer.tips(img,e,{tips: [1, '#fff']});
 }
 

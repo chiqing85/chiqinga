@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\index.html";i:1517297735;}*/ ?>
 <link rel="stylesheet" href="__Css__/link.css">
 <div class="card-header-title">
     权限管理 > 管理员列表
@@ -18,24 +19,24 @@
                             <td><b>状态</b></td>
                             <td><b>操作</b></td>
                         </tr>
-                        {volist name="list" id="vo" key="k"}
+                        <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $k = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?>
                         <tr>
 
-                            <td class="id">{$vo.id}</td>
-                            <td class="user">{$vo.user}</td>
-                            <td class="user_pic"><img src="{$vo.user_pic}" alt="{$vo.user}" class="user_pic"></td>
-                           <td>{$vo['AuthGroup'][0]['title']}</td>
-                            <td>{$vo.reg_time|date='Y-m-d H:i:s',###}</td>
+                            <td class="id"><?php echo $vo['id']; ?></td>
+                            <td class="user"><?php echo $vo['user']; ?></td>
+                            <td class="user_pic"><img src="<?php echo $vo['user_pic']; ?>" alt="<?php echo $vo['user']; ?>" class="user_pic"></td>
+                           <td><?php echo $vo['AuthGroup'][0]['title']; ?></td>
+                            <td><?php echo date('Y-m-d H:i:s',$vo['reg_time']); ?></td>
                             <td class="status">
-                                {eq name="$vo['auth_group'][0]['status']" value="0"}
+                                <?php if($vo['auth_group'][0]['status'] == '0'): ?>
                                 <i class="fa fa-check-circle"></i>
-                                {else\}
+                                <?php else: ?>
                                 <i class="fa fa-times-circle"></i>
-                                {/eq}
+                                <?php endif; ?>
                                 <!--<div class="switch">
-                                    <input type="checkbox" id="user_status" class="status" {if condition="$vo['auth_group'][0]['status'] eq 1"}checked="checked"{/if} >
+                                    <input type="checkbox" id="user_status" class="status" <?php if($vo['auth_group'][0]['status'] == 1): ?>checked="checked"<?php endif; ?> >
                                     <label for="user_status" class="slider"></label>
-                                    <p>{eq name="$vo['auth_group'][0]['status']" value="1"}关闭{else\}开启{/eq}</p>
+                                    <p><?php if($vo['auth_group'][0]['status'] == '1'): ?>关闭<?php else: ?>开启<?php endif; ?></p>
                                 </div>-->
 
                             </td>
@@ -43,13 +44,13 @@
                                 <a class="action-edit">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                <a class="action-delete" data-id="{$vo.id}">
+                                <a class="action-delete" data-id="<?php echo $vo['id']; ?>">
                                     <i class="fa fa-trash-o"></i>
                                 </a>
                             </td>
 
                         </tr>
-                        {/volist}
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
 
                     </table>
                 </form>

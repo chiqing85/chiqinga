@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\config\index.html";i:1517293719;}*/ ?>
 <link rel="stylesheet" href="__Css__/config.css">
 <div class="card-header-title">
         系统 > 网站信息
@@ -5,13 +6,13 @@
     </div>
     <div class="card-content-body config-body">
         <form class="form-horizontal" id="myForm" onsubmit="return false" data-url="/Admin/config/save">
-            {foreach $config as $vo}
+            <?php foreach($config as $vo): ?>
             <dl class="row">
-                <dd class="odd">{$vo.desribes}</dd>
+                <dd class="odd"><?php echo $vo['desribes']; ?></dd>
                 <dd class="opt">
-                    {if condition="$vo.key eq 'SiteaLogo'"}
+                    <?php if($vo['key'] == 'SiteaLogo'): ?>
                     <div class="col-sm-12 imgFile" style="padding-left: 0; margin-bottom: 4px;">
-                        <input class="form-control file-img" name="{$vo.key}" placeholder="网站Logo" value="{$vo.v}">
+                        <input class="form-control file-img" name="<?php echo $vo['key']; ?>" placeholder="网站Logo" value="<?php echo $vo['v']; ?>">
                         <i class="fa fa-picture-o imgFile-ico" style="padding-left: 5px;" onmouseover="mouseover(this)" onmouseout="layer.closeAll();">
                             <div class="thumb">
                                 <img >
@@ -25,20 +26,20 @@
                         </span>
                     </div>
                     <p class="notic">网站Logo，最佳尺寸200*90</p>
-                    {elseif condition="$vo.key eq 'Affiche'"}
-                    <textarea name="{$vo.key}" id="" cols="30" rows="5" class="form-control" placeholder="{$vo.v}"></textarea>
-                    <p class="notic">{$vo.k}</p>
-                    {else /}
-                    <input type="text" class="form-control" placeholder="{$vo.v}" name="{$vo.key}">
-                    <p class="notic">{$vo.k}</p>
-                    {/if}
+                    <?php elseif($vo['key'] == 'Affiche'): ?>
+                    <textarea name="<?php echo $vo['key']; ?>" id="" cols="30" rows="5" class="form-control" placeholder="<?php echo $vo['v']; ?>"></textarea>
+                    <p class="notic"><?php echo $vo['k']; ?></p>
+                    <?php else: ?>
+                    <input type="text" class="form-control" placeholder="<?php echo $vo['v']; ?>" name="<?php echo $vo['key']; ?>">
+                    <p class="notic"><?php echo $vo['k']; ?></p>
+                    <?php endif; ?>
                 </dd>
             </dl>
-            {/foreach}
+            <?php endforeach; ?>
             <dl class="row">
                 <dd class="odd"></dd>
                 <dd class="opt">
-                    {:token()}
+                    <?php echo token(); ?>
                     <button class="btn btn-info submits">确认提交</button>
                 </dd>
             </dl>

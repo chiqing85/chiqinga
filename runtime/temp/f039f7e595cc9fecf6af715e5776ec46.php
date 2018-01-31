@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\article\add.html";i:1517293090;}*/ ?>
 <link rel="stylesheet" href="__Css__/config.css">
 <div class="card-header-title">
     文章管理 > <a data-url="/Admin/article">文章列表</a> >　添加文章
@@ -19,9 +20,9 @@
                 <div class="col-sm-10">
                     <div class="selectbox">
                         <select name="cid" class="form-control select">
-                            {volist name="list" id="vo"}
-                            <option value="{$vo.id}" {eq name="$vo.pid" value="0"}disabled{/eq}>{$vo.html}{$vo.name}</option>
-                            {/volist}
+                            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $vo['id']; ?>" <?php if($vo['pid'] == '0'): ?>disabled<?php endif; ?>><?php echo $vo['html']; ?><?php echo $vo['name']; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </div>
                 </div>
@@ -65,7 +66,7 @@
             <div class="form-group">
                 <label class="col-sm-1 control-label">作者</label>
                 <div class="col-sm-10">
-                    <input class="form-control" name="author" placeholder="作者" value="{$Think.session.user.name}">
+                    <input class="form-control" name="author" placeholder="作者" value="<?php echo \think\Session::get('user.name'); ?>">
                 </div>
             </div>
 
@@ -113,7 +114,7 @@
         <div class="form-group">
             <label class="col-sm-1 control-label"></label>
             <div class="col-sm-10">
-                {:token()}
+                <?php echo token(); ?>
                 <button class="btn btn-info pull-left submits">提交</button>
             </div>
         </div>

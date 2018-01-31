@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\add.html";i:1517364860;}*/ ?>
 <link rel="stylesheet" href="__Css__/config.css">
 <div class="card-header-title">
     权限管理 > <a data-url="/Admin/User">管理员列表</a> >　添加用户
@@ -50,9 +51,9 @@
                 <div class="col-sm-7">
                    <div class="selectbox">
                        <select name="role_id" class="form-control select">
-                           {volist name="list" id="vo"}
-                           <option value="{$vo.id}">{$vo.title}</option>
-                           {/volist}
+                           <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                           <option value="<?php echo $vo['id']; ?>"><?php echo $vo['title']; ?></option>
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                        </select>
                    </div>
                 </div>
@@ -61,7 +62,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label"></label>
             <div class="col-sm-7">
-                {:token()}
+                <?php echo token(); ?>
                 <button class="btn btn-info pull-left submits">提交</button>
             </div>
         </div>
