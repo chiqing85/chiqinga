@@ -17,8 +17,17 @@ namespace app\admin\controller;
 
 use think\Loader;
 
-class Goup extends Common
+class Group extends Common
 {
+    private $Group;
+
+    public function _initialize()
+    {
+        parent::_initialize();
+
+        $this->Group = model('AuthGroup');
+    }
+
     public function index()
     {
         // 角色列表
@@ -39,7 +48,7 @@ class Goup extends Common
         {
             $goup = input('post.');
 
-            $validate = Loader::validate('goup');
+            $validate = Loader::validate('group');
 
             if(!$validate->check($goup)) {
 
@@ -63,6 +72,15 @@ class Goup extends Common
 
             return view();
         }
+    }
+
+    /**
+     *删除角色
+     */
+
+    public function del()
+    {
+        return input('id');
     }
 
 
