@@ -42,4 +42,13 @@ return [
     'admin/article/preview/:id' => 'admin/article/preview',
     'admin/article/save/:id' => 'admin/article/save',
     'admin/article/save/' => 'admin/article/save',
+
+    'admin/user/del/:id' => 'admin/user/del/',
+
+    'admin/group/del/:id' => 'admin/group/del',
+
+    'admin/group/save/:id' => 'admin/group/save',
+    'admin/group/save' => 'admin/group/save',
+
+
 ];

@@ -32,7 +32,7 @@ class Group extends Common
     {
         // 角色列表
 
-        $list = model('AuthGroup')->field('rules', true)->paginate(12);
+        $list = $this->Group->field('rules', true)->paginate(12);
 
 
         $this->assign('list', $list);
@@ -59,7 +59,7 @@ class Group extends Common
             unset($goup['__token__']);
 
 
-            if(Db('AuthGroup')->insert($goup)) {
+            if($this->Group->insert($goup)) {
 
                 return jsdata(200, '角色添加成功……','');
 
@@ -74,13 +74,83 @@ class Group extends Common
         }
     }
 
+     /**
+     * 分配权限
+     */
+     public function save()
+     {
+         if(request()->isPost())
+         {
+            $data = input('post.');
+
+            $validate = Loader::validate('group');
+
+            if(!$validate->check($data))
+            {
+                return $validate->getError();
+            };
+
+            if($rules = input('rules/a'))  $data['rules'] =  implode(',', $rules);
+
+            unset($data['__token__']);
+
+             if($this->Group->update($data))
+             {
+                 return jsdata('200', '权限分配成功！', '');
+
+             } else {
+
+                 return '权限分配失败！';
+             }
+
+         } else {
+
+             $Groups = $this->Group->get(input('id'));
+
+            $this->assign('group', $Groups);
+
+             $rule = model('AuthRule');  //rule模块
+
+             $rules = $rule->treeList();    //权限节点列表
+
+             $rulesArr = explode(',',  $Groups->rules);     //所拥有的权限节点
+
+             foreach ($rules as $k => $v){
+
+                 if(in_array($v['id'], $rulesArr)){
+
+                     $rules[$k]['ischeck'] = 1;
+
+                 }else {
+
+                     $rules[$k]['ischeck'] = 0;
+                 }
+             }
+
+             $this->assign('rules', $rules);
+
+             return view();
+         }
+
+     }
+
     /**
      *删除角色
      */
 
     public function del()
     {
-        return input('id');
+        $groups = model('AuthGroup')::get(input('id'),'access');
+
+        if($groups->together('access')->delete())
+        {
+            return jsdata('200','删除角色成功……','');
+
+        } else {
+
+            return '角色删除失败！';
+        }
+
     }
 
 

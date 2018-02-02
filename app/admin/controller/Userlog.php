@@ -18,7 +18,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Db;
 
-class Userlog extends Controller
+class Userlog extends Common
 {
     public function index()
     {

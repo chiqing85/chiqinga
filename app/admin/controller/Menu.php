@@ -8,21 +8,16 @@
  * 本程序采用thinkphp v5.0开发
  * ============================================================================
  * Author:  chiqing_85
- * Time:23:44
+ * Time:18:57
  */
 
-namespace app\Admin\model;
+namespace app\admin\controller;
 
 
-use think\Model;
-
-class AuthRule extends Model
+class Menu
 {
-
-    public function treeList()
+    public function index()
     {
-        $rule = $this->order('id')->select();
-
-        return le($rule);
+        return json_encode(config('menu')); //后台菜单
     }
 }

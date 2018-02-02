@@ -1,11 +1,6 @@
-/*************
- *
- *
+/*****
  * base
- *
- *
  * * * * * */
-
 // 展示切换
 
 $('.navigation').live('click', function() {
@@ -23,15 +18,14 @@ $(document).on('click','.file-user', function () {
     layer.open({
         type: 2,
         title: '<i class="fa fa-crop"></i> 用户头像',
-        area: ['880px', '650px'],
-        fixed: false, //不固定
-        maxmin: true,
+        area: ['870px', '630px'],
+        fixed: true, //不固定
         content: '/static/cropper/index.html'
     });
     return false;
 })
 //左侧菜单栏
-$.post('/admin/index/menu',function(data){
+$.post('/admin/menu/index',function(data){
 
     data = JSON.parse(data);
 
@@ -105,6 +99,12 @@ $('.nav-item,ul.child_menu>li').live('click', function () {
             if(data.status == 200)
             {
                 layer.msg(data.msg,{icon: 6, time:2000});
+
+                return false;
+
+            } else if (data['data'] == 203)
+            {
+                layer.msg(data.msg,{icon:5, time:2000});
 
                 return false;
             }
@@ -256,7 +256,12 @@ $(document).on('click', '.save', function(){
                 })
             });
 
-        }else{
+        } else if (data['data'] == 203)
+        {
+            layer.msg(data.msg,{icon:5, time:2000});
+
+            return false;
+        } else {
 
             layer.msg(data, {icon: 5, time: 1500});
         }
@@ -361,7 +366,7 @@ $(document).on('click', '.ins',function () {
 /*************
  *
  *
- * goup
+ * group
  *
  *
  * * * * * */
@@ -369,6 +374,13 @@ $(document).on('click', '.ins',function () {
 $(document).on('click', '.action-add, .action-add-c', function(){
 
     $.get($(this).attr('data-url'),function (data) {
+
+        if (data['data'] == 203)
+        {
+            layer.msg(data.msg,{icon:5, time:2000});
+
+            return false;
+        }
 
         $('.article').html(data);
 
@@ -415,6 +427,14 @@ $(document).on('change', '.file-article', function() {
  $(document).on('click', '.action-other', function () {
 
     $.post($(this).attr('data-url'), function (data) {
+
+        if (data['data'] == 203)
+        {
+            layer.msg(data.msg,{icon:5, time:2000});
+
+            return false;
+
+        }
         layer.full(
             layer.open({
                 type: 1,
@@ -433,6 +453,13 @@ $(document).on('change', '.file-article', function() {
 
  $(document).on('click', '.action-edit-save', function() {
      $.get($(this).attr('data-url'), function(data) {
+
+         if (data['data'] == 203)
+         {
+             layer.msg(data.msg,{icon:5, time:2000});
+
+             return false;
+         }
 
          $('.article').html(data);
      })
@@ -505,7 +532,12 @@ $(document).on('click', '.submits', function(){
 
             });
 
-        }else{
+        }else if (data['data'] == 203)
+        {
+            layer.msg(data.msg,{icon:5, time:2000});
+
+            return false;
+        } else{
 
             layer.msg(data,{icon:5, time:1500});
         };

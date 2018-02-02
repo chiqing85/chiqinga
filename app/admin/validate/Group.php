@@ -16,7 +16,7 @@ namespace App\Admin\validate;
 
 use think\Validate;
 
-class Goup extends Validate
+class Group extends Validate
 {
     protected $rule = [
             ['title','require', '角色名称不能为空！'],

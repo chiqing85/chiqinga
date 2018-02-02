@@ -26,7 +26,7 @@ return array(
     ]],
     'Auth' => ['name' => '权限管理', 'ico' => 'fa-table', 'data-url' => 'javascript:;', 'child' =>[
         ['name' => '管理员列表', 'data-url' => '/admin/user'],
-        ['name' => '角色管理', 'data-url' => '/admin/goup'],
+        ['name' => '角色管理', 'data-url' => '/admin/group'],
         ['name' => '权限节点', 'data-url' => '/admin/rule'],
     ]],
     'Article' => ['name' => '文章管理', 'ico' => 'fa-file-text', 'data-url' => 'javascript:;', 'child' => [
@@ -40,7 +40,7 @@ return array(
         ['name' => '图片管理', 'data-url' => ''],
         ['name' => '图片回收站', 'data-url' => ''],
     ]],*/
-    'Envelope' => ['name' => '评论管理', 'ico' => 'fa-sitemap', 'data-url' => 'javascript:;', 'child' => [
+    'Envelope' => ['name' => '评论管理', 'ico' => 'fa-comments', 'data-url' => 'javascript:;', 'child' => [
         ['name' => '评论列表', 'data-url' => '/admin/feedback/1'],
         ['name' => '意见反馈', 'data-url' => '/admin/feedback/0'],
     ]],

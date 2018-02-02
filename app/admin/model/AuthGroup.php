@@ -19,5 +19,8 @@ use think\Model;
 
 class AuthGroup extends Model
 {
-
+    public function access ()
+    {
+        return $this->hasMany('AuthGroupAccess','group_id');
+    }
 }

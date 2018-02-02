@@ -48,8 +48,7 @@
                     <div class="selectbox">
                         <select name="group_id" class="form-control select">
                             {volist name="list" id="vo"}
-                            <option value="{$vo.id}" {eq name="$user['AuthGroup'][0]['id']" value="$vo.id" }selected{
-                            /eq}>{$vo.title}</option>
+                            <option value="{$vo.id}" {eq name="($user['AuthGroup'][0]['id'] ?? '')" value="$vo.id" }selected{/eq}>{$vo.title}</option>
                             {/volist}
                         </select>
                     </div>

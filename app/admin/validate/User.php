@@ -13,7 +13,6 @@
 
 namespace App\Admin\validate;
 
-
 use think\Validate;
 
 class User extends Validate
@@ -22,5 +21,10 @@ class User extends Validate
         ['user', 'require','用户名不能为空'],
         ['user_password', 'require', '密码不能为空'],
         ['__token__', 'require|max:50|token'],
+    ];
+
+    //更新场景 只须验证用户名和令牌
+    protected $scene = [
+        'edit' => ['user',  '__token__'],
     ];
 }

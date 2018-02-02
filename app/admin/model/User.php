@@ -22,6 +22,10 @@ use think\Session;
 
 class User extends Model
 {
+    protected $autoWriteTimestamp = true;
+    //创建数据时间戳
+    protected $createTime = 'reg_time';
+
     public  function  login($data)
     {
        $user = $data['user'];

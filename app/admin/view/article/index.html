@@ -95,7 +95,13 @@
                     })
                 });
 
-            }else{
+            }else if (data['data'] == 203)
+            {
+                layer.msg(data.msg,{icon:5, time:2000});
+
+                return false;
+
+            } else {
 
                 layer.msg(data,{icon:5, time:1500});
 

@@ -13,6 +13,7 @@
  */
 namespace app\admin\controller;
 
+use auth\Auth;
 use think\Controller;
 
 class Common extends Controller
@@ -28,7 +29,30 @@ class Common extends Controller
 
         };
 
+        $auth = new Auth();
+
+        $uid = session('user.id');
+
+        $module = request()->module();  //模块名
+
+        $controller = request()->controller();  //控制器名
+
+        $action = request()->action(); //方法名
+
         $this->base();
+
+       /* if($uid == 1) {
+
+            return true;
+
+        } else*/
+
+        if(!$auth->check( $module . '/' .$controller .'/' .  $action ,$uid))
+        {
+
+            $this->error('抱歉，您没有该操作权限……', '','203','3');
+
+        }
     }
 
     //公共变量

@@ -24,84 +24,166 @@ class User extends Common
 {
     private $cModel;   //当前控制器关联模型
 
+    private $list;
+
     public function _initialize()
     {
         parent::_initialize();
+
         $this->cModel = new userser;   //别名：避免与控制名冲突
+
+        //查询角色列表
+
+        $this->list = model('AuthGroup')->field('id,title')->select();
     }
 
+     /**
+     * 管理员列表
+     * */
     public function index()
     {
-
-        $user = $this->cModel->field('user_password', true)->paginate(12);
-
+        $user = $this->cModel->field('user_password', true)->order('id')->paginate(12);
 
         $this->assign('list', $user);
 
         return view();
     }
 
-    /*****
-     *
-     * 新增管理员
-     *
-     * ******/
-    public function add()
-    {
+     /**
+    * 编辑管理员
+    */
 
-        if(request()->isPost())
+     public function save()
+     {
+        if(input('id'))
         {
-           $data = input('post.');
 
-           $validata = Loader::validate('User');
-
-           if(!$validata->check($data))
-           {
-               return $validata->getError();
-           }
-
-           $data['reg_time'] = time();
-
-           $data['login_ip'] = request()->ip();
-
-            //生成随机数
-            $rand = mt_rand(100000,999999);
-
-            $data['user_password'] = md5(input('user_password')) . $rand;
-
-            unset($data['__token__']);
-
-            $data['token'] = $rand;
+            $this->assign('list', $this->list);
 
             $user = $this->cModel;
 
-            $user->data($data, true);
+            $user = $user::get(input('id'));
 
-            if($user->allowField(true)->save())
+            $this->assign('user', $user);
+
+            return view();
+        }
+     }
+
+     /**
+     * 新增管理员
+     * */
+    public function add()
+    {
+        if(request()->isPost())
+        {
+           //模型
+           $user = $this->cModel;
+
+           $data = input('post.');
+
+           $scene = empty($data['id']) ? 0 : 1; //场景验证 0 表示插入 1 表示更新
+
+            $validata = Loader::validate('User');
+
+            if($scene == false)
             {
-                $user->AuthGroup()->save($data['group_id']);
+                 /**
+                 * 插入
+                 */
 
-                return jsdata(200,'添加用户成功……','');
+                if(!$validata->check($data))
+                {
+                    return $validata->getError();
+                }
+
+                $data['login_ip'] = request()->ip(0,true);
+
+                //生成随机数
+                $rand = mt_rand(100000,999999);
+
+                $data['user_password'] = md5(input('user_password')) . $rand;
+
+                unset($data['__token__']);
+
+                $data['token'] = $rand;
+
+                $user->data($data, true);
+
+                if($user->allowField(true)->save() && $user->AuthGroup()->save($data['group_id']))
+                {
+
+                    return jsdata(200,'添加用户成功……','');
+
+                } else {
+
+                    return '用户添加失败！';
+                }
 
             } else {
 
-                return '用户添加失败！';
+                 /**
+                 * 更新
+                 */
+
+                if(!$validata->scene('edit')->check($data))
+                {
+                    return $validata->getError();
+                }
+
+               if($data['user_pic'] !== $user->get($data['id'])->user_pic)
+               {
+                   @unlink('.'.$user->get($data['id'])->user_pic);   //如果用户头像改变，删除原头像图片
+               }
+
+                $user->data($data, true);
+
+                $user->AuthGroup()->detach();
+
+                if( $user->allowField(true)->save($data, $data['id']) || $user->AuthGroup()->attach($data['group_id']))
+                {
+                    return jsdata('200', '用户更新成功！','');
+
+                }else {
+
+                    return '用户更新数据失败!';
+                }
+
             }
-
-
 
         } else{
 
+            $this->assign('list', $this->list);
 
-        //查询角色列表
-
-        $list = model('AuthGroup')->field('id,title')->select();
-
-        $this->assign('list', $list);
-
-        return view();
+            return view();
 
         }
+    }
+
+    //删除用户
+    public function del()
+    {
+        $user = $this->cModel;
+
+        $users = $user::get(input('id'));
+
+        if($users->user_pic) {
+
+            $pic = unlink('.'.$users->user_pic);
+
+        } else {
+
+            $pic = true;
+        }
+
+        if($users->AuthGroup()->detach() == null && $users->delete() && $pic )
+        {
+            return jsdata('200','用户删除成功……','');
+
+        } else {
+
+            return '用户删除失败……';
+        };
     }
 
     //用户头像
@@ -121,7 +203,7 @@ class User extends Common
 
         }else{
 
-            return '文件上传失败！';
+            return '头像上传失败！';
         }
     }
 }

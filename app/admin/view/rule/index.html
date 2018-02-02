@@ -38,7 +38,12 @@
                                 <td>{$vo.time|date='Y-m-d H:i:s',###}</td>
                                 <td>{$vo.sort}</td>
                                 <td>
-
+                                    <a class="action-edit action-edit-save" data-url="/admin/rule/save/id/{$vo.id}" title="编辑">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a class="action-delete" data-id="{$vo.id}" title="删除">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
                                 </td>
                             </tr>
                         {/volist}
@@ -49,3 +54,36 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('.action-delete').on('click', function(){
+
+        $.post('/admin/rule/del/id/' + $(this).attr('data-id'),function(data){
+
+            if(data.status == 200) {
+
+                layer.msg(data.msg, {icon: 6, time:2000},function(index){
+
+                    layer.close(index);
+
+                    $.post('/admin/rule/',function (data) {
+
+                        $('.article').html(data);
+
+                    })
+                });
+
+            }else if (data['data'] == 203)
+            {
+                layer.msg(data.msg,{icon:5, time:2000});
+
+                return false;
+
+            } else {
+
+                layer.msg(data,{icon:5, time:1500});
+
+            };
+        });
+    });
+</script>

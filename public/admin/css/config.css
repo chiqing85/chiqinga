@@ -208,3 +208,25 @@ input.typeradio:checked + label::after{
     top: .239rem;
     left: .19rem;
 }
+.typecheck {
+    display: none;
+}
+.rules {
+    padding: .5rem;
+}
+.rules.left_01 {
+    background: #f5f7fc;
+    clear: both;
+    margin-bottom: 0px;
+}
+.rules.left_02 {
+    padding-left: 2em;
+    float: left;
+    margin-bottom: 14px;
+    clear: both;
+}
+.rules.left_03 {
+    margin-left: 0px;
+    clear: none;
+    float: left;
+}

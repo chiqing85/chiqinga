@@ -56,7 +56,7 @@ class Rule extends Common
 
              } else {
 
-                 return '节点添加失败—';
+                 return '节点添加失败……';
              }
          } else {
 
@@ -66,6 +66,61 @@ class Rule extends Common
 
              return view();
          }
-
      }
+
+      /**
+      * 编辑节点
+      * */
+     public function save()
+     {
+         if(request()->isPost())
+         {
+             $data = input('post.');
+
+             $validate = Loader::validate('Rule');
+
+             if(!$validate->check($data))
+             {
+                 return $validate->getError();
+             }
+
+
+             if(model('AuthRule')->allowField(true)->save($data,$data['id']))
+             {
+                 return jsdata(200,'节点更新成功……', '');
+
+             } else {
+
+                 return '更新失败';
+             }
+
+         } else {
+
+             $id = input('id');
+
+             $this->assign('rule', model('AuthRule')->get($id));
+
+             $data = le(db('AuthRule')->select());
+
+             $this->assign('list',$data );
+
+             return view();
+         }
+     }
+      /**
+      * 删除节点
+      */
+      public function del()
+      {
+          $id = input('id');
+
+          if(model('AuthRule')->destroy($id))
+          {
+              return jsdata('200','删除节点成功……','');
+          } else {
+
+              return '删除节点失败……';
+          }
+      }
+
 }

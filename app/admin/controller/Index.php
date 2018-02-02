@@ -62,15 +62,6 @@ class Index extends Common
         }
     }
 
-    public function menu()
-    {
-        //缓存后台菜单
-       $nav = Cache::remember('menu', function(){
-            return Config('menu');
-        }, 3600*24*7);
-
-       return json_encode($nav);
-    }
 
    public function home()
    {
