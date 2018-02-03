@@ -590,4 +590,38 @@ $(document).on('click', '.tree', function () {
 
        $('.parent_id_'+ tree_id).hide();
    }
+});
+
+/**
+* 回复评论
+* */
+
+$(document).on('click', '.feedback-myForm-submit', function () {
+
+    var reply = $('#myForm').attr('data-url');
+
+    $.post(reply,  $('#myForm').serialize(),function(data) {
+
+        if(data.status == 200) {
+
+            layer.msg(data.msg, {icon: 6, time:2000},function(index){
+
+                layer.close(index);
+
+                $('.card-header-title a').trigger('click');
+
+            });
+
+        }else if (data['data'] == 203)
+        {
+            layer.msg(data.msg,{icon:5, time:2000});
+
+            return false;
+        } else{
+
+            layer.msg(data,{icon:5, time:1500});
+        };
+
+    })
+
 })

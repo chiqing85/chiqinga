@@ -63,6 +63,8 @@ class Feedback extends Common
 
         unset($data['__token__']);
 
+        $data['name'] = session('user.name');
+
         return model('feedback')->add($data);
     }
 
@@ -88,8 +90,39 @@ class Feedback extends Common
      */
     public function preview()
     {
-       $this->assign('Feedback',  model('Feedback')->get(input('id')));
+
+        $Feedback =  model('Feedback')->get(input('id'));
+
+       $this->assign('Feedback', $Feedback);
+
+        $c = model('Feedback')->where('cid', $Feedback['id'])->order('id')->select();
+
+        $this->assign('fc', $c);
+
 
         return view();
+    }
+
+    /**
+    * 回复评论
+    */
+    public function reply()
+    {
+
+
+        $data = input('post.');
+
+        if(!$data['cid'])
+        {
+            return '对不起，你的回复有误，或者您的请求为非法！';
+        }
+
+        $data['name'] = session('user.name');
+
+        $feedback = model('Feedback');
+
+        $feedback->data($data, true);
+
+        return  $feedback->add($data);
     }
 }

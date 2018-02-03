@@ -24,17 +24,13 @@ class Feedback extends Model
 
     public function add($data)
     {
-        $feedback = new Feedback();
-
-        $feedback->data($data, true);
+        $feedback = $this->data($data);
 
         $feedback->time = time();
 
         $feedback->ip = request()->ip();
 
         $feedback->uid = session('user.id');
-
-        $feedback->name = session('user.name');
 
         $feedback->item = session('user.user_pic')?session('user.user_pic'): '/public/admin/images/item/'. mt_rand(0,139). 'jpg';
 

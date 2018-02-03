@@ -37,8 +37,9 @@
                     <div class="feedback-conent">
                         <div class="feedback-past">
                             <ul>
+                                <li style="text-align: center; color: #ccc;">{$Feedback.time|date="Y-m-d H:i:s", ###}</li>
                                 <li>
-                                    <img src="{$Feedback.item}" alt="{$Feedback.name}" class="user_pic">
+                                    <img src="{$Feedback.item}" alt="{$Feedback.name}" class="user_pic user-m-img">
                                     <div class="u-active-content">
                                         {$Feedback.content}
                                     </div>
@@ -52,9 +53,12 @@
                             </ul>
                         </div>
                         <div class="feedback-myForm">
-                            <form id="myForm" class="feedback-myForm-a">
-                                <input type="text" class="form-control" placeholder="您可以在此输入信息进行回复……" >
+                            <form id="myForm" class="feedback-myForm-a" data-url="/admin/Feedback/reply">
+                                <input type="text" class="form-control" name="content" placeholder="您可以在此输入信息进行回复……" >
                                 <span class="imgpicker">
+                                    <input type="hidden" name="md_id" value="{$Feedback.md_id}">
+                                    <input type="hidden" name="fid" value="{$Feedback.fid}">
+                                    <input type="hidden" name="cid" value="{$Feedback.id}">
                                     <span class="feedback-myForm-submit">发送</span>
                                 </span>
                             </form>
@@ -62,7 +66,13 @@
                     </div>
                     <!--当前用户的个人资料-->
                     <div class="feedback-user-info">
-                        这是当前用户的个人资料
+                        <div class="feedback-img-bg"></div>
+                        <div class="feedback-user-inof-content">
+                            <div class="inof-img">
+                                <img src="{$Think.session.user.user_pic}" alt="{$Think.session.user.name}" class="user_pic_x">
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,20 +96,22 @@
         height: 100%;
     }
     .feedback-conent {
-        float: left;
+        /*float: left;*/
         margin-left: 12rem;
-        width: 60%;
+        /*width: 60%;*/
         height: 500px;
     }
     .feedback-user-info {
+        display: none;
         position: absolute;
-        right: 0;
+        right: 1rem;
         top: 0;
         bottom: 0;
         height: 100%;
         float: right;
         width: 15rem;
-        border-left: 1px solid #ebeff5;
+        background: url(/admin/images/feedback-bg-001.jpg);
+        background-size: cover;
     }
     ul.feedback-user-pic {
         padding: 1.5rem 0;
@@ -143,7 +155,7 @@
 
         position: relative;
         padding: 0 10px;
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - 50px);
         min-height: 30px;
         line-height: 3;
         font-size: .8rem;
@@ -151,8 +163,12 @@
         word-break: break-all;
         border-radius: 4px;
     }
+    .user-m-img {
+        float: left;
+    }
     .u-active-content{
         background: #40dc8b;
+        margin-left: 10px;
     }
     .m-active-content {
         margin-right: 10px;
@@ -164,7 +180,7 @@
         content: " ";
         position: absolute;
         top: 6px;
-        left: -6px;
+        left: -10px;
         background: #40dc8b;
         border-width: 1px;
         width: 10px;
@@ -194,18 +210,37 @@
         position: relative;
         display: inline-block;
         cursor: pointer;
-        background: #dadfe6;
+        background: #776ddb;
+        color: #fff;
         padding: .75rem 1.5rem;
-        color: #2a2a2a;
         text-align: center;
         border-radius: .375rem;
         overflow: hidden;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
-    span.feedback-myForm-submit:hover {
-        color: #fff;
-        background: #776ddb;
+
+    .feedback-img-bg {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 15rem;
+        background: rgba(0,0,0,.35);
+        z-index: -1000;
+    }
+
+    .feedback-user-inof-content {
+        z-index: 1000;
+        width: 100%;
+    }
+    .inof-img {
+        text-align: center;
+        margin: 1rem auto;
+    }
+    img.user_pic_x {
+        border-radius: 100%;
+        width: 100px;
+        border: 3px solid #fff;
     }
 
 </style>
