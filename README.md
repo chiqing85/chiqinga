@@ -1,9 +1,8 @@
-![logo](https://github.com/chiqing85/chiqinga/blob/feature/public/uploads/20180130/7cfed4903cc0629139443af7cc04606c.jpg)
-## chiqinga v5.0.3 
+![logo](https://github.com/chiqing85/chiqinga/blob/feature/public/uploads/20180130/7cfed4903cc0629139443af7cc04606c.jpg) chiqinga v5.0.3 
 
 ~~~
-ÕâÊÇÎÒµÄ²©¿ÍºóÌ¨¹ÜÀíÏµÍ³£¬¼´½«Íê³É¡­¡­
+è¿™æ˜¯æˆ‘çš„åšå®¢åŽå°ç®¡ç†ç³»ç»Ÿï¼Œå³å°†å®Œæˆâ€¦â€¦
 ~~~
-> chiqinga v5.0.3 »ùÓÚthinkphp5¿ª·¢£¬ÔËÐÐ»·¾³ÒªÇóPHP5.4ÒÔÉÏ
+> chiqinga v5.0.3 åŸºäºŽthinkphp5å¼€å‘ï¼Œè¿è¡ŒçŽ¯å¢ƒè¦æ±‚PHP5.4ä»¥ä¸Š
 
 + 2018-02-04
