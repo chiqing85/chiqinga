@@ -21,6 +21,7 @@ use think\Db;
 
 class Feedback extends Common
 {
+    //评论列表
     public function index()
     {
 
@@ -30,9 +31,16 @@ class Feedback extends Common
 
         $this->assign('title', input('md_id') == false?'意见反馈':'评论列表');
 
+        $this->assign('md_id', input('md_id'));
+
         return view();
 
     }
+
+    /**
+     *
+     * @return array
+     */
 
     public function add()
     {
@@ -56,5 +64,32 @@ class Feedback extends Common
         unset($data['__token__']);
 
         return model('feedback')->add($data);
+    }
+
+    /**
+     *
+     * 删除评论
+     *
+    */
+    public function del()
+    {
+        if( Db('Feedback')->delete(input('id')))
+        {
+            return jsdata(200, '删除成功！');
+
+        }else{
+            return '删除失败！';
+        }
+    }
+
+     /**
+     *
+     * 查看评论
+     */
+    public function preview()
+    {
+       $this->assign('Feedback',  model('Feedback')->get(input('id')));
+
+        return view();
     }
 }

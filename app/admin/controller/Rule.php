@@ -84,7 +84,6 @@ class Rule extends Common
                  return $validate->getError();
              }
 
-
              if(model('AuthRule')->allowField(true)->save($data,$data['id']))
              {
                  return jsdata(200,'节点更新成功……', '');

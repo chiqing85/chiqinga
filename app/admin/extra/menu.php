@@ -41,8 +41,8 @@ return array(
         ['name' => '图片回收站', 'data-url' => ''],
     ]],*/
     'Envelope' => ['name' => '评论管理', 'ico' => 'fa-comments', 'data-url' => 'javascript:;', 'child' => [
-        ['name' => '评论列表', 'data-url' => '/admin/feedback/1'],
-        ['name' => '意见反馈', 'data-url' => '/admin/feedback/0'],
+        ['name' => '评论列表', 'data-url' => '/admin/feedback/index/1'],
+        ['name' => '意见反馈', 'data-url' => '/admin/feedback/index/0'],
     ]],
     'database' => ['name' => '数据库', 'ico' => 'fa-database', 'data-url' => 'javascript:;', 'child' => [
         ['name' => '数据库列表', 'data-url' => '/admin/database'],

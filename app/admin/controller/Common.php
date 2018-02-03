@@ -41,11 +41,11 @@ class Common extends Controller
 
         $this->base();
 
-       /* if($uid == 1) {
+        if($uid == 1) {     //超级管理员
 
             return true;
 
-        } else*/
+        } else
 
         if(!$auth->check( $module . '/' .$controller .'/' .  $action ,$uid))
         {

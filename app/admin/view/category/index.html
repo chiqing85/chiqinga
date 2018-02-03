@@ -26,13 +26,12 @@
                         {else /}
 
                             {volist name="list" id="vo" mod="2"}
-
                                 {eq name="mod" value="1"}
                                 <tr class="odd">
                                     {else/}
                                 <tr>
                                 {/eq}
-                                    <td>{if condition='count($vo.level) gt 0'}<i class="fa fa-plus"></i>{else \}<i class="fa fa-minus"></i>{/if}</td>
+                                    <td>{if condition='count($vo.level) gt 0'}<i class="fa fa-plus tree" tree_id="{$vo.id}"></i>{else \}<i class="fa fa-minus"></i>{/if}</td>
                                     <td><b>{$vo.id}</b></td>
                                     <td><b>{$vo.name}</b></td>
                                     <td><b>{$vo.dirs}</b></td>
@@ -46,11 +45,11 @@
                                     <td><b>{$vo.sort}</b></td>
                                     <td><b>{$vo.time|date='Y-m-d H:i:s',###}</b></td>
                                     <td style="display: flex;">
-                                        <a data-url="/Admin/Category/add/{$vo.id}" title=" 添加子类" class="action-add-c">
+                                        <a data-url="/admin/Category/add/{$vo.id}" title=" 添加子类" class="action-add-c">
                                             <i class="fa fa-pencil-square-o"></i>
                                         </a>
                                         &nbsp;&nbsp;
-                                        <a href="/admin/category/save/{$vo.id}" title="编辑" class="action-edit">
+                                        <a data-url="/admin/category/save/{$vo.id}" title="编辑" class="action-edit action-edit-save">
                                             <i class="fa fa-pencil"></i>
                                         </a>
                                         &nbsp;&nbsp;
@@ -60,14 +59,14 @@
                                     </td>
                                 </tr>
                                 {volist name="$vo.level" id="le" mod="2"}
-                                    {eq name="mod" value="1"}
-                                    <tr class="odd" style="display: none">
+                                    {eq name="mod" value="0"}
+                                    <tr class="odd parent_id_{$le.pid}" style="display: none">
                                         {else/}
-                                    <tr style="display: none">
+                                    <tr style="display: none" class="parent_id_{$le.pid}">
                                         {/eq}
-                                        <td>{if condition='count($le.level) gt 0'}<i class="fa fa-plus"></i>{else \}<i class="fa fa-minus"></i>{/if}</td>
+                                        <td>{if condition='count($le.level) gt 0'}<i class="fa fa-plus tree" tree_id="{$le.id}"></i>{/if}</td>
                                         <td><b>{$le.id}</b></td>
-                                        <td><b> —— {$le.name}</b></td>
+                                        <td><b> |—— &nbsp;{$le.name}</b></td>
                                         <td><b>{$le.dirs}</b></td>
                                         <td>
                                             {eq name="$le.isshow" value="0"}
@@ -83,7 +82,7 @@
                                                 <i class="fa fa-pencil-square-o"></i>
                                             </a>
                                             &nbsp;&nbsp;
-                                            <a href="/admin/category/save/{$le.id}" title="编辑" class="action-edit">
+                                            <a data-url="/admin/category/save/{$le.id}" title="编辑" class="action-edit action-edit-save">
                                                 <i class="fa fa-pencil"></i>
                                             </a>
                                             &nbsp;&nbsp;
@@ -92,10 +91,41 @@
                                             </a>
                                         </td>
                                     </tr>
+
+
+                                {volist name="$le.level" id="ce" mod="2"}
+                                    {eq name="mod" value="0"}
+                                    <tr class="odd parent_id_{$ce.pid}" style="display: none">
+                                        {else/}
+                                    <tr style="display: none" class="parent_id_{$ce.pid}">
+                                    {/eq}
+                                        <td></td>
+                                        <td><b>{$le.id}</b></td>
+                                        <td><b> |—— |—— &nbsp;{$ce.name}</b></td>
+                                        <td><b>{$ce.dirs}</b></td>
+                                        <td>
+                                            {eq name="$ce.isshow" value="0"}
+                                            <i class="fa fa-check-circle"></i>
+                                            {else\}
+                                            <i class="fa fa-times-circle"></i>
+                                            {/eq}
+                                        </td>
+                                        <td><b>{$ce.sort}</b></td>
+                                        <td><b>{$ce.time|date='Y-m-d H:i:s',###}</b></td>
+                                        <td style="display: flex;">
+                                            &nbsp;&nbsp;
+                                            <a data-url="/admin/category/save/{$ce.id}" title="编辑" class="action-edit action-edit-save">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                            &nbsp;&nbsp;
+                                            <a href="javascript:;" class='action-delete' data-id="{$ce.id}" title="删除">
+                                                <i class="fa fa-trash-o"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
                                 {/volist}
-
                             {/volist}
-
+                        {/volist}
                         {/empty}
                     </table>
                 </form>
@@ -109,7 +139,7 @@
 
     $('.action-delete').on('click', function(){
 
-        $.post('/Admin/category/del/' + $(this).attr('data-id'),function(data){
+        $.post('/admin/category/del/' + $(this).attr('data-id'),function(data){
 
             if(data.status == 200) {
 
@@ -124,7 +154,13 @@
                     })
                 });
 
-            }else{
+            }else if (data['data'] == 203)
+            {
+                layer.msg(data.msg,{icon:5, time:2000});
+
+                return false;
+
+            } else {
 
                 layer.msg(data,{icon:5, time:1500});
             };

@@ -19,12 +19,16 @@
                         </tr>
 
                         {empty name="list"}
-                                <tr>
-                                    <td colspan="7" align="center">对不起，没有查询到任何相关结果！</td>
-                                </tr>
-                        {else /}
-                            {volist name="list" id="vo"}
                             <tr>
+                                <td colspan="7" align="center">对不起，没有查询到任何相关结果！</td>
+                            </tr>
+                        {else /}
+                            {volist name="list" id="vo" mod="2"}
+                            {eq name="mod" value="1"}
+                            <tr class="odd">
+                                {else/}
+                            <tr>
+                            {/eq}
                                 <td class="status">
                                     {eq name="$vo.status" value="0"}
                                         <i class="fa fa-envelope"></i>
@@ -43,8 +47,8 @@
                                 </td>
                                 <td class="time">{$vo.time|date='Y-m-d H:i:s',###}</td>
                                 <td class="smart-actions feedback">
-                                    <a class="action-eye" title="查看">
-                                        <i class="fa fa-eye-slash"></i>
+                                    <a class="action-edit action-edit-save" title="查看" data-url="/admin/feedback/preview/{$vo.id}">
+                                        <i class="fa fa-eye"></i>
                                     </a>
                                     <a class="action-square" title="回复">
                                         <i class="fa fa-share-square"></i>
@@ -68,3 +72,35 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('.action-delete').on('click', function(){
+
+        $.post('/admin/feedback/del/' + $(this).attr('data-id'),function(data){
+
+            if(data.status == 200) {
+
+                layer.msg(data.msg, {icon: 6, time:2000},function(index){
+
+                    layer.close(index);
+
+                    $.post('/admin/feedback/index/{$md_id}',function (data) {
+
+                        $('.article').html(data);
+
+                    })
+                });
+
+            }else if (data['data'] == 203)
+            {
+                layer.msg(data.msg,{icon:5, time:2000});
+
+                return false;
+            } else {
+
+                layer.msg(data,{icon:5, time:1500});
+
+            };
+        });
+    });
+</script>

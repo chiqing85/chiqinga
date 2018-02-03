@@ -62,7 +62,6 @@ class Category extends Common
                 return '对不起，栏目添加失败！';
             }
 
-
         }else {
 
             input('id') == false ? $pid = 0 : $pid = input('id');
@@ -87,9 +86,38 @@ class Category extends Common
          }
      }
 
+     /**
+    * 编辑栏目
+    */
      public function save()
      {
-         return 1111;
+         if(request()->isPost())
+         {
+             $data = input('post.');
+
+             $validate = Loader::validate('category');
+
+             if(!$validate->check($data)) {
+
+                 return $validate->getError();
+             }
+             if(model('Category')->allowField(true)->save($data,$data['id']))
+             {
+                 return jsdata(200,'栏目更新成功……', '');
+
+             } else {
+
+                 return '更新失败';
+             }
+
+
+         } else {
+
+             $this->assign('category', model('Category')->get(input('id')));
+
+             return view();
+
+         }
      }
 
 }

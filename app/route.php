@@ -38,7 +38,7 @@ return [
 
     'admin/category/add/' => 'admin/category/add',
 
-    'admin/feedback/:md_id' => 'admin/feedback/index',
+    'admin/feedback/index/:md_id' => 'admin/feedback/index',
     'admin/article/preview/:id' => 'admin/article/preview',
     'admin/article/save/:id' => 'admin/article/save',
     'admin/article/save/' => 'admin/article/save',
@@ -49,6 +49,13 @@ return [
 
     'admin/group/save/:id' => 'admin/group/save',
     'admin/group/save' => 'admin/group/save',
+
+    'admin/category/save/:id' => 'admin/category/save',
+    'admin/category/save' => 'admin/category/save',
+
+    'admin/feedback/del/:id' => 'admin/feedback/del',
+
+    'admin/feedback/preview/:id' => 'admin/feedback/preview',
 
 
 ];

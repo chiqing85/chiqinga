@@ -570,3 +570,24 @@ $(document).on('click', '.pagination>li', function () {
 
     return false;
 });
+
+/**
+ * 树形结构
+ */
+
+$(document).on('click', '.tree', function () {
+    var tree_id = $(this).attr('tree_id');
+
+   if($(this).is('.fa-plus'))
+   {
+      $(this).attr('class','fa fa-minus tree');
+
+      $('.parent_id_'+ tree_id).show();
+
+   } else {
+
+       $(this).attr('class', 'fa fa-plus tree');
+
+       $('.parent_id_'+ tree_id).hide();
+   }
+})

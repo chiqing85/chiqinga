@@ -165,19 +165,6 @@ class Article extends Common
 
             $data = Db('category')->order('sort asc, id desc')->field('time', true)->select();
 
-            function le($data, $pid = 0, $level = 0, $html = ""){
-                $arr = array();
-                foreach ($data as $v) {
-                    if($v['pid'] == $pid) {
-                        $v['level'] = $level;
-                        $v['html'] = str_repeat($html, $level);
-                        $arr[] =$v;
-                        $arr = array_merge($arr, le($data, $v['id'], $level + 1, $html  = '|— '));
-                    }
-                }
-                return $arr;
-            };
-
             $this->assign('list',le($data));
 
             return view();
