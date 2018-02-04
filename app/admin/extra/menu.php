@@ -46,7 +46,7 @@ return array(
     ]],
     'database' => ['name' => '数据库', 'ico' => 'fa-database', 'data-url' => 'javascript:;', 'child' => [
         ['name' => '数据库列表', 'data-url' => '/admin/database'],
-        ['name' => '数据还原', 'data-url' => ''],
+        ['name' => '备份列表', 'data-url' => '/admin/database/reduction'],
         ['name' => 'SQL执行', 'data-url' => '/admin/database/query'],
     ]],
 );

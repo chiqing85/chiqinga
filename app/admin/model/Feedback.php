@@ -49,11 +49,11 @@ class Feedback extends Model
 
             Db::name('notice')->insert($notice);
 
-            return jsdata(200,'信息已经提交，谢谢您的反馈……');
+            return true;
 
         }else{
 
-            return '提交失败！';
+            return false;
         }
     }
 }

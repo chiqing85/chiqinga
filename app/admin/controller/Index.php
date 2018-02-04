@@ -43,6 +43,9 @@ class Index extends Common
         //评论总数
         $this->assign('feedback', db('feedback')->count());
 
+        $feedback = db('feedback')->order('time','desc')->limit(5)->select();    //最新留言
+
+        $this->assign('feedbacks', $feedback);
 
         if(request()->isPost()){
 

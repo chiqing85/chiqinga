@@ -608,7 +608,11 @@ $(document).on('click', '.feedback-myForm-submit', function () {
 
                 layer.close(index);
 
-                $('.card-header-title a').trigger('click');
+                $.post($('.os').attr('data-url'),function (data) {
+
+                    $('.article').html(data);
+
+                });
 
             });
 
@@ -617,11 +621,46 @@ $(document).on('click', '.feedback-myForm-submit', function () {
             layer.msg(data.msg,{icon:5, time:2000});
 
             return false;
+
         } else{
 
             layer.msg(data,{icon:5, time:1500});
         };
 
-    })
+    });
 
-})
+});
+
+/**
+* 数据备份
+* */
+
+$(document).on('click', '.database-add, .database-add-m', function () {
+
+    $.post($(this).attr('data-url'), $('#myForm').serialize(),function (data) {
+
+        if(data.status == 200) {
+
+             layer.msg(data.msg, {icon: 6, time:2000}, function(index) {
+
+                 layer.close(index);
+
+                 $.post('/admin/database/index', function (data) {
+
+                     $('.article').html(data);
+
+                 });
+             });
+
+        } else if (data['data'] == 203)
+        {
+            layer.msg(data.msg,{icon:5, time:2000});
+
+            return false;
+
+        } else {
+
+            layer.msg(data,{icon:5, time:1500});
+        };
+    });
+});

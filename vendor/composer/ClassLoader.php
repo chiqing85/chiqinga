@@ -148,7 +148,7 @@ class ClassLoader
      * appending or prepending to the ones previously set for this namespace.
      *
      * @param string       $prefix  The prefix/namespace, with trailing '\\'
-     * @param array|string $paths   The PSR-4 common directories
+     * @param array|string $paths   The PSR-4 base directories
      * @param bool         $prepend Whether to prepend the directories
      *
      * @throws \InvalidArgumentException
@@ -196,7 +196,7 @@ class ClassLoader
      * replacing any others previously set for this prefix.
      *
      * @param string       $prefix The prefix
-     * @param array|string $paths  The PSR-0 common directories
+     * @param array|string $paths  The PSR-0 base directories
      */
     public function set($prefix, $paths)
     {
@@ -212,7 +212,7 @@ class ClassLoader
      * replacing any others previously set for this namespace.
      *
      * @param string       $prefix The prefix/namespace, with trailing '\\'
-     * @param array|string $paths  The PSR-4 common directories
+     * @param array|string $paths  The PSR-4 base directories
      *
      * @throws \InvalidArgumentException
      */

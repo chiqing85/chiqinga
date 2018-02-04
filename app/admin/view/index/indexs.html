@@ -249,6 +249,39 @@
                 <i class="fa fa-comment" style="transform: rotateY(180deg);"></i>
                 最新留言
             </div>
+            <div class="card-content mCustomScrollbar">
+                {volist name="feedbacks" id="vo"}
+                    <div class="feedbacks-box">
+                        {eq name='$vo.uid' value="$Think.session.user.id"}
+                        <div class="feedback-content-r">
+                            <div class="feedbacks-name-r">
+                                <span>{$vo.time|date="Y-m-d H:i:s",###}</span>
+                                <h5>{$vo.name}</h5>
+                            </div>
+                            <div class="feedbacks-content-box-r">
+                                {$vo.content}
+                            </div>
+                        </div>
+                        <div class="feedback-img-r">
+                            <img src="{$vo.item ? $vo.item : '/admin/images/item/59.jpg'}" alt="" class="user_pir">
+                        </div>
+                        {else/}
+                        <div class="feedback-img">
+                            <img src="{$vo.item ? $vo.item : '/admin/images/item/59.jpg'}" alt="" class="user_pir">
+                        </div>
+                        <div class="feedback-content">
+                            <div class="feedbacks-name">
+                                <h5>{$vo.name}</h5>
+                                <span>{$vo.time|date="Y-m-d H:i:s",###}</span>
+                            </div>
+                            <div class="feedbacks-content-box">
+                                {$vo.content}
+                            </div>
+                        </div>
+                        {/eq}
+                    </div>
+                {/volist}
+            </div>
         </div>
     </div>
 
@@ -345,6 +378,11 @@
 
 </div>
 <script>
+
+
+
+    $(".card-content").mCustomScrollbar();
+
 
     $('.close').on('click',function () {
         $('.alert-danger').hide();

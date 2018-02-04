@@ -9,13 +9,13 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="small-box">
             <div class="tab" style="margin: 0; border: 1px solid #eaeef4; border-left: none;">
-                <div class="os">
+                <div class="os" data-url="/admin/feedback/preview/{$Feedback.id}">
                     <!--交流双方头像-->
                     <div class="feedback-user">
                         <ul class="feedback-user-pic">
                             <li>
                                 <div class="feeddack-user-m">
-                                    <img src="{$Feedback.item ?? '/admin/images/item/59.jpg'}" alt="{$Feedback.name}" class="user_pic">
+                                    <img src="{$Feedback.item ? $Feedback.item : '/admin/images/item/59.jpg'}" alt="{$Feedback.name}" class="user_pic">
                                     <div class="user-m-inof">
                                         <div class="user-n">{$Feedback.name}</div>
                                     </div>
@@ -38,18 +38,43 @@
                         <div class="feedback-past">
                             <ul>
                                 <li style="text-align: center; color: #ccc;">{$Feedback.time|date="Y-m-d H:i:s", ###}</li>
+                                {eq name='$Feedback.uid' value="$Think.session.user.id"}
+                                    <li class="active">
+                                        <div class="m-active-content">
+                                            {$Feedback.content}
+                                        </div>
+                                        <img src="{$Feedback.item ?$Feedback.item : '/admin/images/item/59.jpg'}" alt="{$Feedback.name}" class="user_pic">
+                                    </li>
+                                {else/}
                                 <li>
-                                    <img src="{$Feedback.item}" alt="{$Feedback.name}" class="user_pic user-m-img">
+                                    <img src="{$Feedback.item ?$Feedback.item : '/admin/images/item/59.jpg'}" alt="{$Feedback.name}" class="user_pic user-m-img">
                                     <div class="u-active-content">
                                         {$Feedback.content}
                                     </div>
                                 </li>
+                                {/eq}
+
+                                {volist name="list" id="vo"}
+                                {eq name='$vo.uid' value="$Think.session.user.id"}
                                 <li class="active">
+                                    <div class="m-time">{$vo.time|date="m-d H:i",###}</div>
                                     <div class="m-active-content">
-                                        这是你回复的信息
+                                        {$vo.content}
                                     </div>
-                                    <img src="{$Think.session.user.user_pic}" alt="{$Think.session.user.name}" class="user_pic">
+                                    <img src="{$vo.item ? $vo.item : '/admin/images/item/59.jpg'}" alt="{$vo.name}" class="user_pic">
                                 </li>
+                                {else/}
+                                <li>
+
+                                    <img src="{$vo.item ? $vo.item : '/admin/images/item/59.jpg'}" alt="{$vo.name}" class="user_pic user-m-img">
+                                    <div class="u-time">{$vo.time|date="m-d H:i",###}</div>
+                                    <div class="u-active-content">
+                                        {$vo.content}
+                                    </div>
+                                </li>
+                                {/eq}
+                                {/volist}
+
                             </ul>
                         </div>
                         <div class="feedback-myForm">
@@ -179,18 +204,18 @@
     .u-active-content:before {
         content: " ";
         position: absolute;
-        top: 6px;
+        bottom: 6px;
         left: -10px;
         background: #40dc8b;
         border-width: 1px;
         width: 10px;
         height: 10px;
-        border-radius: 100% 0 0 0;
+        border-radius: 0 0 0 100%;
     }
     .m-active-content:before {
         position: absolute;
-        left: 95%;
-        top: 10px;
+        right: -10px;
+        bottom: 6px;
         content: '';
         width: 16px;
         height: 16px;
@@ -241,6 +266,19 @@
         border-radius: 100%;
         width: 100px;
         border: 3px solid #fff;
+    }
+    .u-time {
+        font-size: .5rem;
+        color: #ccc;
+        margin: -5px 0 5px 62px;
+        display: table;
+    }
+
+    .m-time {
+        font-size: .5rem;
+        color: #ccc;
+        margin: -5px 68px 5px 0;
+        display: block;
     }
 
 </style>

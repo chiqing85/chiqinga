@@ -5,7 +5,9 @@
 <div class="card-content-body link-body database">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="small-box">
-            <a href="javascript:;" data-url="/Admin/link/add" class="action-add">数据备份</a>
+            <a href="javascript:;" data-url="/admin/database/backup" class="database-add action-add-backup">数据备份</a>
+            <a href="javascript:;" data-url="/admin/database/optimize" class="database-add action-add-optimize">表优化</a>
+            <a href="javascript:;" data-url="/admin/database/repair" class="database-add action-add-repair">修复表</a>
             <div class="tab">
                 <form id="myForm">
                     <table class="os">
@@ -39,11 +41,11 @@
                             <td>{$vo.Collation}</td>
                             <td class="sort">{$vo.Create_time}</td>
                             <td class="smart-actions">
-                                <a class="action-edit">
-                                    <i class="fa fa-pencil"></i>
+                                <a class="action-edit database-add-m" data-url="/admin/database/optimize?base%5B%5D={$vo.Name}" title="优化">
+                                    <i class="fa fa-magic"></i>
                                 </a>
-                                <a class="action-delete" data-id="">
-                                    <i class="fa fa-trash-o"></i>
+                                <a class="action-delete database-add-m" data-url="/admin/database/repair?base%5B%5D={$vo.Name}" title="修复">
+                                    <i class="fa fa-wrench"></i>
                                 </a>
                             </td>
                         </tr>
@@ -56,24 +58,23 @@
     </div>
 </div>
 
-<script>
-    //翻页
+<style>
+    a.database-add {
+        display: inline-block;
+        padding: .81rem .95rem;
+        color: #fff;
+        border-radius: .375rem;
+        margin-left: 16px;
+    }
+    a.action-add-backup {
+        background: linear-gradient(90deg,#b57fff,#8a7fff);
+    }
 
-    $('.pagination>li').on('click',function () {
+    a.action-add-optimize {
+        background: linear-gradient(90deg,#4cc4ff,#4ca6ff);
+    }
 
-        var $url = $(this).find('a').attr('href');
-
-        if($url == undefined){
-
-            return false;
-        }
-
-        $.post($url,function(data){
-
-            $('.article').html(data);
-
-        });
-
-        return false;
-    });
-</script>
+    a.action-add-repair {
+        background: linear-gradient(90deg,#fc0,#ffa100);
+    }
+</style>

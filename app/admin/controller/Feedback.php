@@ -65,7 +65,14 @@ class Feedback extends Common
 
         $data['name'] = session('user.name');
 
-        return model('feedback')->add($data);
+        if(model('feedback')->add($data))
+        {
+            return jsdata('200', '提交成功，感谢您的反馈……');
+
+        } else {
+
+            return '对不起，您的提交失败……';
+        }
     }
 
     /**
@@ -93,12 +100,18 @@ class Feedback extends Common
 
         $Feedback =  model('Feedback')->get(input('id'));
 
-       $this->assign('Feedback', $Feedback);
 
-        $c = model('Feedback')->where('cid', $Feedback['id'])->order('id')->select();
+        if($Feedback['cid'])
+        {
+            $Feedback = model('Feedback')->where('id', $Feedback['cid'])->find();
+        }
 
-        $this->assign('fc', $c);
 
+        $c = model('Feedback')->where('cid',  $Feedback['id'])->order('id','asc')->select();
+
+        $this->assign('Feedback',$Feedback);
+
+        $this->assign('list', $c);
 
         return view();
     }
@@ -123,6 +136,12 @@ class Feedback extends Common
 
         $feedback->data($data, true);
 
-        return  $feedback->add($data);
+        if($feedback->add($data))
+        {
+            return jsdata(200,'提交成功，谢谢您的回复……');
+        } else {
+
+            return '提交失败！';
+        }
     }
 }
