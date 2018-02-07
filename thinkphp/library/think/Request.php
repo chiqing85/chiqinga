@@ -93,18 +93,18 @@ class Request
      * @var array 资源类型
      */
     protected $mimeType = [
-        'xml'   => 'application/xml,text/xml,application/x-xml',
-        'json'  => 'application/json,text/x-json,application/jsonrequest,text/json',
-        'js'    => 'text/javascript,application/javascript,application/x-javascript',
+        'xml'   => 'app/xml,text/xml,app/x-xml',
+        'json'  => 'app/json,text/x-json,app/jsonrequest,text/json',
+        'js'    => 'text/javascript,app/javascript,app/x-javascript',
         'css'   => 'text/css',
-        'rss'   => 'application/rss+xml',
-        'yaml'  => 'application/x-yaml,text/yaml',
-        'atom'  => 'application/atom+xml',
-        'pdf'   => 'application/pdf',
+        'rss'   => 'app/rss+xml',
+        'yaml'  => 'app/x-yaml,text/yaml',
+        'atom'  => 'app/atom+xml',
+        'pdf'   => 'app/pdf',
         'text'  => 'text/plain',
         'image' => 'image/png,image/jpg,image/jpeg,image/pjpeg,image/gif,image/webp,image/*',
         'csv'   => 'text/csv',
-        'html'  => 'text/html,application/xhtml+xml,*/*',
+        'html'  => 'text/html,app/xhtml+xml,*/*',
     ];
 
     protected $content;
@@ -692,7 +692,7 @@ class Request
     {
         if (empty($this->post)) {
             $content = $this->input;
-            if (empty($_POST) && false !== strpos($this->contentType(), 'application/json')) {
+            if (empty($_POST) && false !== strpos($this->contentType(), 'app/json')) {
                 $this->post = (array) json_decode($content, true);
             } else {
                 $this->post = $_POST;
@@ -717,7 +717,7 @@ class Request
     {
         if (is_null($this->put)) {
             $content = $this->input;
-            if (false !== strpos($this->contentType(), 'application/json')) {
+            if (false !== strpos($this->contentType(), 'app/json')) {
                 $this->put = (array) json_decode($content, true);
             } else {
                 parse_str($content, $this->put);

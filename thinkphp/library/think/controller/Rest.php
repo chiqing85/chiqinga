@@ -26,8 +26,8 @@ abstract class Rest
     protected $restTypeList      = 'html|xml|json|rss';
     protected $restDefaultType   = 'html';
     protected $restOutputType    = [ // REST允许输出的资源类型列表
-        'xml'  => 'application/xml',
-        'json' => 'application/json',
+        'xml'  => 'app/xml',
+        'json' => 'app/json',
         'html' => 'text/html',
     ];
 

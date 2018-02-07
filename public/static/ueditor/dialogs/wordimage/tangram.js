@@ -395,7 +395,7 @@ baidu.swf.createHTML = function (options) {
     delete options['movie'];
     delete options['classid'];
     delete options['codebase'];
-    options['type'] = 'application/x-shockwave-flash';
+    options['type'] = 'app/x-shockwave-flash';
     options['pluginspage'] = 'http://www.macromedia.com/go/getflashplayer';
     str.push('<embed');
     var salign;

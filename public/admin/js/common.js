@@ -409,7 +409,7 @@ $(document).on('change', '.file-article', function() {
     formData.append('images', $(this)[0].files[0]);
 
     $.ajax({
-        url: '/admin/article/upload',
+        url: '/admin//upload/articleupload',
         type: 'POST',
         data: formData,
         // 告诉jQuery不要去处理发送的数据

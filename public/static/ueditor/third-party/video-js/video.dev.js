@@ -5773,7 +5773,7 @@ vjs.Flash.version = function(){
   // other browsers
   } catch(e) {
     try {
-      if (navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin){
+      if (navigator.mimeTypes['app/x-shockwave-flash'].enabledPlugin){
         version = (navigator.plugins['Shockwave Flash 2.0'] || navigator.plugins['Shockwave Flash']).description.replace(/\D+/g, ',').match(/^,?(.+),?$/)[1];
       }
     } catch(err) {}
@@ -5806,7 +5806,7 @@ vjs.Flash.embed = function(swf, placeHolder, flashVars, params, attributes){
 
 vjs.Flash.getEmbedCode = function(swf, flashVars, params, attributes){
 
-  var objTag = '<object type="application/x-shockwave-flash"',
+  var objTag = '<object type="app/x-shockwave-flash"',
       flashVarsString = '',
       paramsString = '',
       attrsString = '';

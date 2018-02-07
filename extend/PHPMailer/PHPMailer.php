@@ -3622,7 +3622,7 @@ class PHPMailer
         $this->Body = static::normalizeBreaks($message);
         $this->AltBody = static::normalizeBreaks($this->html2text($message, $advanced));
         if (!$this->alternativeExists()) {
-            $this->AltBody = 'This is an HTML-only message. To view it, activate HTML in your email application.'
+            $this->AltBody = 'This is an HTML-only message. To view it, activate HTML in your email app.'
                 . static::$LE;
         }
         return $this->Body;
@@ -3672,61 +3672,61 @@ class PHPMailer
     public static function _mime_types($ext = '')
     {
         $mimes = [
-            'xl'    => 'application/excel',
-            'js'    => 'application/javascript',
-            'hqx'   => 'application/mac-binhex40',
-            'cpt'   => 'application/mac-compactpro',
-            'bin'   => 'application/macbinary',
-            'doc'   => 'application/msword',
-            'word'  => 'application/msword',
-            'xlsx'  => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-            'xltx'  => 'application/vnd.openxmlformats-officedocument.spreadsheetml.template',
-            'potx'  => 'application/vnd.openxmlformats-officedocument.presentationml.template',
-            'ppsx'  => 'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
-            'pptx'  => 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-            'sldx'  => 'application/vnd.openxmlformats-officedocument.presentationml.slide',
-            'docx'  => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-            'dotx'  => 'application/vnd.openxmlformats-officedocument.wordprocessingml.template',
-            'xlam'  => 'application/vnd.ms-excel.addin.macroEnabled.12',
-            'xlsb'  => 'application/vnd.ms-excel.sheet.binary.macroEnabled.12',
-            'class' => 'application/octet-stream',
-            'dll'   => 'application/octet-stream',
-            'dms'   => 'application/octet-stream',
-            'exe'   => 'application/octet-stream',
-            'lha'   => 'application/octet-stream',
-            'lzh'   => 'application/octet-stream',
-            'psd'   => 'application/octet-stream',
-            'sea'   => 'application/octet-stream',
-            'so'    => 'application/octet-stream',
-            'oda'   => 'application/oda',
-            'pdf'   => 'application/pdf',
-            'ai'    => 'application/postscript',
-            'eps'   => 'application/postscript',
-            'ps'    => 'application/postscript',
-            'smi'   => 'application/smil',
-            'smil'  => 'application/smil',
-            'mif'   => 'application/vnd.mif',
-            'xls'   => 'application/vnd.ms-excel',
-            'ppt'   => 'application/vnd.ms-powerpoint',
-            'wbxml' => 'application/vnd.wap.wbxml',
-            'wmlc'  => 'application/vnd.wap.wmlc',
-            'dcr'   => 'application/x-director',
-            'dir'   => 'application/x-director',
-            'dxr'   => 'application/x-director',
-            'dvi'   => 'application/x-dvi',
-            'gtar'  => 'application/x-gtar',
-            'php3'  => 'application/x-httpd-php',
-            'php4'  => 'application/x-httpd-php',
-            'php'   => 'application/x-httpd-php',
-            'phtml' => 'application/x-httpd-php',
-            'phps'  => 'application/x-httpd-php-source',
-            'swf'   => 'application/x-shockwave-flash',
-            'sit'   => 'application/x-stuffit',
-            'tar'   => 'application/x-tar',
-            'tgz'   => 'application/x-tar',
-            'xht'   => 'application/xhtml+xml',
-            'xhtml' => 'application/xhtml+xml',
-            'zip'   => 'application/zip',
+            'xl'    => 'app/excel',
+            'js'    => 'app/javascript',
+            'hqx'   => 'app/mac-binhex40',
+            'cpt'   => 'app/mac-compactpro',
+            'bin'   => 'app/macbinary',
+            'doc'   => 'app/msword',
+            'word'  => 'app/msword',
+            'xlsx'  => 'app/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'xltx'  => 'app/vnd.openxmlformats-officedocument.spreadsheetml.template',
+            'potx'  => 'app/vnd.openxmlformats-officedocument.presentationml.template',
+            'ppsx'  => 'app/vnd.openxmlformats-officedocument.presentationml.slideshow',
+            'pptx'  => 'app/vnd.openxmlformats-officedocument.presentationml.presentation',
+            'sldx'  => 'app/vnd.openxmlformats-officedocument.presentationml.slide',
+            'docx'  => 'app/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'dotx'  => 'app/vnd.openxmlformats-officedocument.wordprocessingml.template',
+            'xlam'  => 'app/vnd.ms-excel.addin.macroEnabled.12',
+            'xlsb'  => 'app/vnd.ms-excel.sheet.binary.macroEnabled.12',
+            'class' => 'app/octet-stream',
+            'dll'   => 'app/octet-stream',
+            'dms'   => 'app/octet-stream',
+            'exe'   => 'app/octet-stream',
+            'lha'   => 'app/octet-stream',
+            'lzh'   => 'app/octet-stream',
+            'psd'   => 'app/octet-stream',
+            'sea'   => 'app/octet-stream',
+            'so'    => 'app/octet-stream',
+            'oda'   => 'app/oda',
+            'pdf'   => 'app/pdf',
+            'ai'    => 'app/postscript',
+            'eps'   => 'app/postscript',
+            'ps'    => 'app/postscript',
+            'smi'   => 'app/smil',
+            'smil'  => 'app/smil',
+            'mif'   => 'app/vnd.mif',
+            'xls'   => 'app/vnd.ms-excel',
+            'ppt'   => 'app/vnd.ms-powerpoint',
+            'wbxml' => 'app/vnd.wap.wbxml',
+            'wmlc'  => 'app/vnd.wap.wmlc',
+            'dcr'   => 'app/x-director',
+            'dir'   => 'app/x-director',
+            'dxr'   => 'app/x-director',
+            'dvi'   => 'app/x-dvi',
+            'gtar'  => 'app/x-gtar',
+            'php3'  => 'app/x-httpd-php',
+            'php4'  => 'app/x-httpd-php',
+            'php'   => 'app/x-httpd-php',
+            'phtml' => 'app/x-httpd-php',
+            'phps'  => 'app/x-httpd-php-source',
+            'swf'   => 'app/x-shockwave-flash',
+            'sit'   => 'app/x-stuffit',
+            'tar'   => 'app/x-tar',
+            'tgz'   => 'app/x-tar',
+            'xht'   => 'app/xhtml+xml',
+            'xhtml' => 'app/xhtml+xml',
+            'zip'   => 'app/zip',
             'mid'   => 'audio/midi',
             'midi'  => 'audio/midi',
             'mp2'   => 'audio/mpeg',
@@ -3775,12 +3775,12 @@ class PHPMailer
         if (array_key_exists(strtolower($ext), $mimes)) {
             return $mimes[strtolower($ext)];
         }
-        return 'application/octet-stream';
+        return 'app/octet-stream';
     }
 
     /**
      * Map a file name to a MIME type.
-     * Defaults to 'application/octet-stream', i.e.. arbitrary binary data.
+     * Defaults to 'app/octet-stream', i.e.. arbitrary binary data.
      *
      * @param string $filename A file name or full path, does not need to exist as a file
      *

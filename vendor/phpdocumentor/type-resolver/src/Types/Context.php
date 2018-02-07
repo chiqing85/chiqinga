@@ -20,7 +20,7 @@ namespace phpDocumentor\Reflection\Types;
  * you can provide a short form or make use of namespace aliases.
  *
  * The phpDocumentor Reflection component knows how to create this class but if you use the DocBlock parser from your
- * own application it is possible to generate a Context class using the ContextFactory; this will analyze the file in
+ * own app it is possible to generate a Context class using the ContextFactory; this will analyze the file in
  * which an associated class resides for its namespace and imports.
  *
  * @see ContextFactory::createFromClassReflector()

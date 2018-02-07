@@ -2051,9 +2051,9 @@
              * 文件MIMETYPE类型，与文件类型的对应关系请参考[http://t.cn/z8ZnFny](http://t.cn/z8ZnFny)
              * @property type
              * @type {string}
-             * @default 'application'
+             * @default 'app'
              */
-            this.type = source.type || 'application';
+            this.type = source.type || 'app';
     
             /**
              * 文件最后修改日期
@@ -3911,7 +3911,7 @@
                 });
     
                 // insert flash object
-                html = '<object id="' + this.uid + '" type="application/' +
+                html = '<object id="' + this.uid + '" type="app/' +
                         'x-shockwave-flash" data="' +  opts.swf + '" ';
     
                 if ( Base.browser.ie ) {

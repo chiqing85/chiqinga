@@ -41,7 +41,7 @@ class ThinkExtend extends LibraryInstaller
 
                 $composerExtra = $this->composer->getPackage()->getExtra();
 
-                $appDir = !empty($composerExtra['app-path']) ? $composerExtra['app-path'] : 'application';
+                $appDir = !empty($composerExtra['app-path']) ? $composerExtra['app-path'] : 'app';
 
                 if (is_dir($appDir)) {
 

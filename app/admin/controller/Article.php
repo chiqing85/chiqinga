@@ -21,20 +21,6 @@ use app\admin\model\Article as articler;
 
 class Article extends Common
 {
-    //创建目录
-    protected function checkPath($path)
-    {
-        if (is_dir($path)) {
-            return true;
-        }
-
-        if (mkdir($path, 0755, true)) {
-            return true;
-        } else {
-            $this->error = "目录 {$path} 创建失败！";
-            return false;
-        }
-    }
     /*********
      *
      * 文章列表
@@ -170,27 +156,4 @@ class Article extends Common
             return view();
         }
      }
-
-    //文章缩略图
-    public function upload()
-    {
-        $file = request()->file('images');
-
-        if($file)
-        {
-            $image = \think\Image::open($file);
-
-            $this->checkPath( realpath($_SERVER['DOCUMENT_ROOT']) . DS.'uploads/'. date('Ymd'));
-
-            $thume = '/uploads/'. date('Ymd'). DS .md5(microtime(true)) .'.jpg';
-
-            $image->thumb(125, 86)->save( realpath($_SERVER['DOCUMENT_ROOT']) . $thume);
-
-            return $thume;
-
-        }else{
-
-            return '文件上传失败！';
-        }
-    }
 }

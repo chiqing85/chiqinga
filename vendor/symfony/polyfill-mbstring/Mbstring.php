@@ -492,7 +492,7 @@ final class Mbstring
         $info = array(
             'internal_encoding' => self::$internalEncoding,
             'http_output' => 'pass',
-            'http_output_conv_mimetypes' => '^(text/|application/xhtml\+xml)',
+            'http_output_conv_mimetypes' => '^(text/|app/xhtml\+xml)',
             'func_overload' => 0,
             'func_overload_list' => 'no overload',
             'mail_charset' => 'UTF-8',

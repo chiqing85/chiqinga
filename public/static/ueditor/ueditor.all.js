@@ -8241,7 +8241,7 @@ UE.ajax = function() {
             }
         };
         if (method == "POST") {
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.setRequestHeader('Content-Type', 'app/x-www-form-urlencoded');
             xhr.send(submitStr);
         } else {
             xhr.send(null);
@@ -17657,7 +17657,7 @@ UE.plugins['video'] = function (){
                     ' src="' + me.options.UEDITOR_HOME_URL+'themes/default/images/spacer.gif" style="background:url('+me.options.UEDITOR_HOME_URL+'themes/default/images/videologo.gif) no-repeat center center; border:1px solid gray;'+(align ? 'float:' + align + ';': '')+'" />'
                 break;
             case 'embed':
-                str = '<embed type="application/x-shockwave-flash" class="' + classname + '" pluginspage="http://www.macromedia.com/go/getflashplayer"' +
+                str = '<embed type="app/x-shockwave-flash" class="' + classname + '" pluginspage="http://www.macromedia.com/go/getflashplayer"' +
                     ' src="' +  utils.html(url) + '" width="' + width  + '" height="' + height  + '"'  + (align ? ' style="float:' + align + '"': '') +
                     ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >';
                 break;
@@ -23337,7 +23337,7 @@ UE.plugin.register('snapscreen', function (){
                         var container = me.container;
                         var doc = me.container.ownerDocument || me.container.document;
                         snapplugin = doc.createElement("object");
-                        try{snapplugin.type = "application/x-pluginbaidusnap";}catch(e){
+                        try{snapplugin.type = "app/x-pluginbaidusnap";}catch(e){
                             return;
                         }
                         snapplugin.style.cssText = "position:absolute;left:-9999px;width:0;height:0;";
@@ -23659,7 +23659,7 @@ UE.plugin.register('music', function (){
                     ' width="'+ width +'" height="' + height + '" _url="'+url+'" class="edui-faked-music"' +
                     ' src="'+me.options.langPath+me.options.lang+'/images/music.png" />'
             :
-            '<embed type="application/x-shockwave-flash" class="edui-faked-music" pluginspage="http://www.macromedia.com/go/getflashplayer"' +
+            '<embed type="app/x-shockwave-flash" class="edui-faked-music" pluginspage="http://www.macromedia.com/go/getflashplayer"' +
                 ' src="' + url + '" width="' + width  + '" height="' + height  + '" '+ (align && !cssfloat? 'align="' + align + '"' : '') +
                 (cssfloat ? 'style="float:' + cssfloat + '"' : '') +
                 ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >';

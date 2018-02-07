@@ -3009,7 +3009,7 @@ CodeMirror.defineMode("xml", function(config, parserConfig) {
     };
 });
 
-CodeMirror.defineMIME("application/xml", "xml");
+CodeMirror.defineMIME("app/xml", "xml");
 CodeMirror.defineMIME("text/html", {name: "xml", htmlMode: true});
 CodeMirror.defineMode("javascript", function(config, parserConfig) {
     var indentUnit = config.indentUnit;
@@ -3370,7 +3370,7 @@ CodeMirror.defineMode("javascript", function(config, parserConfig) {
 });
 
 CodeMirror.defineMIME("text/javascript", "javascript");
-CodeMirror.defineMIME("application/json", {name: "javascript", json: true});
+CodeMirror.defineMIME("app/json", {name: "javascript", json: true});
 
 CodeMirror.defineMode("css", function(config) {
     var indentUnit = config.indentUnit, type;

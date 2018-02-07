@@ -114,7 +114,7 @@ class Crawler extends \SplObjectStorage
     public function addContent($content, $type = null)
     {
         if (empty($type)) {
-            $type = 0 === strpos($content, '<?xml') ? 'application/xml' : 'text/html';
+            $type = 0 === strpos($content, '<?xml') ? 'app/xml' : 'text/html';
         }
 
         // DOM only for HTML/XML content

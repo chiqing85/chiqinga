@@ -63,4 +63,30 @@ class Upload extends Controller
 
     }
 
+    /**
+     * 文章缩略图
+     * @return string
+     */
+    public function articleupload()
+    {
+        $file = request()->file('images');
+
+        if($file)
+        {
+            $image = \think\Image::open($file);
+
+            $this->checkPath( realpath($_SERVER['DOCUMENT_ROOT']) . DS.'uploads/'. date('Ymd'));
+
+            $thume = '/uploads/'. date('Ymd'). DS .md5(microtime(true)) .'.jpg';
+
+            $image->thumb(125, 86)->save( realpath($_SERVER['DOCUMENT_ROOT']) . $thume);
+
+            return $thume;
+
+        }else{
+
+            return '文件上传失败！';
+        }
+    }
+
 }
