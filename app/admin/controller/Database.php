@@ -159,7 +159,7 @@ class Database extends Common
 
         $restore = $this->bak;
 
-        $res = $restore->restor($base);
+        $res = $restore->restore($base);
 
         if($res)
         {
