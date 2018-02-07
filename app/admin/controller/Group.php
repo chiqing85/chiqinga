@@ -140,7 +140,7 @@ class Group extends Common
 
     public function del()
     {
-        $groups = model('AuthGroup')::get(input('id'),'access');
+        $groups = model('AuthGroup')->get(input('id'),'access');
 
         if($groups->together('access')->delete())
         {

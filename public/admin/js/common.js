@@ -1,3 +1,8 @@
+$.post('/admin/index/index',function (data) {
+
+    $('.article').html(data);
+
+})
 /*****
  * base
  * * * * * */
