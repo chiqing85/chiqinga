@@ -40,7 +40,7 @@
                                 <label for="{$vo.id}" class="colourattrbox"></label>
                             </td>
                             <td>{$vo.id}</td>
-                            <td>{$vo.title}</td>
+                            <td><a href="/article/{$vo.id}.shtml" target="_blank">{$vo.title}</a></td>
                             <td>{$vo['category']['name']}</td>
                             <td>{$vo.author}</td>
                             <td>{eq name="$vo.istop" value="0"}<span class="in-is demo">No</span> {else/}<span class="in-is danger">Yes</span> {/eq}</td>

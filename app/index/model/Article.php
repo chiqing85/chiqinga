@@ -15,7 +15,7 @@ namespace app\index\model;
 
 use think\Model;
 
-class Articler extends Model
+class Article extends Model
 {
     public function index()
     {

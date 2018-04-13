@@ -311,27 +311,35 @@
             </div>
         </div>
     </div>
-
-
 </div>
 <script>
 
-
-
     $(".card-content").mCustomScrollbar();
 
+    var ca = document.cookie.split(';');
+
+    for(var i =0; i < ca.length; i++)
+    {
+        var c = ca[i].trim();
+
+        if(c.indexOf('danger=') == 0) $('.alert-danger').hide();
+    }
 
     $('.close').on('click',function () {
+
         $('.alert-danger').hide();
 
-        var time = new Date().getTime();
+        var time = new Date();
 
-        document.cookie = 'danger=0; expires='+ time + 3600*12;
+        var curdaty = new Date().toLocaleDateString();  //当前日期
 
-        console.log(document.cookie);
+        var curwebhours =  new Date(curdaty).getTime() + (24 * 60 * 60 * 1000) -1;  //当日24点时间戳
+
+        time.setTime(curwebhours);
+
+        document.cookie="danger=lock; expires=" + time.toUTCString() + ';Path=/';       //设置cookie
+
     });
-
-
 
     $('.btn-icon').on('mouseover',function () {
 
@@ -380,8 +388,6 @@
 
             var tmp = item.now.tmp;
 
-            var tmp = - 30;
-
             $('.desc').text(item.basic.location);
 
             $('.slider-value-container').html(tmp + '&#8451;');
@@ -390,16 +396,11 @@
 
             $('.temperature img').attr('src', '__Img__/heweather/' + item.now.cond_code + '.png' );
 
-
-        })
+        });
 
         var tmp = data.HeWeather6[0].now.tmp;   //温度
 
-        var tmp = - 50;
-
         var tmps = 50 + parseInt(tmp);    //百份比
-
-        console.log(Math.sin(40) * 131);
 
 
 
@@ -418,7 +419,16 @@
 
 
         } else {
-            console.log( 'true');
+            console.log(tmps);;
+
+            var y = Math.sin(tmp) * 180 ;
+
+            var x = 50 + Math.sin(tmps) * 360;
+
+
+
+            console.log(y, x);
+
         }
 
         $('.circle').attr('cx', x);

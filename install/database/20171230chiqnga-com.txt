@@ -80,8 +80,8 @@ CREATE TABLE `auth_group_access` (
     KEY `group_id` (`group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
----------------------------------------
-------------网站信息
+----------------------------------------
+------------网站信息--------------------
 ----------------------------------------
 create table config(
 id int(10) AUTO_INCREMENT PRIMARY KEY,

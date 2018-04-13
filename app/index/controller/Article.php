@@ -13,8 +13,51 @@
 
 namespace app\index\controller;
 
+use app\index\model\Article as articles;
 
-class Article
+class Article extends Common
 {
+    /**
+     * Title: 文章内容
+     * Notes:index
+     * @return \think\response\View
+     */
+    public function index()
+    {
+        $articler = new articles;
 
+        $data = $articler->where('id', input('id'))->find();
+
+        $articler->where('id', input('id'))->setInc('number');
+
+        $this->assign('data', $data);
+
+        $this->assign('fron',$articler->where('id < '.input('id'))->order('id desc')->find());//上一篇
+
+        $this->assign('after',$articler->where('id > '.input('id'))->order('id asc')->find());//下一篇
+
+        return view();
+    }
+
+    /**
+     * Title:　归档
+     * Notes:archives
+     * @return int
+     */
+    public function archives()
+    {
+        $articler = new articles;
+
+        $data = db('article')->field('FROM_UNIXTIME(time,"%Y-%m") as stime,id,title,time,duction')->group('time desc')->select();
+
+        $arr = array();
+        foreach ($data as $k => $v) {
+
+            $arr[$v['stime']][] = $v;
+        };
+
+        $this->assign('list', $arr);
+
+        return view('archives/index');
+    }
 }

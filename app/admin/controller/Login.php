@@ -14,22 +14,23 @@
 
 namespace app\admin\controller;
 
+use think\Controller;
 use think\Request;
 
 use think\Validate;
 
 use think\Session;
 
-class Login extends Common
+class Login extends Controller
 {
     protected $rule = [
         ['user','require','用户名不能为空！'],
         ['user_password','require', '密码不能为空'],
         ['__token__', 'require|max:50|token']
-];
+    ];
     public function _initialize()
     {
-        $Copyright = '<a href="/">王赤清个人网站</a> &copy; 2015 - '. date('Y',time()) .'版权所有 ';
+        $Copyright = '<a href="/">'. db('config')->where('key', 'SiteaName')->value('v').'</a> &copy; 2015 - '. date('Y',time()) .'版权所有 ';
 
         $this->assign('Copyright', $Copyright);
 

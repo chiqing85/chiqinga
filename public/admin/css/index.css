@@ -65,6 +65,18 @@
     box-shadow: 0 0 0 0 #db9d00, 0 0 0 0 #ffb600;
 }
 
+.small-box:hover .info {
+    background: linear-gradient(to right,#65ccff,#65b2ff);
+}
+.small-box:hover .primary {
+    background-image: linear-gradient(to right,#bf91ff,#9a91ff);
+}
+.small-box:hover .success {
+    background-image: linear-gradient(to right,#5be1bd,#5be190);
+}
+.small-box:hover .warning {
+    background-image: linear-gradient(to right,#ffd324,#ffae24);
+}
 .value.tab-menu {
     display: inline-block;
     text-align: center;
@@ -220,7 +232,6 @@ label.btn.btn-icon {
     margin: 0 .8rem;
 }
 label.btn.btn-icon i {
-    font-size: 0.25rem;
     padding: .8rem;
     border: 1px solid #ebeff5;
     border-radius: 50%;

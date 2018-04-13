@@ -1,0 +1,3911 @@
+---------------------------------------------------------------
+[ 2018-04-04T19:47:30+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index
+[ info ] chiqinga.com/admin/index [运行时间：1.705000s][吞吐率：0.59req/s] [内存消耗：2,198.13kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+  14 => 'Copyright',
+  15 => 'title',
+  16 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.119000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.831000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.277000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.282000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:47:33+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/menu/index
+[ info ] chiqinga.com/admin/menu/index [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：1,226.02kb] [文件加载：45]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Menu->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Menu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:47:33+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/index/index
+[ info ] chiqinga.com/admin/index/index [运行时间：0.185000s][吞吐率：5.41req/s] [内存消耗：2,226.59kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\indexs.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:47:33+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/item/52295486f3997723f11c196b50f0f939.jpg
+[ info ] chiqinga.com/uploads/item/52295486f3997723f11c196b50f0f939.jpg [运行时间：0.493000s][吞吐率：2.03req/s] [内存消耗：1,233.13kb] [文件加载：41]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => 'item',
+    2 => '52295486f3997723f11c196b50f0f939.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'if-modified-since' => 'Tue, 03 Apr 2018 12:23:28 GMT',
+  'if-none-match' => '"a66a-568f0c617ae27"',
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:47:33+08:00 ] 127.0.0.1 127.0.0.1 GET /request
+[ info ] api.chiqinga.com/request [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：1,210.76kb] [文件加载：41]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'request',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Request->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Request.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:48:04+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.233000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.132000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:48:37+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.120000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:49:10+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.120000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:49:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index
+[ info ] chiqinga.com/admin/index [运行时间：0.101000s][吞吐率：9.90req/s] [内存消耗：2,198.27kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+  14 => 'Copyright',
+  15 => 'title',
+  16 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:49:27+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/item/52295486f3997723f11c196b50f0f939.jpg
+[ info ] chiqinga.com/uploads/item/52295486f3997723f11c196b50f0f939.jpg [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,232.66kb] [文件加载：41]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => 'item',
+    2 => '52295486f3997723f11c196b50f0f939.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:49:27+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/index/index
+[ info ] chiqinga.com/admin/index/index [运行时间：0.131000s][吞吐率：7.63req/s] [内存消耗：2,226.67kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\indexs.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.035000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:49:27+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/menu/index
+[ info ] chiqinga.com/admin/menu/index [运行时间：0.045000s][吞吐率：22.22req/s] [内存消耗：1,226.05kb] [文件加载：45]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Menu->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Menu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:49:27+08:00 ] 127.0.0.1 127.0.0.1 GET /request
+[ info ] api.chiqinga.com/request [运行时间：0.027000s][吞吐率：37.04req/s] [内存消耗：1,210.76kb] [文件加载：41]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'request',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Request->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Request.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:49:32+08:00 ] 127.0.0.1 127.0.0.1 GET /out/
+[ info ] chiqinga.com/out/ [运行时间：0.397000s][吞吐率：2.52req/s] [内存消耗：1,444.00kb] [文件加载：53]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'out',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->out[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:49:32+08:00 ] 127.0.0.1 127.0.0.1 GET /login/index
+[ info ] chiqinga.com/login/index [运行时间：0.085000s][吞吐率：11.76req/s] [内存消耗：1,492.04kb] [文件加载：54]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Login.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\login\index.html [ array (
+  0 => 'Copyright',
+  1 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:49:33+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.shtml
+[ info ] chiqinga.com/captcha.shtml [运行时间：0.189000s][吞吐率：5.29req/s] [内存消耗：1,251.52kb] [文件加载：40]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\www\bolg\chiqinga\chiqinga\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:49:41+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/login/index
+[ info ] chiqinga.com/index.php/login/index [运行时间：0.435000s][吞吐率：2.30req/s] [内存消耗：2,353.45kb] [文件加载：65]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/login/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '82',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'user' => 'admin',
+  'user_password' => 'admin',
+  'iver' => 'dfu',
+  '__token__' => '04ece555e2f7c4fbf3edc0834d199dfd',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.287000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user` = 'admin' OR `email` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `login_time`=1522842580,`login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] INSERT INTO `user_log` (`user` , `time` , `ip` , `location`) VALUES ('admin' , 1522842580 , '127.0.0.1' , '本地测试') [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:49:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index
+[ info ] chiqinga.com/admin/index [运行时间：0.172000s][吞吐率：5.81req/s] [内存消耗：2,198.16kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+  14 => 'Copyright',
+  15 => 'title',
+  16 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:49:43+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/menu/index
+[ info ] chiqinga.com/admin/menu/index [运行时间：0.059000s][吞吐率：16.95req/s] [内存消耗：1,226.05kb] [文件加载：45]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Menu->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Menu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:49:43+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/index/index
+[ info ] chiqinga.com/admin/index/index [运行时间：0.194000s][吞吐率：5.15req/s] [内存消耗：2,226.61kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\indexs.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.018000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:49:43+08:00 ] 127.0.0.1 127.0.0.1 GET /request
+[ info ] api.chiqinga.com/request [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：1,210.76kb] [文件加载：41]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'request',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Request->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Request.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:49:43+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.278000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.164000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:49:57+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.074000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.127000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:50:46+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.111000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:25+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index
+[ info ] chiqinga.com/admin/index [运行时间：0.194000s][吞吐率：5.15req/s] [内存消耗：2,197.99kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+  14 => 'Copyright',
+  15 => 'title',
+  16 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index
+[ info ] chiqinga.com/admin/index [运行时间：0.172000s][吞吐率：5.81req/s] [内存消耗：2,197.99kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+  14 => 'Copyright',
+  15 => 'title',
+  16 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:26+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/menu/index
+[ info ] chiqinga.com/admin/menu/index [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：1,226.05kb] [文件加载：45]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Menu->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Menu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:52:26+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/index/index
+[ info ] chiqinga.com/admin/index/index [运行时间：0.164000s][吞吐率：6.10req/s] [内存消耗：2,226.67kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\indexs.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.009000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:27+08:00 ] 127.0.0.1 127.0.0.1 GET /request
+[ info ] api.chiqinga.com/request [运行时间：0.041000s][吞吐率：24.39req/s] [内存消耗：1,210.76kb] [文件加载：41]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'request',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Request->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Request.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:52:37+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/config
+[ info ] chiqinga.com/admin/config [运行时间：0.645000s][吞吐率：1.55req/s] [内存消耗：2,109.06kb] [文件加载：61]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Config->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Config.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\config\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'config',
+  6 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' ORDER BY `id` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:42+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/mail
+[ info ] chiqinga.com/admin/mail [运行时间：0.189000s][吞吐率：5.29req/s] [内存消耗：2,110.30kb] [文件加载：61]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mail',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Mail->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Mail.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\mail\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'mail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:46+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/link
+[ info ] chiqinga.com/admin/link [运行时间：0.628000s][吞吐率：1.59req/s] [内存消耗：2,177.17kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'link',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Link->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Link.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\link\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `link` [ RunTime:0.199000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `link` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `link` ORDER BY sort asc, id desc LIMIT 0,12 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:51+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog
+[ info ] chiqinga.com/admin/userlog [运行时间：0.460000s][吞吐率：2.17req/s] [内存消耗：2,172.89kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 0,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:57+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.120000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:57+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=2
+[ info ] chiqinga.com/admin/userlog?page=2 [运行时间：0.135000s][吞吐率：7.41req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 12,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:52:59+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=3
+[ info ] chiqinga.com/admin/userlog?page=3 [运行时间：0.123000s][吞吐率：8.13req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 24,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:02+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=1
+[ info ] chiqinga.com/admin/userlog?page=1 [运行时间：0.131000s][吞吐率：7.63req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 0,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:06+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=9
+[ info ] chiqinga.com/admin/userlog?page=9 [运行时间：0.128000s][吞吐率：7.81req/s] [内存消耗：2,172.52kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '9',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 96,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:15+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=5
+[ info ] chiqinga.com/admin/userlog?page=5 [运行时间：0.142000s][吞吐率：7.04req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 48,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:18+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=3
+[ info ] chiqinga.com/admin/userlog?page=3 [运行时间：0.127000s][吞吐率：7.87req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 24,12 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:20+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=4
+[ info ] chiqinga.com/admin/userlog?page=4 [运行时间：0.128000s][吞吐率：7.81req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 36,12 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:22+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=5
+[ info ] chiqinga.com/admin/userlog?page=5 [运行时间：0.131000s][吞吐率：7.63req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 48,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:23+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=6
+[ info ] chiqinga.com/admin/userlog?page=6 [运行时间：0.127000s][吞吐率：7.87req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '6',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 60,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:24+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=7
+[ info ] chiqinga.com/admin/userlog?page=7 [运行时间：0.133000s][吞吐率：7.52req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '7',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 72,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:25+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=8
+[ info ] chiqinga.com/admin/userlog?page=8 [运行时间：0.118000s][吞吐率：8.47req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '8',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 84,12 [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:27+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=9
+[ info ] chiqinga.com/admin/userlog?page=9 [运行时间：0.137000s][吞吐率：7.30req/s] [内存消耗：2,172.52kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '9',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 96,12 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:29+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=5
+[ info ] chiqinga.com/admin/userlog?page=5 [运行时间：0.135000s][吞吐率：7.41req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 48,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:30+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.120000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:32+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=1
+[ info ] chiqinga.com/admin/userlog?page=1 [运行时间：0.124000s][吞吐率：8.06req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 0,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:38+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=4
+[ info ] chiqinga.com/admin/userlog?page=4 [运行时间：0.137000s][吞吐率：7.30req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 36,12 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:53:40+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/userlog?page=1
+[ info ] chiqinga.com/admin/userlog?page=1 [运行时间：0.127000s][吞吐率：7.87req/s] [内存消耗：2,173.41kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'userlog',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Userlog->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Userlog.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\userlog\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'log',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_log` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 0,12 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:54:03+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.134000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:54:36+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.106000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:55:09+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.124400s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:55:40+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/user
+[ info ] chiqinga.com/admin/user [运行时间：0.280000s][吞吐率：3.57req/s] [内存消耗：2,497.23kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.056000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`user`,`user_pic`,`email`,`qq`,`nickname`,`reg_time`,`login_time`,`login_ip`,`token` FROM `user` ORDER BY `id` LIMIT 0,12 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.037000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:55:42+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.141000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:55:45+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/save/id/1
+[ info ] chiqinga.com/admin/user/save/id/1 [运行时间：0.170000s][吞吐率：5.88req/s] [内存消耗：2,414.55kb] [文件加载：67]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->save[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\save.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+  6 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:55:49+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/User
+[ info ] chiqinga.com/Admin/User [运行时间：0.191000s][吞吐率：5.24req/s] [内存消耗：2,497.23kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'User',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`user`,`user_pic`,`email`,`qq`,`nickname`,`reg_time`,`login_time`,`login_ip`,`token` FROM `user` ORDER BY `id` LIMIT 0,12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:55:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/save/id/5
+[ info ] chiqinga.com/admin/user/save/id/5 [运行时间：0.177000s][吞吐率：5.65req/s] [内存消耗：2,414.41kb] [文件加载：67]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->save[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\save.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+  6 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:15+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.126000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:27+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/User
+[ info ] chiqinga.com/Admin/User [运行时间：0.163000s][吞吐率：6.13req/s] [内存消耗：2,497.23kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'User',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.019000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`user`,`user_pic`,`email`,`qq`,`nickname`,`reg_time`,`login_time`,`login_ip`,`token` FROM `user` ORDER BY `id` LIMIT 0,12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/save/id/5
+[ info ] chiqinga.com/admin/user/save/id/5 [运行时间：0.173000s][吞吐率：5.78req/s] [内存消耗：2,414.41kb] [文件加载：67]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->save[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\save.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+  6 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:48+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/user/add/
+[ info ] chiqinga.com/Admin/user/add/ [运行时间：0.219000s][吞吐率：4.57req/s] [内存消耗：2,418.55kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '141',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'user' => 'demo',
+  'email' => '',
+  'user_pic' => '/uploads/item/bb576b16c7380509dbd33bf3c0fcd38c.jpg',
+  'group_id' => '3',
+  '__token__' => '1496efdca6784c3ff3397c3015bff598',
+  'id' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->add[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] DELETE FROM `auth_group_access`    WHERE  `uid` = 5 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `user`='demo',`email`='',`user_pic`='/uploads/item/bb576b16c7380509dbd33bf3c0fcd38c.jpg'  WHERE  `id` = 5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:49+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.148000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:50+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/User
+[ info ] chiqinga.com/Admin/User [运行时间：0.151000s][吞吐率：6.62req/s] [内存消耗：2,492.45kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'User',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`user`,`user_pic`,`email`,`qq`,`nickname`,`reg_time`,`login_time`,`login_ip`,`token` FROM `user` ORDER BY `id` LIMIT 0,12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:50+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/User
+[ info ] chiqinga.com/Admin/User [运行时间：0.256000s][吞吐率：3.91req/s] [内存消耗：2,492.45kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'User',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`user`,`user_pic`,`email`,`qq`,`nickname`,`reg_time`,`login_time`,`login_ip`,`token` FROM `user` ORDER BY `id` LIMIT 0,12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/save/id/5
+[ info ] chiqinga.com/admin/user/save/id/5 [运行时间：0.159000s][吞吐率：6.29req/s] [内存消耗：2,409.68kb] [文件加载：67]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->save[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\save.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+  6 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:56:59+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/user/add/
+[ info ] chiqinga.com/Admin/user/add/ [运行时间：0.185000s][吞吐率：5.41req/s] [内存消耗：2,417.38kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '141',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'user' => 'demo',
+  'email' => '',
+  'user_pic' => '/uploads/item/bb576b16c7380509dbd33bf3c0fcd38c.jpg',
+  'group_id' => '3',
+  '__token__' => '68585874b0e51137132177d3ae40c91c',
+  'id' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->add[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] DELETE FROM `auth_group_access`    WHERE  `uid` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `user`='demo',`email`='',`user_pic`='/uploads/item/bb576b16c7380509dbd33bf3c0fcd38c.jpg'  WHERE  `id` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] REPLACE INTO `auth_group_access` (`uid` , `group_id`) VALUES (5 , 3) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:57:01+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/User
+[ info ] chiqinga.com/Admin/User [运行时间：0.180000s][吞吐率：5.56req/s] [内存消耗：2,497.11kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'User',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`user`,`user_pic`,`email`,`qq`,`nickname`,`reg_time`,`login_time`,`login_ip`,`token` FROM `user` ORDER BY `id` LIMIT 0,12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:57:02+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/User
+[ info ] chiqinga.com/Admin/User [运行时间：0.162000s][吞吐率：6.17req/s] [内存消耗：2,497.11kb] [文件加载：70]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'User',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\user\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `auth_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`user`,`user_pic`,`email`,`qq`,`nickname`,`reg_time`,`login_time`,`login_ip`,`token` FROM `user` ORDER BY `id` LIMIT 0,12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `auth_group`.*,pivot.uid AS pivot__uid,pivot.group_id AS pivot__group_id FROM `auth_group` INNER JOIN `auth_group_access` `pivot` ON `pivot`.`group_id`=`auth_group`.`id` WHERE  `pivot`.`uid` = 5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:57:22+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.142000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:57:31+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/group
+[ info ] chiqinga.com/admin/group [运行时间：0.159000s][吞吐率：6.29req/s] [内存消耗：2,383.51kb] [文件加载：66]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Group->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Group.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\group\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `auth_group` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`status`,`describe` FROM `auth_group` LIMIT 0,12 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:57:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/group/save/2
+[ info ] chiqinga.com/admin/group/save/2 [运行时间：0.608000s][吞吐率：1.64req/s] [内存消耗：2,443.29kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'save',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Group->save[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Group.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\group\save.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'group',
+  6 => 'rules',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_group` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.443000s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` ORDER BY `id` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:57:49+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/database/reduction
+[ info ] chiqinga.com/admin/database/reduction [运行时间：0.304000s][吞吐率：3.29req/s] [内存消耗：2,146.90kb] [文件加载：62]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'database',
+    2 => 'reduction',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Database->reduction[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Database.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\database\reduction.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:57:55+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.113000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:58:13+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/database
+[ info ] chiqinga.com/admin/database [运行时间：0.165000s][吞吐率：6.06req/s] [内存消耗：2,166.55kb] [文件加载：62]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'database',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Database->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Database.php ]
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\database\index.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'datalist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] show table STATUS [ RunTime:0.041000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:58:28+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.119000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:58:30+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/index
+[ info ] chiqinga.com/admin/index [运行时间：0.524000s][吞吐率：1.91req/s] [内存消耗：2,226.65kb] [文件加载：64]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=5tu8gtgpda903b830bhfodsut2; danger=lock',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://chiqinga.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'expire' => 604800,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\www\bolg\chiqinga\chiqinga\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\indexs.html [ array (
+  0 => 'SiteaName',
+  1 => 'SiteaUrl',
+  2 => 'MetaCopyright',
+  3 => 'RecordNo',
+  4 => 'SiteaLogo',
+  5 => 'affiche',
+  6 => 'os',
+  7 => 'log',
+  8 => 'copy',
+  9 => 'articled',
+  10 => 'article',
+  11 => 'feedback_d',
+  12 => 'feedback',
+  13 => 'feedbacks',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.236000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `type` = 'system' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `v` FROM `config` WHERE  `key` = 'Affiche' ORDER BY `id` LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY id desc LIMIT 7 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feedback` [ RunTime:0.145000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` WHERE  `time` > '1522771200' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `feedback` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `feedback` ORDER BY `time`  desc LIMIT 5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-04T19:58:30+08:00 ] 127.0.0.1 127.0.0.1 GET /request
+[ info ] api.chiqinga.com/request [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：1,210.76kb] [文件加载：41]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'request',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Request->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Request.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-04T19:59:01+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.119000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T19:59:34+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.149000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]
+---------------------------------------------------------------
+[ 2018-04-04T20:00:07+08:00 ] 127.0.0.1 127.0.0.1 GET /Notice
+[ info ] api.chiqinga.com/Notice [运行时间：30.133000s][吞吐率：0.03req/s] [内存消耗：1,824.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\www\bolg\chiqinga\chiqinga\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Notice',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://chiqinga.com/admin/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'origin' => 'http://chiqinga.com',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/event-stream',
+  'connection' => 'close',
+  'host' => 'api.chiqinga.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Notice->index[ E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=chiqing;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `notice` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `notice` WHERE  (  isstatus = 0 and uid = 1 ) LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [1]Maximum execution time of 30 seconds exceeded[E:\www\bolg\chiqinga\chiqinga\app\api\controller\Notice.php:43]

@@ -41,11 +41,11 @@ class Common extends Controller
 
         $this->base();
 
-        /*if($uid == 1) {     //超级管理员
+        if($uid == 1) {     //超级管理员
 
             return true;
 
-        } else*/
+        } else
 
         if(!$auth->check( $module . '/' .$controller .'/' .  $action ,$uid))
         {
@@ -76,6 +76,7 @@ class Common extends Controller
             //网站logo
             if($v['key'] == 'SiteaLogo') $SiteaLogo = $v['v'];
         }
+
         $this->assign('SiteaName', $SiteaName);
 
         $this->assign('SiteaUrl', $SiteaUrl);

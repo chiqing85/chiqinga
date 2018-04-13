@@ -79,7 +79,7 @@ class Upload extends Controller
 
             $thume = '/uploads/'. date('Ymd'). DS .md5(microtime(true)) .'.jpg';
 
-            $image->thumb(125, 86)->save( realpath($_SERVER['DOCUMENT_ROOT']) . $thume);
+            $image->thumb(710,355)->save( realpath($_SERVER['DOCUMENT_ROOT']) . $thume);
 
             return $thume;
 

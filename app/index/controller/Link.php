@@ -14,7 +14,16 @@
 namespace app\index\controller;
 
 
-class Link
-{
+use think\Db;
 
+class Link extends Common
+{
+    public function index()
+    {
+        $list = Db::name('link')->order('sort asc, id desc')->paginate(12);
+
+        $this->assign('links', $list);
+
+        return view();
+    }
 }

@@ -102,7 +102,7 @@ class User extends Common
                 //生成随机数
                 $rand = mt_rand(100000,999999);
 
-                $data['user_password'] = md5(input('user_password')) . $rand;
+                $data['user_password'] = md5(input('user_password') . $rand);
 
                 unset($data['__token__']);
 

@@ -234,7 +234,6 @@ $(document).on('change','input.file-config',function () {
 
         }
     });
-
 });
 
 /**************

@@ -58,4 +58,10 @@ return [
     'admin/feedback/preview/:id' => 'admin/feedback/preview',
 
 
+    'article/:id' => 'article/index',
+    'link' => 'link/index/',
+
+    'archives' => 'article/archives/',
+
+
 ];

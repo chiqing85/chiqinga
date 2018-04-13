@@ -1,10 +1,53 @@
 <?php
 namespace app\index\controller;
 
-class Index
+use app\index\model\Article;
+
+class Index extends Common
 {
     public function index()
     {
-        return '<style type="text/css">*{ padding: 0; margin: 0; } .think_default_text{ padding: 4px 48px;} a{color:#2E5CD5;cursor: pointer;text-decoration: none} a:hover{text-decoration:underline; } body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.6em; font-size: 42px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p> ThinkPHP V5<br/><span style="font-size:30px">十年磨一剑 - 为API开发设计的高性能框架</span></p><span style="font-size:22px;">[ V5.0 版本由 <a href="http://www.qiniu.com" target="qiniu">七牛云</a> 独家赞助发布 ]</span></div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_bd568ce7058a1091"></thinkad>';
+        $articler = new article;
+
+        $data = $articler->order('istop desc, id desc')->field('content', true)->paginate(5);
+
+        $this->assign('list', $data);
+
+        $this->assign('bgimg', 'https://www.bing.com/'.$this->bing());
+
+        return view();
+    }
+
+    public function bing( $https=true,$method='get',$data=null)
+    {
+        $ch=curl_init(); //初始化
+
+        $curl = 'https://cn.bing.com/HPImageArchive.aspx?format=js&n=1';
+
+        curl_setopt($ch,CURLOPT_URL,$curl);
+        curl_setopt($ch,CURLOPT_HEADER,false);//设置不需要头信息
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);//获取页面内容，但不输出
+
+        if($https)
+        {
+            curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,FALSE);//不做服务器认证
+            curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,FALSE);//不做客户端认证
+        }
+
+        if($method=='post')
+        {
+            curl_setopt($ch, CURLOPT_POST,true);//设置请求是post方式
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $data);//设置post请求数据
+
+        }
+
+        $str=curl_exec($ch);//执行访问
+        curl_close($ch);//关闭curl，释放资源
+
+        $str = json_decode($str, true);
+
+        return $str['images'][0]['url'];
+
+
     }
 }

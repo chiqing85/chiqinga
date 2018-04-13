@@ -1,0 +1,111 @@
+::-webkit-scrollbar {
+    width: .625rem;
+    height: .7rem;
+    overflow: auto;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #9E9E9E;
+    min-height: 1.562rem;
+    min-width: 1.562rem;
+    border: .062rem solid #e0e0e0;
+}
+::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+    border: .062rem solid #efefef;
+}
+::selection {
+    background: #ddd;
+    color: #000;
+    text-shadow: none;
+}
+.post-footer .author{
+    margin: 0 auto;
+}
+.pagination{
+    display: initial;
+}
+section.post-content pre{
+    border-left: 3px solid #9E9E9E;
+    border-radius: 3px;
+    background: #282c34;
+    color: #abb2bf;
+    padding: 0.5em;
+    font-size: 90%;
+    line-height: 2rem;
+}
+section.post-content h2.h2{
+    margin: .875rem -1rem;
+    padding: 0 .875rem;
+    border-left: .3125rem solid #51aded;
+    background-color: #f7f7f7;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+}
+section.post-content p img.wp-smiley {
+    width: 20px;
+    display: inline;
+    left: unset;
+    transform: unset;
+    padding: unset;
+}
+.pagination a {
+    color: gray;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.pagination a:hover {
+    background-color: gray;
+    color: #fff;
+}
+/* ================================================================
+footer
+=============================================================== */
+
+#footer {
+    background: #23282D;
+    padding: 40px 0 30px;
+    text-align: center;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.footer-list.text-center {
+    margin: 0 auto;
+}
+#footer p {
+    color: rgba(255,255,255,.3);
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.8;
+}
+.kratos-social-icons>a {
+    padding: 4px 14px;
+    color: #51aded;
+}
+#footer p a {
+    color: rgba(255,255,255,.5);
+}
+.kratos-social-icons>a i {
+    font-size: 25px;
+}
+
+#footer p a:hover {
+    text-decoration: none;
+    color: #51aded!important;
+}
