@@ -102,6 +102,8 @@ class User extends Common
                 //生成随机数
                 $rand = mt_rand(100000,999999);
 
+//                md5($user_password . $info['token']) !== $info['user_password']
+
                 $data['user_password'] = md5(input('user_password') . $rand);
 
                 unset($data['__token__']);
@@ -205,5 +207,69 @@ class User extends Common
 
             return '头像上传失败！';
         }
+    }
+
+    /**
+     * Title: 修改用户密码
+     * Notes:pwd
+     */
+    public function pwd(){
+        if(!request()->isPost())
+        {
+            $data = input('get.');
+
+            $validata = Loader::validate('User');
+
+            if(!$validata->scene('pwd')->check($data))
+            {
+                return $validata->getError();
+            }
+
+            //生成随机数
+            $rand = mt_rand(100000,999999);
+
+            $data['user_password'] = md5($data['user_password'].$rand);
+
+            $data['token'] = $rand;
+
+            unset($data['__token__']);
+
+            if(db('user')->where('id', session('user.id'))->update($data))
+            {
+                return jsdata('200','密码重置成功……','');
+            }
+
+        } else {
+            return view();
+        }
+    }
+
+    /**
+     * Title: 修改昵称
+     * Notes:userinfo
+     */
+    public function userinfo()
+    {
+        if(request()->isGet()){
+
+            $data = input('get.');
+
+            $validata = Loader::validate('User');
+
+            if(!$validata->scene('edit')->check($data))
+            {
+                return $validata->getError();
+            }
+
+            unset($data['__token__']);
+
+            if(db('user')->where('id', session('user.id'))->update($data)){
+                return jsdata('200','昵称修改成功……','');
+            }
+
+        }else{
+            return view();
+        }
+
     }
 }

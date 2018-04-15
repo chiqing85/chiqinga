@@ -1,7 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:74:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\archives\index.html";i:1523600753;s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\nav.html";i:1523590894;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\footer.html";i:1523592807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:74:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\archives\index.html";i:1523802384;s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\nav.html";i:1523633270;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\footer.html";i:1523592807;}*/ ?>
 
 <!doctype html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -23,7 +23,7 @@
 			</span>
     </a>
     <ul>
-        <li class="nav- nav-current"><a href="http://chiqinga.com">首页</a></li>
+        <li class="nav- nav-current"><a href="/">首页</a></li>
         <li class="nav-"><a href="/archives/">归档</a></li>
         <li class="nav-"><a href="/link/">友链</a></li>
         <!--<li class="nav-"><a href="/about/">关于</a></li>-->
@@ -43,28 +43,28 @@
         </div>
     </header>
 </section>
+
+
 <article class="post page">
-    <section class="post-content">
-        <div class="demo">
-            <div class="history">
-                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $k = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?>
-                <div class="history-date">
-                    <ul>
-                        <h2 class="<?php if($k == '1'): ?>first<?php else: ?>date02<?php endif; ?>" <?php if($k == '1'): ?>style="position: relative;"<?php endif; ?>> <a href="javascript:;" class="nogo"><?php echo $key; ?></a><?php if($k == '1'): ?><span class="first">文章归档</span><?php endif; ?></h2>
-                        <?php if(is_array($vo) || $vo instanceof \think\Collection || $vo instanceof \think\Paginator): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$so): $mod = ($i % 2 );++$i;?>
-                        <li>
-                            <h3><?php echo date("m-d",$so['time']); ?><span><?php echo date("Y",$so['time']); ?></span></h3>
-                            <dl>
-                                <dt><a href="/article/<?php echo $so['id']; ?>.shtml" target="_blank"><?php echo $so['title']; ?></a><span><?php echo $so['duction']; ?></span></dt>
-                            </dl>
-                        </li>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </ul>
-                </div>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
+    <div class="demo">
+        <div class="history">
+            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $k = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?>
+            <div class="history-date">
+                <ul>
+                    <h2 class="<?php if($k == '1'): ?>first<?php else: ?>date02<?php endif; ?>" <?php if($k == '1'): ?>style="position: relative;"<?php endif; ?>> <a href="javascript:;" class="nogo"><?php echo $key; ?></a><?php if($k == '1'): ?><span class="first">文章归档</span><?php endif; ?></h2>
+                    <?php if(is_array($vo) || $vo instanceof \think\Collection || $vo instanceof \think\Paginator): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$so): $mod = ($i % 2 );++$i;?>
+                    <li>
+                        <h3><?php echo date("m-d",$so['time']); ?><span><?php echo date("Y",$so['time']); ?></span></h3>
+                        <dl>
+                            <dt><a href="/article/<?php echo $so['id']; ?>.shtml" target="_blank"><?php echo $so['title']; ?></a><span><?php echo $so['duction']; ?></span></dt>
+                        </dl>
+                    </li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </ul>
             </div>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
-    </section>
+    </div>
 </article>
 
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">

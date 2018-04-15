@@ -167,33 +167,40 @@ li.content-title.active>a:before {
     height: 100%;
 }
 .slider-container {
+    position: relative;
     width: 80%;
     max-width: 300px;
-    margin: 0 auto .5rem;
+    margin: .5rem auto;
     z-index: 2;
+}
+.demo1 {
+    transform-origin: center;
+    transform: rotate(125deg);
+}
+.demo2 {
+    transform-origin: center;
+    transform: rotate(125deg);
+    transition: stroke-dasharray .3s ease-in;
 }
 circle.circle {
     fill: #fff;
     stroke: #40dc7e;
 }
 .temperature-bg{
-    width: 260px;
-    height: 260px;
+    width: 300px;
+    height: 300px;
     position: absolute;
-    top: 2.35rem;
-    left: 3.5rem;
-    border-radius: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    border: 2px solid #ebeef2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: table;
     z-index: -3;
+}
+.value.temperature {
+    display: table-cell;
+    vertical-align: middle;
 }
 .slider-value-container {
     position: relative;

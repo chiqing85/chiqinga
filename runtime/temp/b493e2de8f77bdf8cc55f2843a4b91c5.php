@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\index.html";i:1515136152;s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\common\base.html";i:1517997076;s:72:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\common\heder.html";i:1517997076;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\common\footer.html";i:1516982909;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\index.html";i:1515136152;s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\common\base.html";i:1517997076;s:72:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\common\heder.html";i:1523665495;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\common\footer.html";i:1516982909;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>

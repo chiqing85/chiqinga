@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\login\index.html";i:1523014795;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\login\index.html";i:1523529417;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -8,7 +8,6 @@
     <title><?php echo $title; ?></title>
     <!--bootstrap-->
     <link rel="stylesheet" href="__Public__/static/bootstrap/css/bootstrap.min.css">
-
     <!--style-->
     <link rel="stylesheet" type="text/css" href="__Css__/Login.css" media="all">
 </head>

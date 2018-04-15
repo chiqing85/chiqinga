@@ -24,6 +24,10 @@ return array(
         ['name' =>'登录日志','data-url' => '/admin/userlog'],
         ['name' => '清除缓存', 'data-url' => '/admin/index/cache_clear'],
     ]],
+    'User' => ['name' => '用户管理','ico' => 'fa-user', 'data-url' => 'javascript:;', 'child' => [
+        ['name' => '修改昵称', 'data-url' => '/admin/user/userinfo'],
+        ['name' => '修改密码', 'data-url' => '/admin/user/pwd']
+    ]],
     'Auth' => ['name' => '权限管理', 'ico' => 'fa-table', 'data-url' => 'javascript:;', 'child' =>[
         ['name' => '管理员列表', 'data-url' => '/admin/user'],
         ['name' => '角色管理', 'data-url' => '/admin/group'],

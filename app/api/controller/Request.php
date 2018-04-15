@@ -24,9 +24,8 @@ class Request
     {
         header("Access-Control-Allow-Origin: http://chiqinga.com");
 
-//        return $this->now();
+        return $this->now();
 
-        return '{"HeWeather6":[{"basic":{"cid":"CN101190301","location":"镇江","parent_city":"镇江","admin_area":"江苏","cnty":"中国","lat":"32.20440292","lon":"119.45275116","tz":"+8.00"},"update":{"loc":"2018-04-03 15:47","utc":"2018-04-03 07:47"},"status":"ok","now":{"cloud":"16","cond_code":"101","cond_txt":"多云","fl":"26","hum":"51","pcpn":"0.0","pres":"1012","tmp":"28","vis":"19","wind_deg":"160","wind_dir":"东南风","wind_sc":"2","wind_spd":"6"}}]}';
     }
 
     public function  now()

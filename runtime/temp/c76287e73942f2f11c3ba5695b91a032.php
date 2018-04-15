@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\article\index.html";i:1523593769;s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\nav.html";i:1523590894;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\footer.html";i:1523592807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\article\index.html";i:1523593769;s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\nav.html";i:1523633270;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\footer.html";i:1523592807;}*/ ?>
 
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,7 @@
 			</span>
     </a>
     <ul>
-        <li class="nav- nav-current"><a href="http://chiqinga.com">首页</a></li>
+        <li class="nav- nav-current"><a href="/">首页</a></li>
         <li class="nav-"><a href="/archives/">归档</a></li>
         <li class="nav-"><a href="/link/">友链</a></li>
         <!--<li class="nav-"><a href="/about/">关于</a></li>-->

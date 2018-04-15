@@ -1,6 +1,15 @@
+html,body {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+}
 body.nav-closed .nav {
     -webkit-transition: -webkit-transform 0.3s ease,opacity 0s ease 0s;
     transition: transform 0.3s ease,opacity 0s ease 0s;
+}
+
+.main-nav.overlay {
+    height: 4rem;
 }
 .nav ul {
     padding: 90px 4% 5%;
@@ -17,20 +26,18 @@ body.nav-opened .hero {
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
 }
-.main-header {
-    position: relative;
+.post-head.main-header {
     display: table;
     width: 100%;
-    height: 100vh;
-    margin-bottom: 5rem;
-    text-align: center;
-    background: #222 no-repeat center center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
-}
-.post-head.main-header {
-    height: 30vh !important;
-    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .main-nav {
     position: relative;
@@ -44,8 +51,16 @@ body.nav-opened .hero {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
 }
-
-element.style {
+section.hero {
+    display: inline-table;
+    width: 100%;
+    height: 30vh !important;
+    padding-top: 0;
+    text-align: center;
+    background: #fff;
+    z-index: 5;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .main-nav a {
     text-decoration: none;
@@ -77,32 +92,28 @@ element.style {
 a:hover{
     color: black;
 }
-.wp {
-    width: 700px;
-}
 header.main-header .wp {
-    margin:120px auto;
+    margin: 11.9rem auto;
+    vertical-align: middle;
+    color: #fff;
     clear: both;
 }
 .wp .icon {
     display: inline-block;
-    width: 130px;
-    height: 130px;
-    margin-bottom: 60px;
-    font-size: 96px;
-    line-height: 130px;
-    color: #fff;
+    width: 10.7rem;
+    height: 10.7rem;
+    margin-bottom: 30px;
+    font-size: 9.5rem;
+    line-height: 10.7rem;
     background: #1e73be;
-    background: rgba(30,115,190,.97);
     border-radius: 50%;
 }
 .entry-title, .page-title {
     margin: 0;
-    font-size: 56px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1.2;
+    font-size: 6rem;
     color: #fff;
-    font-family: inherit;
 }
 .page-description {
     margin-top: 1em;
@@ -115,13 +126,11 @@ header.main-header .wp {
    =================================================== */
 
 .post {
-    position: relative;
-    width: 80%;
-    max-width: 710px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
-    word-wrap: break-word;
+    width: 95%;
+    margin: 0 auto;
+}
+.post:after{
+    display: none;
 }
 blockquote {
     -moz-box-sizing: border-box;
@@ -194,10 +203,8 @@ span.first {
     text-align: left;
 }
 .demo {
-    width:960px;
-    margin:60px auto 0 auto;
+    margin: 6rem auto 0;
 }
-/*history*/
 .history {
     background:url(../images/line04.gif) repeat-y 187px 0;
     overflow:hidden;
@@ -221,7 +228,7 @@ span.first {
     left:0;
     top:0;
     width:935px;
-    z-index:99;
+    z-index:3;
 }
 .history-date h2 a {
     color:#00bbff;
@@ -243,7 +250,6 @@ span.first {
 }
 .history-date ul li {
     background:url(../images/icon07.gif) no-repeat 180px 0;
-    padding-bottom:50px;
     zoom:1;
 }
 .history-date ul li.last {
@@ -338,4 +344,48 @@ span.first {
     *background:transparent!important;
     *font-size:12px!important;
     _font-weight:normal!important;
+}
+
+/* =========================================================
+   移动端
+    ======================================================== */
+@media (max-width: 989px){
+    .hero .main-nav {
+        padding: .3rem .8rem 0 0;
+    }
+    .wp {
+        display: table-cell;
+    }
+    .wp>i.icon {
+        margin-bottom: 0;
+        width: 6.7rem;
+        height: 6.7rem;
+        font-size: 5.8rem;
+        line-height: 6.7rem;
+    }
+    .entry-title, .page-title {
+        padding-top: 1.5rem;
+        font-size: 3rem;
+    }
+    .page-description{
+        display: none;
+    }
+
+    .history-date h2 {
+        background-position-x: 8rem;
+        padding-left: inherit;
+        margin-bottom: 5rem;
+    }
+    .history-date ul li {
+        background-position-x: 10rem;
+    }
+    .history {
+        background-position-x: 10.5rem;
+    }
+    .history-date ul li h3 {
+        width: 9.5rem;
+    }
+    .history-date ul li dl {
+        width: 130px;
+    }
 }

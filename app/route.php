@@ -24,7 +24,6 @@ return [
         'admin' => 'admin'
     ],
 
-
     'login' => 'admin/login/index',
     'out' => 'admin/login/out',
 

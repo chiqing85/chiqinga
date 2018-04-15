@@ -48,7 +48,7 @@ class Article extends Common
     {
         $articler = new articles;
 
-        $data = db('article')->field('FROM_UNIXTIME(time,"%Y-%m") as stime,id,title,time,duction')->group('time desc')->select();
+        $data = db('article')->field('FROM_UNIXTIME(time,"%Y") as stime,id,title,time,duction')->group('time desc')->select();
 
         $arr = array();
         foreach ($data as $k => $v) {

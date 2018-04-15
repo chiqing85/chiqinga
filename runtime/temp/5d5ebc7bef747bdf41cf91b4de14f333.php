@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\indexs.html";i:1523005671;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"E:\www\bolg\chiqinga\chiqinga\public/../app/admin\view\index\indexs.html";i:1523769138;}*/ ?>
 <link rel="stylesheet" href="__Css__/index.css">
 <?php if(!in_array(($affiche), explode(',',""))): ?>
 <div class="alert alert-danger alert-dismissable">
@@ -76,44 +76,19 @@
             </ul>
             <div class="content-active">
                 <div class="slider-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="280" width="280" version="1.1" style="display: block; margin: 1rem auto .5rem;">
+                        <circle cx="140" cy="140" r="130" fill="none" stroke="#ebeef2" stroke-width="2" stroke-linecap="round"/>
 
-                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                        <defs>
-                            <filter height="100%" width="100%" x="0" y="0" id="blurFilter1515060678360">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="43.80165021126464"></feGaussianBlur>
-                                <feComponentTransfer>
-                                    <feFuncA tableValues="1 1" type="discrete"></feFuncA>
-                                </feComponentTransfer>
-                            </filter>
-                            <clipPath id="sliderClip1515060678360">
-                                <path stroke="black" d="M 41,238 A 140,140 0 1 1 238,238 A 9,9 0 1 1 226,226 A 122,122 1 1 0 53,226 A 9,9 0 1 1 41,238 Z"></path>
-                            </clipPath>
+                        <circle class="demo1" cx="140" cy="140" r="130" fill="none" stroke="#ebeff5" stroke-width="7%" stroke-linecap="round" stroke-dasharray="652.8,10000"/>
 
-                        </defs>
-                        <g transform="translate(10, 30)">
-
-                            <g class="toClip" clip-path="url(#sliderClip1515060678360)">
-                                <g class="toFilter" filter="url(#blurFilter1515060678360)">
-                                    <!---->
-                                    <path d="M 140,140 L -136,336 A 280,280 0 0 1 12,-109 Z" fill="#42db7d"></path>
-                                </g>
-
-                                <path d="M 140,140 L 140,420 A 280,280 1 0 0 147,-139 Z" fill="#ebeff5"></path>
-                                <path d="M 139,139 L 139,419 A 279,279 1 0 0 337,337 Z" fill="#ebeff5"></path>
-                                <!--<path d="M 140,140  L 140,420 A 280,280 1 0 0 147,-139 Z" fill="#ebeff5"></path>-->
-                            </g>
-
-                            <circle class="circle" cx="143" cy="9" r="16" stroke-width="3"></circle>
-                        </g>
-                        <text class="svgmin" x="35" y="290" fill="#4ca6ff">- 50 &#8451;</text>
-                        <text class="svgaxm" x="235" y="290" fill="#ff6780">50 &#8451;</text>
+                        <circle class="demo2" id="J_demo2" cx="140" cy="140" r="130" fill="none" stroke="#42db7d" stroke-width="7%" stroke-linecap="round" stroke-dasharray="0,1000"/>
+                        <!--<circle class="circle" cx="65" cy="260" r="16" stroke-width="3" id="circleInner" stroke-dasharray="465" style="transform:rotate(.8783783783783784rad); transform-origin: 150px 150px;"></circle>-->
+                        <text class="svgmin" x="35" y="280" fill="#4ca6ff">- 50 ℃</text>
+                        <text class="svgaxm" x="200" y="280" fill="#ff6780">50 ℃</text>
                     </svg>
 
-
-
-
                     <div class="temperature-bg">
-                        <div class="value temperature" style="text-align: center;">
+                        <div class="value temperature">
                             <img src alt="" width="50">
                             <span class="cond_txt"></span>
                             <div class="slider-value-container"> </div>
@@ -399,44 +374,30 @@
 
         var tmp = data.HeWeather6[0].now.tmp;   //温度
 
-        var tmps = 50 + parseInt(tmp);    //百份比
+        var tmps = parseInt(tmp) / 50 * 40;    //百份比
 
+        var value;
 
+        if(tmps == 0){
+            value = 40;
+        }else if(tmps > 0 && tmps < 40) {
+            value = tmps + 40;
+        } else if(tmps >= 40) {
+            value = 80;
+        }else if(tmps <= -40) {
+            value = 0;
+        } else if(tmps < 0) {
+            value = 40 - Math.abs(tmps);
+        };
 
-        if(tmp <= 0)
-        {
-//            var y = 140 + 280 * (50 - tmps)/100 ;
-            var p = 12;
+        var demo2 =  document.querySelector("#J_demo2");
+        var circleLength = Math.floor(2 * Math.PI * demo2.getAttribute("r"));
 
-            var y = Math.sin(-p) * 110 ;
-//            var x = 140- Math.abs(25 - tmps) * 5.6;
+        var val = parseFloat(value).toFixed(2);
 
-
-
-            var x = Math.sin(90 - p) * 110 - 8;
-
-
-
-        } else {
-            console.log(tmps);;
-
-            var y = Math.sin(tmp) * 180 ;
-
-            var x = 50 + Math.sin(tmps) * 360;
-
-
-
-            console.log(y, x);
-
-        }
-
-        $('.circle').attr('cx', x);
-
-        $('.circle').attr('cy', y);
+        val = Math.max(0,val);
+        val = Math.min(100,val);
+        demo2.setAttribute("stroke-dasharray","" + circleLength * val / 100 + ",10000");
 
     });
-
-
-
-
 </script>

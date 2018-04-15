@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\index\index.html";i:1523592703;s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\nav.html";i:1523590894;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\footer.html";i:1523592807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\index\index.html";i:1523633660;s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\nav.html";i:1523633270;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\footer.html";i:1523592807;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -20,7 +20,7 @@
 			</span>
     </a>
     <ul>
-        <li class="nav- nav-current"><a href="http://chiqinga.com">首页</a></li>
+        <li class="nav- nav-current"><a href="/">首页</a></li>
         <li class="nav-"><a href="/archives/">归档</a></li>
         <li class="nav-"><a href="/link/">友链</a></li>
         <!--<li class="nav-"><a href="/about/">关于</a></li>-->
@@ -55,7 +55,7 @@
 			<header class="post-header">
 				<h2 class="post-title"><a href="/article/<?php echo $vo['id']; ?>.shtml"><?php echo $vo['title']; ?> </a> </h2>
 			</header>
-			<div style="width: 100%; height: 335px; overflow: hidden;margin-bottom: 15px;">
+			<div style="width: 100%; max-height: 335px; overflow: hidden;margin-bottom: 15px;">
 				<img src="<?php echo $vo['thumb']; ?>" alt="<?php echo $vo['title']; ?>" style="width: 100%;max-width: 710px;">
 			</div>
 			<section class="post-excerpt">

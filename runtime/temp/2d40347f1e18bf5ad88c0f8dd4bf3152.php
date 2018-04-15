@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\link\index.html";i:1523593647;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\footer.html";i:1523592807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\link\index.html";i:1523794359;s:73:"E:\www\bolg\chiqinga\chiqinga\public/../app/index\view\common\footer.html";i:1523592807;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,19 +12,20 @@
     <link rel="stylesheet" href="/index/css/link.css">
 </head>
 <body class="page-template page-links">
-    <header class="main-header post-head " style="background-image: url(/index/images/VCG21fbb3e3dc4.jpg)">
-        <nav class="main-nav overlay clearfix">
-            <a class="back-button icon-arrow-left" href="/"><i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp; Home</a>
-        </nav>
+    <div class="hero">
+        <header class="main-header post-head " style="background-image: url(/index/images/VCG21fbb3e3dc4.jpg)">
+            <nav class="main-nav overlay clearfix">
+                <a class="back-button icon-arrow-left" href="/"><i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp; <span class="word">Home</span></a>
+            </nav>
+            <div class="wp">
+                <i class="icon ion-shuffle"></i>
+                <h1 class="entry-title">友链</h1>
+                <div class="page-description"><p>附近的天体们，按首字母排序。</p></div>
+            </div>
+        </header>
+    </div>
 
-        <div class="wp">
-            <i class="icon ion-shuffle"></i>
-            <h1 class="entry-title">友链</h1>
-            <div class="page-description"><p>附近的天体们，按首字母排序。</p></div>
-        </div>
-    </header>
-
-    <article class="post page">
+  <article class="post page">
         <section class="post-content">
             <div class="kg-card-markdown"><blockquote>
                 <p>排名不分先后</p>

@@ -12,7 +12,7 @@
  * Time:17:28
  */
 
-namespace app\Admin\model;
+namespace app\admin\model;
 
 
 use think\Model;

@@ -494,6 +494,9 @@ article.post:nth-child(2)
 
 h2.post-title {
     font-weight: bolder;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .post-title a {
@@ -636,3 +639,37 @@ body.nav-opened.page .nav {
     z-index: 7;
 }
 
+/* ================================================================
+    移动端
+   ================================================================ */
+@media (max-width: 989px){
+    section.hero,.heightblock{
+        height:30vh !important;
+    }
+    i.icon.ion-android-menu{
+        font-size: 1.5rem;
+    }
+    .user-img, .scroll-down, .main-header:after,span.word {
+        display: none;
+    }
+    body.nav-opened .nav,.nav-opened.page .nav {
+        z-index: 7;
+    }
+    h1.page-title {
+        font-size: 2rem;
+    }
+    h2#hitokoto {
+        font-size: .9rem;
+    }
+    a.menu-button.icon-menu{
+        border: none;
+    }
+    .main-nav{
+        padding: 0;
+        z-index: 10;
+    }
+    h2.post-title {
+        font-size: 1.5rem;
+    }
+
+}

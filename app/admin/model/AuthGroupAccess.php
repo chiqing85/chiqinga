@@ -12,7 +12,7 @@
  * Time:23:42
  */
 
-namespace app\Admin\model;
+namespace app\admin\model;
 
 use think\Model;
 
@@ -23,5 +23,4 @@ class AuthGroupAccess extends Model
     {
 
     }
-
 }

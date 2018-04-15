@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -28,28 +28,28 @@
         </div>
     </header>
 </section>
+
+
 <article class="post page">
-    <section class="post-content">
-        <div class="demo">
-            <div class="history">
-                {volist name="list" id="vo" key ="k"}
-                <div class="history-date">
-                    <ul>
-                        <h2 class="{eq name='$k' value='1'}first{else/}date02{/eq}" {eq name="$k" value="1"}style="position: relative;"{/eq}> <a href="javascript:;" class="nogo">{$key}</a>{eq name='$k' value='1'}<span class="first">文章归档</span>{/eq}</h2>
-                        {volist name="vo" id="so"}
-                        <li>
-                            <h3>{$so.time|date="m-d",###}<span>{$so.time|date="Y",###}</span></h3>
-                            <dl>
-                                <dt><a href="/article/{$so.id}.shtml" target="_blank">{$so.title}</a><span>{$so.duction}</span></dt>
-                            </dl>
-                        </li>
-                        {/volist}
-                    </ul>
-                </div>
-                {/volist}
+    <div class="demo">
+        <div class="history">
+            {volist name="list" id="vo" key ="k"}
+            <div class="history-date">
+                <ul>
+                    <h2 class="{eq name='$k' value='1'}first{else/}date02{/eq}" {eq name="$k" value="1"}style="position: relative;"{/eq}> <a href="javascript:;" class="nogo">{$key}</a>{eq name='$k' value='1'}<span class="first">文章归档</span>{/eq}</h2>
+                    {volist name="vo" id="so"}
+                    <li>
+                        <h3>{$so.time|date="m-d",###}<span>{$so.time|date="Y",###}</span></h3>
+                        <dl>
+                            <dt><a href="/article/{$so.id}.shtml" target="_blank">{$so.title}</a><span>{$so.duction}</span></dt>
+                        </dl>
+                    </li>
+                    {/volist}
+                </ul>
             </div>
+            {/volist}
         </div>
-    </section>
+    </div>
 </article>
 
 {include file="/common/footer" /}
