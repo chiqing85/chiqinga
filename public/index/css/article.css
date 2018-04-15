@@ -20,10 +20,13 @@
 }
 .post-footer .author{
     margin: 0 auto;
+    height: 3rem;
 }
 .pagination{
     display: initial;
+    margin: 0 auto;
 }
+
 section.post-content pre{
     border-left: 3px solid #9E9E9E;
     border-radius: 3px;
@@ -108,4 +111,10 @@ footer
 #footer p a:hover {
     text-decoration: none;
     color: #51aded!important;
+}
+
+@media (max-width: 989px) {
+    .pagination {
+        display: grid;
+    }
 }
