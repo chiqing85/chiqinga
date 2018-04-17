@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="__Css__/link.css">
+<div class="card-header-title">
+    权限管理 > 权限节点
+</div>
+<div class="card-content-body link-body">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="small-box">
+            <a href="javascript:;" data-url="/Admin/rule/add" class="action-add">新增节点</a>
+            <div class="tab">
+                <form id="myForm">
+                    <table class="os">
+                        <tr class="odd">
+                            <td><b>ID</b></td>
+                            <td><b>权限名称</b></td>
+                            <td><b>节点</b></td>
+                            <td><b>状态</b></td>
+                            <td><b>添加时间</b></td>
+                            <td><b>排序</b></td>
+                            <td><b>操作</b></td>
+                        </tr>
+                        {volist name="list" id="vo" mod="2"}
+                            {eq name="mod" value="1"}
+                            <tr class="odd">
+                            {else/}
+                            <tr>
+                            {/eq}
+
+                                <td>{$vo.id}</td>
+                                <td>{$vo.html}{$vo.title}</td>
+                                <td>{$vo.name}</td>
+                                <td>
+                                    {eq name="$vo.status" value="1"}
+                                    <i class="fa fa-check-circle"></i>
+                                    {else\}
+                                    <i class="fa fa-times-circle"></i>
+                                    {/eq}
+                                </td>
+                                <td>{$vo.time|date='Y-m-d H:i:s',###}</td>
+                                <td>{$vo.sort}</td>
+                                <td>
+                                    <a class="action-edit action-edit-save" data-url="/admin/rule/save/id/{$vo.id}" title="编辑">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a class="action-delete" data-id="{$vo.id}" title="删除">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        {/volist}
+
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.action-delete').on('click', function(){
+
+        $.post('/admin/rule/del/id/' + $(this).attr('data-id'),function(data){
+
+            if(data.status == 200) {
+
+                layer.msg(data.msg, {icon: 6, time:2000},function(index){
+
+                    layer.close(index);
+
+                    $.post('/admin/rule/',function (data) {
+
+                        $('.article').html(data);
+
+                    })
+                });
+
+            }else if (data['data'] == 203)
+            {
+                layer.msg(data.msg,{icon:5, time:2000});
+
+                return false;
+
+            } else {
+
+                layer.msg(data,{icon:5, time:1500});
+
+            };
+        });
+    });
+</script>
