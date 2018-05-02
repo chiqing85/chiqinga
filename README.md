@@ -29,6 +29,6 @@ git clone git@github.com:chiqing85/chiqinga.git
 
 ## 学习交流 ##
 
-* PHP编程技术交流群：585285315 [http://shang.qq.com/wpa/qunwpa?idkey=8f2cf81e94318dfad138f76764d0e46c70205556b12807bf332d1f72cafe4666](http://pub.idqqimg.com/wpa/images/group.png)
+* PHP编程技术交流群：585285315 ![http://shang.qq.com/wpa/qunwpa?idkey=8f2cf81e94318dfad138f76764d0e46c70205556b12807bf332d1f72cafe4666](http://pub.idqqimg.com/wpa/images/group.png)
 
 ![img-source-from-https://github.com/docker/dockercraft](https://github.com/docker/dockercraft/raw/master/docs/img/contribute.png?raw=true)
