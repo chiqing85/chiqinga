@@ -17,11 +17,11 @@
 ```php
 git clone git@github.com:chiqing85/chiqinga.git
 ```
-1.上传文件到服务器后解压
-2、使用数据库工具导入install/database/blog.sql数据库
-3、修改app/database.php中的数据库信息为自己的数据库配置
-4、后台有天气aip，我是用和风天气，key要自己申请，你也可以申请其他天气api,将申请到的api填进 /app/api/controller/Request.php
-5、后台登录地址：域名/admin/index
+1.上传文件到服务器后解压<br />
+2、使用数据库工具导入install/database/blog.sql数据库<br />
+3、修改app/database.php中的数据库信息为自己的数据库配置<br />
+4、后台有天气aip，我是用和风天气，key要自己申请，你也可以申请其他天气api,将申请到的api填进 /app/api/controller/Request.php<br />
+5、后台登录地址：域名/admin/index<br />
 >默认有三个用户，登录密码分别为:<br />
 用户名　admin 		密码　admin<br />
 用户名　test		密码　123456<br />
