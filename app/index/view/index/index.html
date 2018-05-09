@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{$SiteaName}</title>
+	<link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="/index/css/index.css">
+</head>
+<body class="home-template nav-closed {gt name='$list->currentPage()' value='1'}page{/gt}" >
+{include file="/common/nav" /}
+	<span class="nav-cover"></span>
+	<section class="hero">
+		<div class="element-img" style="background: url({$bgimg});">
+			<header class="main-header">
+				<nav class="main-nav overlay clearfix">
+					<a class="menu-button icon-menu" href="#"><i class="icon ion-android-menu"></i><span class="word"> Menu</span></a>
+				</nav>
+				<div class="vertical">
+					<div class="main-header-content inner">
+						<div class="user-img">
+							<img src="index/images/user.png" alt="王赤清">
+						</div>
+						<h1 class="page-title">{$SiteaName}</h1>
+						<h2 class="page-description" id="hitokoto"></h2>
+					</div>
+				</div>
+				<a class="scroll-down icon-arrow-left" href="#intro" data-offset="-45"><i class="icon ion-ios-arrow-down"></i><span class="hidden">Scroll Down</span></a>
+			</header>
+		</div>
+	</section>
+	<div class="heightblock"></div>
+	<section class="intro">
+		<div id="intro"></div>
+		{volist name="list" id="vo"}
+		<article class="post">
+			<header class="post-header">
+				<h2 class="post-title"><a href="/article/{$vo.id}.shtml">{$vo.title} </a> </h2>
+			</header>
+			<div style="width: 100%; max-height: 335px; overflow: hidden;margin-bottom: 15px;">
+			{notempty name='$vo.thumb'}
+	<img src="{$vo.thumb}" alt="{$vo.title}" style="width: 100%;max-width: 710px;">
+{/notempty}
+			</div>
+			<section class="post-excerpt">
+				<p>{$vo.duction} <a href="/article/{$vo.id}.shtml"> >> </a></p>
+			</section>
+			<footer class="post-meta">
+				<img class="author-thumb" src="//www.gravatar.com/avatar/5a3417093ca13cd797ae76ce191afcb9?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x" alt="meto" nopin="nopin" />
+				<a href="jascript:;">{$vo.author}</a>
+
+				<time class="post-date" datetime="2018-03-19">{$vo.time|date="Y-m-d H:i:s", ###}</time>
+			</footer>
+		</article>
+		{/volist}
+		{$list->render()}
+		{include file="/common/footer" /}
+	</section>
+
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://api.i-meto.com/hitokoto?encode=js-html&length=36"></script>
+
+<script type="text/javascript" src="https://i-meto.com/assets/js/jquery.fitvids.js?v=cdf4501ab0"></script>
+<script src="/index/js/index.js"></script>
+<script>
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>

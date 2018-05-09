@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>友情链接 - {$SiteaName}</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/index/css/link.css">
+</head>
+<body class="page-template page-links">
+    <div class="hero">
+        <header class="main-header post-head " style="background-image: url(/index/images/VCG21fbb3e3dc4.jpg)">
+            <nav class="main-nav overlay clearfix">
+                <a class="back-button icon-arrow-left" href="/"><i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp; <span class="word">Home</span></a>
+            </nav>
+            <div class="wp">
+                <i class="icon ion-shuffle"></i>
+                <h1 class="entry-title">友链</h1>
+                <div class="page-description"><p>附近的天体们，按首字母排序。</p></div>
+            </div>
+        </header>
+    </div>
+
+  <article class="post page">
+        <section class="post-content">
+            <div class="kg-card-markdown"><blockquote>
+                <p>排名不分先后</p>
+            </blockquote>
+                <ul>
+                    {volist name="links" id="vo"}
+                    <li><a href="{$vo.url}">{$vo.name}</a> </li>
+                    {/volist}
+                </ul>
+            </div>
+        </section>
+
+    </article>
+
+    {include file="/common/footer" /}
+</body>
+</html>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?602bf48c18f2bee3e4f4ce2afce43e77";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+

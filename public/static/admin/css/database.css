@@ -1,0 +1,8 @@
+.database-body {
+    margin: 1.25rem auto;
+    width: 100%;
+    -webkit-box-flex: 1;
+    flex: 1;
+    -ms-flex: 1 1 auto;
+    overflow: auto;
+}

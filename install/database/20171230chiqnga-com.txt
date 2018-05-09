@@ -1,0 +1,190 @@
+----------------------------
+-----------创建数据库-------
+---------------------------
+create database chiqing;
+
+-------------
+-------如果是命令行插入，set names gbk;
+------------------------
+
+--------------------------
+-----------用户表---------
+--------------------------
+create table user(
+id int(10) auto_increment primary key,
+user varchar(60) not null comment '用户名',
+user_password varchar(32) not null comment '密码',
+user_pic varchar(255) not null comment '用户头像',
+email varchar(60) not null comment '用户邮箱',
+qq varchar(11) not null comment 'qq',
+nickname varchar(60) not null comment '第三方昵称',
+reg_time int(10) not null comment '注册时间',
+login_time int(10) not null comment '最后登录时间',
+login_ip varchar(16) not null comment '最后登录IP',
+token int(6) not null comment '加盐'
+)charset=utf8;
+--------------------------------
+--------插入后台管理员数据-------
+-------------------------------
+insert into user(`user`, `user_password`, `reg_time`, `token`) value ('admin', md5('admin'+5687), UNIX_TIMESTAMP(), '3658');
+
+--------------------------------
+----------登录表----------------
+--------------------------------
+create table user_log(
+id int(10) auto_increment primary key,
+user varchar(60) not null comment '用户名',
+time int(10) not null comment '登录时间',
+ip varchar(16) not null comment '登录IP',
+location text not null comment '位置'
+)charset=utf8;
+
+-- ----------------------------
+-- think_auth_rule，规则表，
+-- id:主键，name：规则唯一标识, title：规则中文名称 status 状态：为1正常，为0禁用，condition：规则表达式，为空表示存在就验证，不为空表示按照条件验证
+-- ----------------------------
+DROP TABLE IF EXISTS `auth_rule`;
+CREATE TABLE `auth_rule` (
+    `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+    `name` char(80) NOT NULL DEFAULT '',
+    `title` char(20) NOT NULL DEFAULT '',
+    `type` tinyint(1) NOT NULL DEFAULT '1',
+    `status` tinyint(1) NOT NULL DEFAULT '1',
+    `condition` char(100) NOT NULL DEFAULT '',  # 规则附件条件,满足附加条件的规则,才认为是有效的规则
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+-- ----------------------------
+-- think_auth_group 用户组表，
+-- id：主键， title:用户组中文名称， rules：用户组拥有的规则id， 多个规则","隔开，status 状态：为1正常，为0禁用
+-- ----------------------------
+ DROP TABLE IF EXISTS `auth_group`;
+CREATE TABLE `auth_group` (
+    `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+    `title` char(100) NOT NULL DEFAULT '',
+    `status` tinyint(1) NOT NULL DEFAULT '1',
+    `rules` varchar(255) NOT NULL DEFAULT '',
+    `describe` varchar(20) not null comment '角色描述',
+    PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+-- ----------------------------
+-- think_auth_group_access 用户组明细表
+-- uid:用户id，group_id：用户组id
+-- ----------------------------
+DROP TABLE IF EXISTS `auth_group_access`;
+CREATE TABLE `auth_group_access` (
+    `uid` mediumint(8) unsigned NOT NULL,
+    `group_id` mediumint(8) unsigned NOT NULL,
+    UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
+    KEY `uid` (`uid`),
+    KEY `group_id` (`group_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+----------------------------------------
+------------网站信息--------------------
+----------------------------------------
+create table config(
+id int(10) AUTO_INCREMENT PRIMARY KEY,
+k varchar(50) not null comment '键',
+key varchar(50) not null comment 'key键值',
+v text not null comment '值',
+type varchar(30) not null comment '类型',
+desribes varchar(30) not null comment '描述'
+)charset=utf8;
+
+------------------------------------------
+-----------插入网站信息数据
+------------------------------------------
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('网站域名（如：http\:\//\www.google.com）, 后面不带斜线', 'SiteaUrl', 'https://www.chiqinga.com', 'system', '网站地址');
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('网站标题', 'SiteaName', '王赤清个人网站', 'system', '网站名称');
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('网站Logo,最佳尺寸200*90', 'SiteaLogo', '', 'system', '网站Logo');
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('网站关键词，便于SEO', 'MetaKeywords', '王赤清,博客，个人网站', 'system', '网站关键词');
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('网站搜索引擎描述', 'MetaDescription', '王赤清个人网站是记录生活片段的网站', 'system', '网站描述');
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('设置在网站底部显示的备案号，如："苏ICP备15189103号 - 1"', 'RecordNo', '苏ICP备 0000000号 - 1', 'system', '网站备案号');
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('设置在网站底部显示的版权信息', 'MetaCopyright', 'Copyright &copy; 2015 - ', 'system', '版权信息');
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('站长QQ，方便与网站浏览者交流学习', 'QQ', '3201587032', 'system', '站长QQ');
+insert into config(`k`, `key`, `v`, `type`, `desribes`) value ('网站公告，网站醒目位置对外公告', 'Affiche', '', 'system', '网站公告');
+
+
+------------------------------------------------------
+--------------------通知
+------------------------------------------------------
+create table notice(
+id int(10) auto_increment primary key,
+nid mediumint(8) not null comment '发信方ID',
+nimg varchar(255) not null comment '发信方头像',
+uid mediumint(8) not null comment '收信方用户组ID',
+source smallint(5) not null comment '通知来源, 1为评论，0为用户反馈',
+content varchar(255) not null comment '内容',
+isstatus tinyint(1) not null comment '是否已读，0未读,1已读',
+time varchar(10) not null comment '发信时间戳'
+)charset=utf8;
+
+------------------------------------------------------------
+---------------------友情链接-------------------------------
+------------------------------------------------------------
+create table link(
+id int(10) auto_increment primary key,
+name varchar(255) not null comment '网站名称',
+url varchar(255) not null comment '网站域名',
+email varchar(60) not null comment '站长email',
+logo varchar(255) not null comment '网站logo',
+sort smallint(16) not null comment '排序',
+isshow tinyint(1) not null comment '0显示,1不显示'
+)charset=utf8;
+
+---------------------------------------------------------------
+-------------------------反馈管理-----------------------------
+--------------------------------------------------------------
+create table feedback(
+id int(10) auto_increment primary key,
+uid int(10) not null comment '用户ID',
+name varchar(50) not null comment '用户呢称',
+md_id tinyint(1) not null comment '所属分类ID,0 反馈, 1…评论',
+fid int(11) not null default 0 comment '所属分章id,  如果是反馈，则为0',
+cid int(11) not null comment '回复ID对象',
+item varchar(255) not null comment '用户头像',
+title varchar(30) not null comment '主题',
+email varchar(50) not null comment '邮箱',
+content text not null comment '反馈内容或评论内容',
+time varchar(10) not null comment '提交时间',
+ip varchar(16) not null comment '提交者IP',
+status tinyint(1) not null default 0 comment '1已读/0未读状态'
+)charset=utf8;
+
+-------------------------------------------------------------------------------
+---------------------------------------文章栏目--------------------------------
+--------------------------------------------------------------------------------
+create table category(
+id int(10) auto_increment primary key,
+name varchar(30) not null comment '栏目名称',
+dirs varchar(30) comment'导航',
+isshow tinyint(1) not null comment '0显示,1不显示',
+pid int(10),
+sort smallint(16) not null default 100 comment '排序',
+time varchar(10) not null comment '创建时间'
+)charset=utf8;
+
+-----------------------------------------------------------------------------
+---------------------------------------文章----------------------------------
+-----------------------------------------------------------------------------
+create table article(
+id int(10) auto_increment primary key comment '文章ID',
+cid smallint(5) not null comment '栏目id',
+title varchar(100) not null comment '标题',
+duction varchar(255) not null comment '简介',
+thumb varchar(255) default '' comment '缩略图',
+content text comment '内容',
+keywords varchar(255) comment '关键词',
+author varchar(20) not null comment '作者',
+tag varchar(50) default '' comment '来源',
+istop tinyint(1) default 0 comment '是否置顶 0 NO 1 yes',
+isshow tinyint(1) not null comment '是否显示 0 显示 1 不显示',
+time varchar(10) not null comment '创建时间',
+number int(15) not null comment '点击量',
+feedback int(11) default 0 comment '评论量',
+ip varchar(50) not null comment '发布者ip'
+)charset=utf8;
+
+
+
