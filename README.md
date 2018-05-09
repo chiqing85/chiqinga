@@ -3,7 +3,7 @@
 ### demo ###
 演示地址：[http://www.chiqinga.com](http://www.chiqinga.com)
 <br />
-后台登录演示　: [http://www.chiqinga.com/admin/index](http://www.chiqinga.com/admin/index)
+后台登录演示　: [http://www.chiqinga.com/admin](http://www.chiqinga.com/admin)
 >帐号: test<br />
 >密码:　123456
 ### 环境要求 ###
