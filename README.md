@@ -1,9 +1,9 @@
 ## 简介 ##
 > `chiqinga v3.0.2` 是一款基于thinkPHP的简易博客系统，运行环境要求PHP5.4以上,最佳PHP7.0+，该系统以开源方式发布，不提供任何技术支持的义务。
 ### demo ###
-演示地址：[http://chiqinga.tk](http://chiqinga.tk)
+演示地址：[http://chiqing.me](http://chiqing.me)
 <br />
-后台登录演示　: [http://chiqinga.tk/admin](http://chiqinga.tk/admin)
+后台登录演示　: [http://chiqing.me/admin](http://chiqing.me/admin)
 >帐号: test<br />
 >密码:　123456
 ### 环境要求 ###
